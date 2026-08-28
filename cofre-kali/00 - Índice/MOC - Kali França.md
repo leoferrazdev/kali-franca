@@ -63,3 +63,7 @@ area: indice
 ## Registro da arquitetura
 
 - [[Arquitetura do cofre Kali Franca - Registro V1]]
+
+## Bio pública
+
+- [[Bio pública - Registro de implementação V1]]
