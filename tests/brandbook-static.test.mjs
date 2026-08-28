@@ -49,7 +49,7 @@ test('o índice aponta para todas as seções consultáveis do brandbook', () =>
 test('a página explicita o conceito, as fontes tipográficas e a origem do sistema', () => {
   const html = readIfPresent(indexPath);
 
-  assert.match(html, /Expansão da Potência/i);
+  assert.match(html, /Expansão(?:\s|<[^>]+>)*da(?:\s|<[^>]+>)*Potência/i);
   assert.match(html, /Cormorant Garamond/i);
   assert.match(html, /Jost/i);
   assert.match(html, /IBM Plex Mono/i);
