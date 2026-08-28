@@ -41,7 +41,7 @@
 - Consumes: root `index.html` and shared `brandbook/tokens.css`.
 - Produces: six static tests that later tasks must satisfy.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Create `tests/home-static.test.mjs` with this contract:
 
@@ -126,13 +126,13 @@ test('a home preserva a prévia pública de compartilhamento', () => {
 });
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `node --test tests/home-static.test.mjs`
 
 Expected: FAIL because the current root is the minimal screen, does not contain the approved section IDs, does not import `styles.css`, and does not identify the demonstration state.
 
-- [ ] **Step 3: Commit the RED contract**
+- [x] **Step 3: Commit the RED contract**
 
 ```powershell
 git add -- tests/home-static.test.mjs
@@ -149,7 +149,7 @@ git commit -m "test: define contrato visual da home"
 - Consumes: `brandbook/tokens.css`, root `styles.css`, existing `profile.jpg` metadata, and the approved content limits.
 - Produces: semantic `header`, `main`, four anchored content sections, footer, skip link, and links to the brandbook.
 
-- [ ] **Step 1: Write the static structure**
+- [x] **Step 1: Write the static structure**
 
 Replace the inline placeholder document with an HTML document that keeps the existing OG/Twitter metadata and adds these exact structural contracts:
 
@@ -225,13 +225,13 @@ Replace the inline placeholder document with an HTML document that keeps the exi
 
 Update the description, OG title, and OG description to describe the public demonstration instead of the current minimal message. Keep `https://kalifranca.com.br/profile.jpg` unchanged as `og:image` and `twitter:image`.
 
-- [ ] **Step 2: Run the home contract**
+- [x] **Step 2: Run the home contract**
 
 Run: `node --test tests/home-static.test.mjs`
 
 Expected: the semantic and claim tests pass; the CSS tests fail only because root `styles.css` has not been created.
 
-- [ ] **Step 3: Commit the semantic landing**
+- [x] **Step 3: Commit the semantic landing**
 
 ```powershell
 git add -- index.html
@@ -248,7 +248,7 @@ git commit -m "feat: estrutura landing demonstrativa da home"
 - Consumes: `--kf-*` variables imported from `brandbook/tokens.css`.
 - Produces: classes used by `index.html`: `.home-shell`, `.home-cover`, `.sitebar`, `.cover-grid`, `.cover-title`, `.cover-art`, `.chapter`, `.pillar-grid`, `.system-demo`, `.site-footer`, and their responsive states.
 
-- [ ] **Step 1: Create the base and token bindings**
+- [x] **Step 1: Create the base and token bindings**
 
 Create `styles.css` with these required declarations before adding section-specific rules:
 
@@ -306,15 +306,15 @@ body {
 .text-link { display: inline-flex; align-items: center; gap: var(--kf-space-2); color: var(--kf-color-accent); font-family: var(--kf-font-mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; }
 ```
 
-- [ ] **Step 2: Add the dark cover and decorative field**
+- [x] **Step 2: Add the dark cover and decorative field**
 
 Use `var(--kf-color-bg-canvas)`, `var(--kf-color-bg-surface)`, `var(--kf-color-accent)`, and `var(--kf-color-accent-warm)` for the cover. Build the orb only with CSS gradients and borders; no new image asset is required. Set the cover title to Cormorant Garamond with a controlled line-height and italic gold keyword. Keep the art decorative with `aria-hidden="true"` from the markup.
 
-- [ ] **Step 3: Add paper, dark, and warm chapters**
+- [x] **Step 3: Add paper, dark, and warm chapters**
 
 Define `.chapter-paper` with `var(--kf-color-bg-paper)` and `var(--kf-color-text-on-paper)`, `.chapter-dark` with the canvas/surface semantic tokens, and `.chapter-warm` with `var(--kf-color-bg-surface)` plus a restrained warm gradient. Use grid layouts for the passage, pillars, system demo, and closing section. Component cards must consume `--kf-component-card-bg` and `--kf-component-card-border`; the primary button must consume `--kf-component-button-primary-bg` and `--kf-component-button-primary-text`.
 
-- [ ] **Step 4: Add mobile-first and reduced-motion rules**
+- [x] **Step 4: Add mobile-first and reduced-motion rules**
 
 At `max-width: 760px`, use one-column layouts, `width: calc(100% - 2rem)` shells, `font-size: clamp(3.6rem, 17vw, 5.5rem)` for the cover title, and `min-width: 0` on grid/flex children. Set art elements below the copy and preserve a minimum 44px target for links/buttons. Add:
 
@@ -325,7 +325,7 @@ At `max-width: 760px`, use one-column layouts, `width: calc(100% - 2rem)` shells
 }
 ```
 
-- [ ] **Step 5: Run the contract and commit the visual system**
+- [x] **Step 5: Run the contract and commit the visual system**
 
 Run: `node --test tests/home-static.test.mjs`
 
@@ -346,15 +346,15 @@ git commit -m "feat: aplica design system na home"
 - Consumes: actual test, lint, build, smoke-test, and visual-inspection output.
 - Produces: durable Obsidian record with separate local, Git, and public-publication states.
 
-- [ ] **Step 1: Create the vault record**
+- [x] **Step 1: Create the vault record**
 
 Create the note with frontmatter `type: delivery` and `status: local-validado`. Record the root route, the source design system, the shared token file, the exact files changed, the explicit demonstration constraint, and links to `[[Escopo - Página de vendas demonstrativa]]`, `[[Escopo - Brandbook online]]`, and `[[Diagnóstico - Falha de compilação Hostinger]]`.
 
-- [ ] **Step 2: Add the root relation to the project context**
+- [x] **Step 2: Add the root relation to the project context**
 
 Add a note under `## Notas relacionadas` in `cofre-kali/Contexto digital do projeto.md` linking `[[Home visual - Registro de implementação V1]]`.
 
-- [ ] **Step 3: Run all automated checks**
+- [x] **Step 3: Run all automated checks**
 
 Run each command from the repository root:
 
@@ -368,15 +368,15 @@ git diff --check
 
 Expected: the home contract passes; root static tests and members tests pass; lint and build exit with code 0; `git diff --check` emits no whitespace errors.
 
-- [ ] **Step 4: Smoke-test the static root**
+- [x] **Step 4: Smoke-test the static root**
 
 Start `python -m http.server 4173` and request `/`, `/styles.css`, `/brandbook/`, and `/profile.jpg` with `Invoke-WebRequest`. Expected status is `200` for each, with `text/html` for `/`, `text/css` for `/styles.css`, and the existing public asset available at `/profile.jpg`. Stop the server after the test.
 
-- [ ] **Step 5: Inspect desktop and mobile rendering**
+- [x] **Step 5: Inspect desktop and mobile rendering**
 
 Capture the root at desktop and 390px mobile widths. Confirm the cover, chapter surfaces, type hierarchy, CTA, orb/orbit field, skip link, internal anchors, no horizontal scroll, and reduced-motion CSS. Do not add screenshots to the repository.
 
-- [ ] **Step 6: Commit the record**
+- [x] **Step 6: Commit the record**
 
 ```powershell
 git add -- 'cofre-kali/Home visual - Registro de implementação V1.md' 'cofre-kali/Contexto digital do projeto.md'
@@ -388,17 +388,17 @@ git commit -m "docs: registra aplicacao visual da home"
 **Files:**
 - Modify: none beyond the files listed above.
 
-- [ ] **Step 1: Review the complete diff**
+- [x] **Step 1: Review the complete diff**
 
 Run: `git diff HEAD~3..HEAD -- index.html styles.css tests/home-static.test.mjs 'cofre-kali/Home visual - Registro de implementação V1.md'`
 
 Confirm there are no unapproved metrics, prices, claims, credentials, unrelated app changes, or references to a fictitious public destination.
 
-- [ ] **Step 2: Verify the branch and remote**
+- [x] **Step 2: Verify the branch and remote**
 
 Run: `git status --short`, `git branch --show-current`, and `git ls-remote origin refs/heads/main`. Expected branch is `main`; the remote hash must equal the final local HEAD; pre-existing local source directories remain untouched unless explicitly included by the user.
 
-- [ ] **Step 3: Push the completed implementation**
+- [x] **Step 3: Push the completed implementation**
 
 ```powershell
 git push origin main
