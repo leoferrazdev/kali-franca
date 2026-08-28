@@ -37,6 +37,12 @@ Características da primeira versão:
 - ausência de dependência de uma migração do site principal para Next;
 - possibilidade de evoluir depois para uma fonte de tokens orientada por dados.
 
+## Plano de implementação
+
+O plano executável foi criado em `docs/superpowers/plans/2026-08-28-brandbook-online.md`.
+
+O plano cobre o contrato estático em TDD, a entrada HTML, os tokens em três camadas, a composição editorial, a integração dos testes, o registro no cofre e a validação local. A execução deve permanecer isolada do workspace de membros e do CRM.
+
 ## Conteúdo previsto
 
 - conceito e princípios visuais, com a racionalidade de cada escolha;
