@@ -33,7 +33,8 @@ cofre-kali/
 ├── 00 - Índice/
 │   ├── MOC - Kali França.md
 │   ├── Roadmap - Kali França.md
-│   └── Como usar este cofre.md
+│   ├── Como usar este cofre.md
+│   └── Arquitetura do cofre Kali Franca - Registro V1.md
 ├── 01 - Contexto e Estratégia/
 ├── 02 - Marca e Design/
 ├── 03 - Produto e Experiência/
@@ -49,7 +50,7 @@ Os números estabilizam a ordem visual das pastas. Nenhum arquivo será apagado 
 | --- | --- |
 | `01 - Contexto e Estratégia` | `Contexto digital do projeto.md`, `Registro de início do projeto.md`, `Perfil, Promessa e ICP.md`, `Escopo - Página de vendas demonstrativa.md` |
 | `02 - Marca e Design` | `Design system como base de conhecimento.md`, `Design system - Mapa da fonte V1.md`, `Escopo - Brandbook online.md`, `Brandbook online - Registro de implementação V1.md` |
-| `03 - Produto e Experiência` | `Home visual - Registro de implementação V1.md` |
+| `03 - Produto e Experiência` | `Diagnóstico visual inicial - Experiência web.md`, `Home visual - Registro de implementação V1.md` |
 | `04 - Operação e Deploy` | `Diagnóstico - Falha de compilação Hostinger.md` |
 
 ## Hub central
@@ -67,7 +68,7 @@ Os números estabilizam a ordem visual das pastas. Nenhum arquivo será apagado 
 
 `00 - Índice/Roadmap - Kali França.md` conterá somente iniciativas futuras já identificadas, especialmente a substituição da página de vendas demonstrativa por uma oferta definitiva. Cada item terá estado explícito e não será apresentado como compromisso ou fato comercial.
 
-`00 - Índice/Como usar este cofre.md` explicará como criar notas, escolher a área, preencher propriedades, separar evidência de hipótese e atualizar o MOC.
+`00 - Índice/Como usar este cofre.md` explicará como criar notas, escolher a área, preencher propriedades, separar evidência de hipótese e atualizar o MOC. O registro `00 - Índice/Arquitetura do cofre Kali Franca - Registro V1.md` conservará a evidência da migração e suas validações.
 
 ## Convenção de propriedades
 
@@ -115,7 +116,7 @@ Propriedades específicas já existentes, como `source`, serão preservadas quan
 ## Critérios de sucesso
 
 - As 11 notas existentes estão distribuídas nas áreas corretas sem exclusões.
-- Os três arquivos de índice estão criados e vinculados ao MOC.
+- Os três arquivos de navegação e o registro de arquitetura estão criados e vinculados ao MOC.
 - As propriedades mínimas estão consistentes.
 - O MOC aponta para todas as áreas e decisões atuais.
 - Não existem links internos quebrados introduzidos pela migração.
