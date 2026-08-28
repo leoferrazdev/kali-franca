@@ -9,7 +9,7 @@ tags:
   - supabase
   - implementacao
 type: delivery
-status: git-local-validado
+status: publicamente-verificado-preview
 area: produto
 ---
 
@@ -78,3 +78,13 @@ Configurar o projeto Supabase próprio da Kali França no ambiente de deploy e v
 - [[Diagnóstico visual inicial - Experiência web]]
 - [[Design system como base de conhecimento]]
 - [[Roadmap - Kali França]]
+
+
+## Verificação pública — 2026-08-28
+
+- https://membros.kalifranca.com.br/ — HTTP 200 e nova experiência presente.
+- https://membros.kalifranca.com.br/login/ — HTTP 200 e nova experiência presente.
+- https://membros.kalifranca.com.br/cadastro/ — HTTP 200 e nova experiência presente.
+- https://membros.kalifranca.com.br/membros/ — HTTP 200, nova experiência e estado vazio presentes.
+- A home pública exibe Prévia da experiência, não Sessão ativa; as variáveis públicas do Supabase ainda não estão configuradas no host.
+- Conclusão: deploy visual público verificado; autenticação pública ainda pendente de configuração externa.

@@ -88,3 +88,10 @@ area: indice
 - [[Autenticação e cadastro - Registro de implementação V1]] registra o início da integração real com Supabase Auth no workspace de membros.
 - O código está validado no commit 6011e57; configuração externa, usuário de teste e deploy público permanecem pendentes.
 - A home protegida consulta apenas o usuário autenticado e não reutiliza o CRM.
+
+
+### Verificação pública atualizada — Área de membros
+
+- As quatro rotas públicas da V1 respondem HTTP 200 com a nova interface.
+- A home está em modo Prévia da experiência; a autenticação ainda aguarda as variáveis públicas do Supabase no host.
+- Estado atual: deploy visual público verificado; autenticação pública pendente de configuração externa.

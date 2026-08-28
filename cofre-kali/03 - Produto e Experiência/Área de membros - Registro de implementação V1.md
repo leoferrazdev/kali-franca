@@ -8,7 +8,7 @@ tags:
   - design-system
   - acessibilidade
 type: delivery
-status: git-publicado-deploy-pendente
+status: publicamente-verificado-preview
 area: produto
 ---
 
@@ -92,3 +92,10 @@ Definir e documentar o contrato técnico da autenticação real antes de conecta
 - https://membros.kalifranca.com.br/ — HTTP 200, porém ainda servindo 4.997 bytes da versão anterior com o texto do shell provisório.
 - /login/, /cadastro/ e /membros/ ainda não foram disponibilizadas publicamente pelo host.
 - Conclusão: Git publicado; deploy público pendente e não deve ser reportado como concluído.
+
+
+## Verificação pública atualizada — 2026-08-28
+
+- As rotas /, /login/, /cadastro/ e /membros/ respondem HTTP 200 com a nova experiência.
+- /membros/ exibe o estado vazio público e Prévia da experiência.
+- O deploy visual está público; a sessão real depende da configuração externa do Supabase.
