@@ -1,0 +1,7 @@
+-- Seed de referência apenas para desenvolvimento local.
+-- Não insere usuários, leads, conversas ou dados reais.
+--
+-- Crie primeiro um usuário no Supabase Auth e depois, em um ambiente seguro,
+-- insira somente o perfil operacional correspondente ao UUID desse usuário:
+-- insert into public.profiles (id, full_name, role)
+-- values ('00000000-0000-0000-0000-000000000000', 'Usuário de desenvolvimento', 'comercial');

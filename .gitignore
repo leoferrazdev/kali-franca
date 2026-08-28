@@ -1,0 +1,30 @@
+# Dependências e artefatos de execução
+node_modules/
+apps/*/node_modules/
+.next/
+apps/*/.next/
+
+# Ambiente e credenciais locais
+.env
+.env.*
+!.env.example
+
+# Build, cache, análise e arquivos temporários
+*.tsbuildinfo
+graphify-out/
+**/graphify-out/
+*.log
+*.tmp
+*.temp
+*.swp
+apps/*/package-lock.json
+
+# Configurações locais do ambiente de trabalho
+.gemini/
+mcp_config.json
+.superpowers/
+.worktrees/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
