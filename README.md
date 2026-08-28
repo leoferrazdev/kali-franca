@@ -1,6 +1,6 @@
 # Kali França
 
-Monorepositório do ecossistema digital da Kali França. O primeiro workspace é o CRM operacional em Next.js; `apps/kali-franca-membros` fica reservado para uma implementação futura e não contém funcionalidades.
+Monorepositório do ecossistema digital da Kali França. O CRM operacional está preparado em Next.js para um roadmap futuro; `apps/kali-franca-membros` permanece reservado e não contém funcionalidades fictícias.
 
 ## Arquitetura
 
@@ -37,20 +37,13 @@ NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
 
 Não reutilize o projeto Supabase da Uli Zarzana. Não versionamos `.env`, usuários, leads, tokens ou chaves privadas. A migration inicial é somente estrutura técnica; aplique-a no projeto Supabase da Kali França antes de cadastrar usuários operacionais.
 
-## Hostinger
+## Publicação planejada
 
-No hPanel, use **Websites → Add Website → Node.js Web App → Import Git Repository** com:
+- `kalifranca.com.br`: site estático em HTML, separado do runtime Node.js deste monorepositório.
+- `membros.kalifranca.com.br`: subdomínio reservado para a futura área de membros; não publicar o CRM neste endereço.
+- `crm.kalifranca.com.br`: publicação futura do workspace `apps/kali-franca-crm` como Node.js Web App.
 
-- domínio: `kalifranca.com.br`;
-- repositório: `leoferrazdev/kali-franca`;
-- branch: `main`;
-- framework: Next.js;
-- Node.js: 22.x;
-- diretório: raiz do repositório;
-- build: `npm run build`;
-- start: `npm run start`.
-
-Cadastre as duas variáveis públicas do Supabase no painel, nunca no GitHub. Antes de substituir qualquer site estático já associado ao domínio, faça backup e verifique o alvo.
+Quando o CRM entrar no roadmap de publicação, use **Websites → Add Website → Node.js Web App → Import Git Repository** com o repositório `leoferrazdev/kali-franca`, branch `main`, Node.js 22.x, diretório raiz, build `npm run build` e start `npm run start`. Cadastre as duas variáveis públicas do Supabase no painel, nunca no GitHub. Antes de substituir qualquer site estático já associado ao domínio, faça backup e verifique o alvo.
 
 ## Estados de entrega
 
