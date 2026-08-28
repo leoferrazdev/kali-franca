@@ -74,3 +74,10 @@ area: indice
 - [[Área de membros - Registro de implementação V1]] registra a fundação visual e de experiência implementada em 2026-08-28.
 - Estado desta entrega: Git local validado; publicação pública pendente.
 - A autenticação real, conteúdo protegido e permissões permanecem fora do escopo até contrato técnico documentado.
+
+
+### Verificação pós-push — Área de membros
+
+- O código da V1 está publicado no commit 6b64c93 da main.
+- A raiz pública ainda responde com o shell provisório; deploy público pendente.
+- As rotas /login/, /cadastro/ e /membros/ não foram consideradas publicadas sem evidência HTTP.

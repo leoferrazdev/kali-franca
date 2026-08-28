@@ -8,7 +8,7 @@ tags:
   - design-system
   - acessibilidade
 type: delivery
-status: git-local-validado
+status: git-publicado-deploy-pendente
 area: produto
 ---
 
@@ -83,3 +83,12 @@ Definir e documentar o contrato técnico da autenticação real antes de conecta
 - [[Design system como base de conhecimento]]
 - [[Design system - Mapa da fonte V1]]
 - [[Roadmap - Kali França]]
+
+
+## Verificação pós-push — 2026-08-28
+
+- Remoto: https://github.com/leoferrazdev/kali-franca.git, branch main alinhada ao commit 6b64c93.
+- Código local e commits da etapa: validados.
+- https://membros.kalifranca.com.br/ — HTTP 200, porém ainda servindo 4.997 bytes da versão anterior com o texto do shell provisório.
+- /login/, /cadastro/ e /membros/ ainda não foram disponibilizadas publicamente pelo host.
+- Conclusão: Git publicado; deploy público pendente e não deve ser reportado como concluído.
