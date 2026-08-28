@@ -1,0 +1,28 @@
+{
+  "name": "kali-franca-membros",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "node server.mjs",
+    "lint": "eslint --ignore-pattern .next .",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.3.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=22 <23"
+  }
+}
