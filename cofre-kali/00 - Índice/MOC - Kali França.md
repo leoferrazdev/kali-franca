@@ -105,3 +105,9 @@ area: indice
 - O código ainda não possui RBAC ou nível administrador implementado; nenhum claim admin, perfil ou permissão do CRM foi criado.
 - A publicação do login permanece pendente das variáveis públicas do Supabase no host e de um teste controlado de sessão.
 - A senha temporária não foi registrada no cofre, arquivos ou Git.
+
+## Atualização — Auth configurado no runtime público — 2026-08-28
+
+- Hostinger configurou as duas variáveis públicas do Supabase e publicou o commit `c887bbe` na `main` com status Concluído.
+- `/membros` agora responde HTTP 307 para `/login/` quando acessado sem sessão; o estado público de prévia deixou de ser servido pelo runtime configurado.
+- O login real com a conta de aplicação criada permanece como validação manual controlada; credenciais não são registradas no cofre.

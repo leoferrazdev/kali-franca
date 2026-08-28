@@ -99,3 +99,10 @@ Definir e documentar o contrato técnico da autenticação real antes de conecta
 - As rotas /, /login/, /cadastro/ e /membros/ respondem HTTP 200 com a nova experiência.
 - /membros/ exibe o estado vazio público e Prévia da experiência.
 - O deploy visual está público; a sessão real depende da configuração externa do Supabase.
+
+## Atualização — Deploy com Supabase Auth ativo — 2026-08-28
+
+- Hostinger recebeu `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` no ambiente de produção.
+- Deploy do commit `c887bbe` na `main` concluído com build Next.js sem erro.
+- Verificação pública: `/`, `/login` e `/cadastro` HTTP 200; `/membros` HTTP 307 para `/login/` sem sessão.
+- A prévia pública foi substituída pela proteção de autenticação; o login real com a conta criada ainda requer teste manual controlado.

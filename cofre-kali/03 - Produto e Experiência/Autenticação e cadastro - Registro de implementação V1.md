@@ -9,7 +9,7 @@ tags:
   - supabase
   - implementacao
 type: delivery
-status: supabase-auth-configurado-conta-criada
+status: publicamente-verificado-auth-configurado
 area: produto
 ---
 
@@ -109,3 +109,12 @@ A aplicação de membros ainda não possui tabela de perfis, claim `admin`, RBAC
 ### Pendência de publicação
 
 O host ainda precisa receber `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` no ambiente de produção. Nenhuma chave foi registrada no cofre ou versionada. A conta criada e a configuração do Supabase não comprovam, sozinhas, o login público até essa configuração e um teste controlado de sessão.
+
+## Configuração de produção e verificação pública — 2026-08-28
+
+- Hostinger configurou no ambiente de produção as variáveis `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`; os valores não foram registrados no cofre, em arquivos ou no Git.
+- Reimplantação concluída na Hostinger para a branch `main`, commit `c887bbe`, em 58 segundos.
+- Configuração confirmada no deploy: diretório raiz `./`, Node `22.x`, comando `npm run build`, entrypoint `apps/kali-franca-membros/server.mjs`.
+- Logs do build: Next.js compilado, TypeScript concluído, páginas estáticas geradas e saída finalizada sem erro. Avisos de incompatibilidade do binário SWC com a GLIBC foram contornados pelo fallback WASM e não impediram a publicação.
+- Verificação pública sem sessão: `/` HTTP 200; `/login` HTTP 200; `/cadastro` HTTP 200; `/membros` HTTP 307 com `Location: /login/`.
+- Conclusão: as variáveis públicas chegaram ao runtime e a proteção server-side da área de membros está ativa. Um login real com a senha temporária não foi executado automaticamente para não retransmitir a credencial; essa é a próxima validação manual controlada.
