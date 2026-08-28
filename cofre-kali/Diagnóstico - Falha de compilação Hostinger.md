@@ -27,6 +27,8 @@ Essa sugestão é uma hipótese do painel, não uma evidência conclusiva.
 - O entrypoint ancora explicitamente o diretório do app Next em `server.mjs`.
 - Antes da interrupção local de dependências, `npm run lint` e `npm run build` concluíram com sucesso.
 - A tentativa local posterior de reinstalação encontrou `ENOTEMPTY` em `node_modules`; a falha subsequente de `next` ausente é um artefato do ambiente local e não prova a causa no Hostinger.
+- O commit `5086e75` foi enviado e confirmado em `origin/main`.
+- Na verificação pública posterior, `https://kalifranca.com.br/` respondeu `200`, mas ainda sem a nova URL de `og:image`; `https://kalifranca.com.br/profile.jpg` e `https://kalifranca.com.br/brandbook/` responderam `404`.
 
 ## Configurações a conferir no hPanel
 
@@ -39,6 +41,6 @@ Em ambos os cenários, conferir Node 22.x, gerenciador npm e instalação basead
 
 ## Próxima evidência necessária
 
-Obter o log de build completo e uma captura dos campos de raiz, entry file, comando de build, versão Node, gerenciador e output directory. Sem esses dados, a causa permanece não confirmada e não deve ser marcada como corrigida.
+Obter o log de build completo e uma captura dos campos de raiz, entry file, comando de build, versão Node, gerenciador e output directory. Também é necessário confirmar a publicação do commit `5086e75`. Sem esses dados, a causa permanece não confirmada e não deve ser marcada como corrigida.
 
 Referências operacionais: [configuração de Node.js Web App no Hostinger](https://www.hostinger.com/support/how-to-deploy-a-nodejs-website-in-hostinger/), [deploy de aplicação Node.js](https://www.hostinger.com/in/tutorials/deploy-node-js-application) e [solução de falha de compilação](https://www.hostinger.com/support/fix-failed-to-build-application-error-hostinger-node-js/).
