@@ -106,3 +106,40 @@ Definir e documentar o contrato técnico da autenticação real antes de conecta
 - Deploy do commit `c887bbe` na `main` concluído com build Next.js sem erro.
 - Verificação pública: `/`, `/login` e `/cadastro` HTTP 200; `/membros` HTTP 307 para `/login/` sem sessão.
 - A prévia pública foi substituída pela proteção de autenticação; o login real com a conta criada ainda requer teste manual controlado.
+
+## Atualização — Logout e auditoria responsiva — 2026-08-28
+
+### Diagnóstico antes das alterações
+
+- P0: nenhum overflow horizontal funcional, corte de conteúdo ou colisão foi confirmado nas rotas auditáveis.
+- P1: foram encontrados alvos interativos abaixo de 44 px em links de marca, links auxiliares de autenticação, navegação mobile da área de membros e no link de retorno da bio.
+- P2: halos, arcos e órbitas que ultrapassam a viewport são elementos decorativos intencionais, recortados por contêineres com `overflow: hidden`; não geram rolagem horizontal.
+
+### Implementação
+
+- Criado `apps/kali-franca-membros/app/components/LogoutButton.tsx` como componente cliente isolado.
+- O botão chama `supabase.auth.signOut()`, bloqueia cliques durante a operação, expõe `aria-busy`, mostra `Saindo…`, comunica falha com `role="status"`/`aria-live="polite"` e retorna para `/login/` com atualização do router.
+- O botão é renderizado somente em sessão ativa; a prévia pública permanece honesta e não simula logout.
+- Cabeçalho, autenticação, navegação e links auxiliares usam alvos mínimos de 44×44 px; a bio e os wordmarks públicos receberam a mesma correção.
+- A direção visual permanece baseada nos tokens compartilhados, sem cores literais novas ou alteração de conteúdo/negócio.
+
+### Auditoria pós-implementação
+
+- Rotas públicas: `/`, `/brandbook/` e `/bio/`.
+- Área de membros: `/login/`, `/cadastro/` e `/membros/`.
+- CRM: `/login/` sem sessão/configuração pública disponível.
+- Viewports retrato: 320, 360, 375, 390, 414, 768, 1024 e 1440 px de largura.
+- Viewports paisagem: 568×320, 667×375 e 896×414.
+- Resultado: zero overflow horizontal funcional e zero alvos abaixo de 44×44 px nas páginas finais. Elementos fora da viewport permaneceram apenas nos fundos decorativos previstos.
+- A sessão autenticada real não foi acionada no runtime local porque as variáveis públicas do Supabase não estão disponíveis nesse ambiente; o fluxo foi validado por contrato de código, build e comportamento de fallback.
+
+### Evidências locais
+
+- `npm test`: 16 testes estáticos + 18 testes do app de membros aprovados.
+- `npm run crm:test`: 31 testes aprovados.
+- `npm run lint`: aprovado.
+- `npm run build`: build Next.js do app de membros aprovado.
+- `npm run crm:build`: build Next.js do CRM aprovado, com os avisos existentes de middleware legado/Edge Runtime.
+- Auditoria visual e DOM executada no navegador local; console sem erros após a validação.
+- Plano: `docs/superpowers/plans/2026-08-28-membros-logout.md`.
+- Especificação: `docs/superpowers/specs/2026-08-28-membros-logout-design.md`.

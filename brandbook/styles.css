@@ -108,12 +108,15 @@ button {
 }
 
 .wordmark {
+  align-items: center;
   color: var(--kf-color-text-primary);
   font-family: var(--kf-font-display);
   font-size: clamp(1.65rem, 2vw, 2rem);
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1;
+  min-height: 44px;
+  display: inline-flex;
   text-decoration: none;
 }
 

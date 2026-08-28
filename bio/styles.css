@@ -190,10 +190,13 @@ svg {
 }
 
 .wordmark {
+  align-items: center;
   color: var(--kf-color-text-primary);
+  display: inline-flex;
   font-family: var(--kf-font-display);
   font-size: 1.25rem;
   line-height: 1;
+  min-height: 44px;
 }
 
 .mono-label,
@@ -420,7 +423,11 @@ a.bio-destination:hover {
 }
 
 .footer-home {
+  height: 2.75rem;
+  min-height: 44px;
+  min-width: 44px;
   margin-left: auto;
+  width: 2.75rem;
   transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 

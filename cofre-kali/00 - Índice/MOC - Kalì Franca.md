@@ -126,3 +126,10 @@ area: indice
 - `https://kalifranca.com.br/`, `/brandbook/` e `/bio/` responderam HTTP `200` e exibem **Kalì Franca**.
 - `https://membros.kalifranca.com.br/login/` e `/cadastro/` responderam HTTP `200` após o deployment e exibem **Kalì Franca**.
 - A verificação pública não encontrou a grafia anterior nas páginas consultadas.
+
+## Atualização — Logout e auditoria responsiva — 2026-08-28
+
+- [[Área de membros - Registro de implementação V1]] registra a criação do logout e a correção dos alvos interativos responsivos.
+- Diagnóstico prévio: P0 = 0; os P1 encontrados foram corrigidos; os P2 eram elementos decorativos contidos pelo layout.
+- A validação cobriu as páginas públicas, autenticação, prévia da área de membros e login do CRM em retrato e paisagem. Resultado local: sem overflow horizontal funcional e sem alvo interativo abaixo de 44×44 px.
+- Estado de entrega: código e documentação locais validados; commit/push e verificação pública desta etapa permanecem pendentes até a publicação.
