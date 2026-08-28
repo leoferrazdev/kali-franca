@@ -30,6 +30,10 @@ Essa sugestão é uma hipótese do painel, não uma evidência conclusiva.
 - O commit `5086e75` foi enviado e confirmado em `origin/main`.
 - Na verificação pública posterior, `https://kalifranca.com.br/` respondeu `200`, mas ainda sem a nova URL de `og:image`; `https://kalifranca.com.br/profile.jpg` e `https://kalifranca.com.br/brandbook/` responderam `404`.
 
+## Atualização da verificação pública
+
+Em 2026-08-28, após a publicação dos commits da home visual, uma nova verificação observou HTTP 200 para `https://kalifranca.com.br/`, `https://kalifranca.com.br/styles.css`, `https://kalifranca.com.br/brandbook/`, `https://kalifranca.com.br/profile.jpg` e `https://membros.kalifranca.com.br/`. A home também passou a conter a `og:image` esperada e o conceito publicado. Essa evidência confirma o estado público atual, mas não identifica retroativamente a causa do 503 histórico; por isso, o status da causa permanece não confirmado.
+
 ## Configurações a conferir no hPanel
 
 | Cenário | Raiz da aplicação | Entry file | Build command | Output directory |

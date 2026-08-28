@@ -42,8 +42,12 @@ status: local-validado
 | Build de membros | `npm run build` — Next 16.3.0, exit code 0 | validado |
 | Smoke local | `/`, `/brandbook/` e `/profile.jpg` — HTTP 200 | validado |
 | Commit | `49e8af8` — preview social, responsividade e diagnóstico registrado | validado |
-| Publicação Hostinger | verificação no painel | pendente até publicação |
-| URL pública | HTTP e renderização | pendente até publicação |
+| Publicação Hostinger | deploy refletido no domínio observado em 2026-08-28 | validado |
+| URL pública | `/brandbook/` e `/profile.jpg` — HTTP 200 em 2026-08-28 | validado |
+
+## Verificação pública atualizada
+
+Em 2026-08-28, após a publicação posterior, `https://kalifranca.com.br/brandbook/` e `https://kalifranca.com.br/profile.jpg` responderam HTTP 200. A ocorrência anterior de HTTP 404 permanece registrada no diagnóstico como evidência histórica.
 
 ## Relações
 
