@@ -4,15 +4,15 @@ type BrandMarkProps = {
 
 export function BrandMark({ compact = false }: BrandMarkProps) {
   return (
-    <a className={`brand-mark${compact ? ' brand-mark--compact' : ''}`} href="https://kalifranca.com.br/" aria-label="Kali França — voltar ao site principal">
+    <a className={`brand-mark${compact ? ' brand-mark--compact' : ''}`} href="https://kalifranca.com.br/" aria-label="Kalì Franca — voltar ao site principal">
       <span className="brand-mark__symbol" aria-hidden="true">
         <span />
         <span />
         <span />
       </span>
       <span className="brand-mark__wordmark">
-        <strong>Kali</strong>
-        <small>França</small>
+        <strong>Kalì</strong>
+        <small>Franca</small>
       </span>
     </a>
   );

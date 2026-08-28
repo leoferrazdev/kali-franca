@@ -1,7 +1,7 @@
 ---
-title: Roadmap - Kali França
+title: Roadmap - Kalì Franca
 aliases:
-  - Roadmap Kali França
+  - Roadmap Kalì Franca
 date: 2026-08-28
 tags:
   - kali-franca
@@ -11,7 +11,7 @@ status: active
 area: indice
 ---
 
-# Roadmap — Kali França
+# Roadmap — Kalì Franca
 
 ## Futuro confirmado
 
@@ -23,5 +23,5 @@ Uma iniciativa entra aqui quando existe intenção explícita de futuro. Ela nã
 
 ## Relação
 
-- [[MOC - Kali França]]
+- [[MOC - Kalì Franca]]
 - [[Escopo - Página de vendas demonstrativa]]

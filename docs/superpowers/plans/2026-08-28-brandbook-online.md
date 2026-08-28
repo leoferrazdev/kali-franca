@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Publicar uma página estática editorial em `https://kalifranca.com.br/brandbook` para consulta e registro explícito da identidade visual da Kali França.
+**Goal:** Publicar uma página estática editorial em `https://kalifranca.com.br/brandbook` para consulta e registro explícito da identidade visual da Kalì Franca.
 
 **Architecture:** A rota será uma entrada estática independente em `brandbook/index.html`, servida pelo mesmo site estático do domínio principal. `brandbook/tokens.css` será a fonte de tokens primitivos, semânticos e de componente da página; `brandbook/styles.css` cuidará do layout, dos componentes editoriais, da responsividade e dos estados de acessibilidade. JavaScript não será necessário para a primeira versão.
 
@@ -11,7 +11,7 @@
 ## Global Constraints
 
 - Rota pública: `https://kalifranca.com.br/brandbook`.
-- Fonte visual: `D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html`.
+- Fonte visual: `D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html`.
 - Tokens obrigatoriamente separados em primitivos, semânticos e tokens de componente.
 - A paleta de referência inclui Umbra `#0E0B0A`, Vinho Profundo `#3A1424`, Ameixa Sagrada `#7A2B44`, Ouro Fosco `#C9A66B`, Alabastro `#F4EDE4`, Cobre Aurora `#C97A52`, Areia Nude `#E2D4C3`, Névoa Mineral `#9AA39F`, Cinza Cálido `#B7ABA0` e Verde Sálvia `#5F7A6A`.
 - A página deve usar Cormorant Garamond, Jost e IBM Plex Mono com fallback tipográfico e `font-display` quando houver carregamento remoto.
@@ -70,7 +70,7 @@ test('a rota estática do brandbook possui entrada pública semântica', () => {
 
   assert.ok(existsSync(indexPath), 'brandbook/index.html deve existir');
   assert.match(html, /<html[^>]+lang=["']pt-BR["']/i);
-  assert.match(html, /<title>[^<]*Brandbook[^<]*Kali França/i);
+  assert.match(html, /<title>[^<]*Brandbook[^<]*Kalì Franca/i);
   assert.match(html, /<a[^>]+href=["']#conteudo["'][^>]*>[^<]*Pular/i);
   assert.match(html, /<main[^>]+id=["']conteudo["']/i);
   assert.equal((html.match(/<h1\b/gi) || []).length, 1);
@@ -105,7 +105,7 @@ test('a página explicita o conceito, as fontes tipográficas e a origem do sist
   assert.match(html, /Cormorant Garamond/i);
   assert.match(html, /Jost/i);
   assert.match(html, /IBM Plex Mono/i);
-  assert.match(html, /Kali Franca - Design System\.dc\.html/i);
+  assert.match(html, /Kalì Franca - Design System\.dc\.html/i);
 });
 
 test('os tokens preservam as três camadas do design system', () => {
@@ -156,7 +156,7 @@ git commit -m "test: define contrato estatico do brandbook"
 - Create: `brandbook/tokens.css`
 
 **Interfaces:**
-- Consumes: contrato de `tests/brandbook-static.test.mjs` e valores auditados em `design-system/Kali Franca - Design System.dc.html`.
+- Consumes: contrato de `tests/brandbook-static.test.mjs` e valores auditados em `design-system/Kalì Franca - Design System.dc.html`.
 - Produces: documento público semântico e nomes de tokens estáveis para o CSS editorial.
 
 - [x] **Step 1: Write the minimal HTML structure**
@@ -177,7 +177,7 @@ Cada seção deve ter um `h2` único e conteúdo real derivado da fonte, incluin
 <section id="cores" class="chapter chapter-light" aria-labelledby="cores-title">
   <p class="chapter-index">03 / sistema cromático</p>
   <h2 id="cores-title">Sombra quente, luz que avança</h2>
-  <div class="swatch-grid" aria-label="Paleta de cores Kali França">
+  <div class="swatch-grid" aria-label="Paleta de cores Kalì Franca">
     <article class="swatch swatch-umbra"><span>Umbra</span><code>#0E0B0A</code></article>
     <article class="swatch swatch-vinho"><span>Vinho Profundo</span><code>#3A1424</code></article>
     <article class="swatch swatch-ameixa"><span>Ameixa Sagrada</span><code>#7A2B44</code></article>
@@ -401,7 +401,7 @@ status: local-validado
 
 - Rota: `https://kalifranca.com.br/brandbook`
 - Arquitetura: página estática independente.
-- Fonte visual: `D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html`.
+- Fonte visual: `D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html`.
 - Arquivos: `brandbook/index.html`, `brandbook/tokens.css`, `brandbook/styles.css`.
 
 ## Decisões aplicadas
@@ -546,7 +546,7 @@ Copiar o asset aprovado sem alterar seu conteúdo e inserir, em cada página, os
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kalifranca.com.br/brandbook/">
 <meta property="og:image" content="https://kalifranca.com.br/profile.jpg">
-<meta property="og:image:alt" content="Retrato de Kali França">
+<meta property="og:image:alt" content="Retrato de Kalì Franca">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://kalifranca.com.br/profile.jpg">
 ```

@@ -1,4 +1,4 @@
-# Especificação de design — Brandbook online Kali França
+# Especificação de design — Brandbook online Kalì Franca
 
 **Data:** 2026-08-28
 **Status:** Em revisão
@@ -6,9 +6,9 @@
 
 ## 1. Contexto
 
-O domínio principal `https://kalifranca.com.br` receberá uma página pública para construção, registro e consulta da identidade visual da Kali França. A área de membros em `https://membros.kalifranca.com.br` permanece fora da primeira implementação.
+O domínio principal `https://kalifranca.com.br` receberá uma página pública para construção, registro e consulta da identidade visual da Kalì Franca. A área de membros em `https://membros.kalifranca.com.br` permanece fora da primeira implementação.
 
-A fonte visual existente está em `D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html`. O cofre `cofre-kali` registra a origem, as decisões e a evolução; a página transforma esse conhecimento em uma experiência pública consultável.
+A fonte visual existente está em `D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html`. O cofre `cofre-kali` registra a origem, as decisões e a evolução; a página transforma esse conhecimento em uma experiência pública consultável.
 
 A indicação editorial `Documento estratégico / Confidencial` presente na fonte foi considerada pelo usuário meramente ilustrativa. A publicação pública e explícita do brandbook está aprovada.
 
@@ -64,7 +64,7 @@ Os valores acima são a referência factual da fonte V1. A implementação dever
 
 ### Entrada e navegação
 
-1. **Capa:** nome Brandbook Kali França, versão, status e convite para explorar.
+1. **Capa:** nome Brandbook Kalì Franca, versão, status e convite para explorar.
 2. **Índice:** navegação persistente por âncoras, com indicação da seção ativa quando houver comportamento em JavaScript.
 3. **Introdução:** propósito do brandbook e como consultar a página.
 

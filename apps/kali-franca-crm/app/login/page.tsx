@@ -39,7 +39,7 @@ export default function LoginPage() {
       <section className="auth-card" aria-labelledby="login-title">
         <span className="eyebrow">ECOSSISTEMA DIGITAL · ACESSO INTERNO</span>
         <h1 id="login-title">Entrar no CRM</h1>
-        <p className="lede">Acesse a operação comercial da Kali França com seu usuário autorizado.</p>
+        <p className="lede">Acesse a operação comercial da Kalì Franca com seu usuário autorizado.</p>
         <form onSubmit={handleSubmit} className="auth-form">
           <label htmlFor="email">E-mail</label>
           <input id="email" type="email" autoComplete="email" required value={email} onChange={(event) => setEmail(event.target.value)} />

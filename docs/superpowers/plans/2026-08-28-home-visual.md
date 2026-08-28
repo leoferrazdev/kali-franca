@@ -1,8 +1,8 @@
-# Home Visual Kali França Implementation Plan
+# Home Visual Kalì Franca Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Transform the static root page into a public editorial demonstration of the Kali França brand, applying the approved design system without publishing unvalidated commercial claims.
+**Goal:** Transform the static root page into a public editorial demonstration of the Kalì Franca brand, applying the approved design system without publishing unvalidated commercial claims.
 
 **Architecture:** Keep the root as an independent static page. `index.html` owns semantic content and metadata, root `styles.css` owns the landing composition, and `brandbook/tokens.css` remains the shared source for primitive, semantic, and component tokens. The implementation does not alter the members app or CRM.
 
@@ -162,7 +162,7 @@ Replace the inline placeholder document with an HTML document that keeps the exi
 
   <header class="home-cover" id="inicio">
     <div class="home-shell sitebar">
-      <a class="wordmark" href="#inicio" aria-label="Kali França, início da página">Kali França</a>
+      <a class="wordmark" href="#inicio" aria-label="Kalì Franca, início da página">Kalì Franca</a>
       <p class="mono-label">Demonstração pública · V1</p>
     </div>
 
@@ -190,7 +190,7 @@ Replace the inline placeholder document with an HTML document that keeps the exi
         <div>
           <p class="eyebrow eyebrow--dark">Do ponto para o campo</p>
           <h2 id="passagem-title">Toda presença começa quando algo encontra espaço para <em>se abrir.</em></h2>
-          <p class="lead">A Kali França está construindo uma linguagem que combina profundidade, luz e direção. Esta página é uma demonstração pública do sistema visual em evolução.</p>
+          <p class="lead">A Kalì Franca está construindo uma linguagem que combina profundidade, luz e direção. Esta página é uma demonstração pública do sistema visual em evolução.</p>
         </div>
       </div>
     </section>
@@ -219,7 +219,7 @@ Replace the inline placeholder document with an HTML document that keeps the exi
     </section>
   </main>
 
-  <footer class="site-footer home-shell"><a class="wordmark" href="#inicio">Kali França</a><p class="mono-label">Demonstração pública · oferta em construção</p><a class="text-link" href="/brandbook/">Brandbook <span aria-hidden="true">↗</span></a></footer>
+  <footer class="site-footer home-shell"><a class="wordmark" href="#inicio">Kalì Franca</a><p class="mono-label">Demonstração pública · oferta em construção</p><a class="text-link" href="/brandbook/">Brandbook <span aria-hidden="true">↗</span></a></footer>
 </body>
 ```
 
@@ -242,7 +242,7 @@ git commit -m "feat: estrutura landing demonstrativa da home"
 
 **Files:**
 - Create: `styles.css`
-- Read: `brandbook/tokens.css`, `brandbook/styles.css`, `design-system/Kali Franca - Design System.dc.html`
+- Read: `brandbook/tokens.css`, `brandbook/styles.css`, `design-system/Kalì Franca - Design System.dc.html`
 
 **Interfaces:**
 - Consumes: `--kf-*` variables imported from `brandbook/tokens.css`.

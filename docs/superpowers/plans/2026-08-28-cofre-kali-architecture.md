@@ -1,4 +1,4 @@
-# Arquitetura do Cofre Kali Franca Implementation Plan
+# Arquitetura do Cofre Kalì Franca Implementation Plan
 
 > For agentic workers: REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox syntax.
 
@@ -23,18 +23,18 @@ Tech Stack: Obsidian CLI, Obsidian Flavored Markdown, YAML frontmatter and Git.
 
 ## File Map
 
-- Create: cofre-kali/00 - Índice/MOC - Kali França.md — primary navigation hub.
-- Create: cofre-kali/00 - Índice/Roadmap - Kali França.md — future initiatives only.
+- Create: cofre-kali/00 - Índice/MOC - Kalì Franca.md — primary navigation hub.
+- Create: cofre-kali/00 - Índice/Roadmap - Kalì Franca.md — future initiatives only.
 - Create: cofre-kali/00 - Índice/Como usar este cofre.md — individual operating rules.
 - Move: the 11 existing Markdown notes into the four semantic areas below.
 - Modify: moved notes only to add the area property where missing.
-- Create: cofre-kali/00 - Índice/Arquitetura do cofre Kali Franca - Registro V1.md — final delivery record.
+- Create: cofre-kali/00 - Índice/Arquitetura do cofre Kalì Franca - Registro V1.md — final delivery record.
 
 ## Task 1: Create folders and index notes
 
 Files:
-- Create: 00 - Índice/MOC - Kali França.md
-- Create: 00 - Índice/Roadmap - Kali França.md
+- Create: 00 - Índice/MOC - Kalì Franca.md
+- Create: 00 - Índice/Roadmap - Kalì Franca.md
 - Create: 00 - Índice/Como usar este cofre.md
 
 Interfaces:
@@ -55,7 +55,7 @@ Repeat the probe only for 01 - Contexto e Estratégia, 02 - Marca e Design, 03 -
 
 Create the note with frontmatter type index, status active and area indice. It must contain these headings and links:
 
-    # Kali França — MOC
+    # Kalì Franca — MOC
     ## Estado atual
     ## Contexto e estratégia
     ## Marca e design
@@ -131,7 +131,7 @@ Run properties format=yaml and search for area: in each numbered area. Expected 
 ## Task 4: Validate the graph and register the migration
 
 Files:
-- Create: cofre-kali/00 - Índice/Arquitetura do cofre Kali Franca - Registro V1.md
+- Create: cofre-kali/00 - Índice/Arquitetura do cofre Kalì Franca - Registro V1.md
 - Modify: the moved context note only if its MOC relation is absent.
 
 Interfaces:
@@ -142,8 +142,8 @@ Interfaces:
 
     obsidian vault="cofre-kali" unresolved total
     obsidian vault="cofre-kali" unresolved verbose
-    obsidian vault="cofre-kali" backlinks path="00 - Índice/MOC - Kali França.md" total
-    obsidian vault="cofre-kali" outline path="00 - Índice/MOC - Kali França.md" format=tree
+    obsidian vault="cofre-kali" backlinks path="00 - Índice/MOC - Kalì Franca.md" total
+    obsidian vault="cofre-kali" outline path="00 - Índice/MOC - Kalì Franca.md" format=tree
 
 Expected: zero unresolved links introduced by migration, at least one MOC backlink and all MOC headings present.
 

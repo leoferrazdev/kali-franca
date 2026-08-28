@@ -73,7 +73,7 @@ test('os estilos da área importam os tokens compartilhados e cobrem acessibilid
 test('o layout publica metadados coerentes da área de membros', () => {
   const layout = read('app', 'layout.tsx');
 
-  assert.match(layout, /Kali França \| Área de membros/);
+  assert.match(layout, /Kalì Franca \| Área de membros/);
   assert.match(layout, /experiência|experiencia|membros/i);
   assert.match(layout, /lang="pt-BR"/);
 });

@@ -1,7 +1,7 @@
 ---
 title: Como usar este cofre
 aliases:
-  - Guia do cofre Kali França
+  - Guia do cofre Kalì Franca
 date: 2026-08-28
 tags:
   - kali-franca
@@ -20,7 +20,7 @@ area: indice
 2. Preserve evidências históricas e acrescente atualizações datadas.
 3. Preencha `title`, `date`, `tags`, `type`, `status` e `area`.
 4. Use `[[wikilinks]]` para conectar notas internas.
-5. Atualize o [[MOC - Kali França]] quando uma decisão ou entrega se tornar relevante.
+5. Atualize o [[MOC - Kalì Franca]] quando uma decisão ou entrega se tornar relevante.
 6. Separe fato observado, inferência, hipótese e roadmap.
 7. Versione mudanças importantes no Git.
 
@@ -38,5 +38,5 @@ area: indice
 
 ## Navegação
 
-- [[MOC - Kali França]]
-- [[Roadmap - Kali França]]
+- [[MOC - Kalì Franca]]
+- [[Roadmap - Kalì Franca]]

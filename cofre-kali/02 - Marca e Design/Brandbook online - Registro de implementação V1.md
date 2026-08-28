@@ -17,7 +17,7 @@ area: marca
 
 - Rota: `https://kalifranca.com.br/brandbook`
 - Arquitetura: página estática independente.
-- Fonte visual: `D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html`.
+- Fonte visual: `D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html`.
 - Arquivos: `brandbook/index.html`, `brandbook/tokens.css`, `brandbook/styles.css`.
 - Teste: `tests/brandbook-static.test.mjs`.
 - Asset de prévia social: `profile.jpg`, originado de `referencias/profile.jpg`.

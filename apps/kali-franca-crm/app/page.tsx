@@ -81,7 +81,7 @@ export default async function HomePage() {
   return (
     <main className="crm-page">
       <header className="crm-header">
-        <div><span className="eyebrow">OPERAÇÃO COMERCIAL · HOJE</span><h1>Visão Geral</h1><p className="lede">Uma leitura clara do que está acontecendo na operação comercial da Kali França.</p></div>
+        <div><span className="eyebrow">OPERAÇÃO COMERCIAL · HOJE</span><h1>Visão Geral</h1><p className="lede">Uma leitura clara do que está acontecendo na operação comercial da Kalì Franca.</p></div>
         <div className="header-actions"><a className="primary-action" href="/capas">Criar capa para Instagram</a><span className="user-badge">{profile.full_name} · {profile.role === 'administradora' ? 'Usuário administrador' : 'Usuário comercial'}</span><SignOutButton /></div>
       </header>
       <section className="metric-grid" aria-label="Indicadores de hoje">

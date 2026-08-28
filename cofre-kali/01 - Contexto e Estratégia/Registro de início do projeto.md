@@ -13,7 +13,7 @@ area: contexto
 # Registro de início do projeto
 
 > [!important] Decisão fundadora
-> O cofre do projeto será utilizado para registrar e documentar todo e qualquer avanço e atualização da Kali França.
+> O cofre do projeto será utilizado para registrar e documentar todo e qualquer avanço e atualização da Kalì Franca.
 
 ## Regra operacional
 

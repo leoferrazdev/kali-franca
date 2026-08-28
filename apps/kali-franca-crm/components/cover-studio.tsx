@@ -525,7 +525,7 @@ export default function CoverStudio() {
       <aside className="cover-steps" aria-label="Etapas da criação">
         <span className="eyebrow">ESTÚDIO EDITORIAL · LOCAL</span>
         <h2>Uma capa pronta para publicar.</h2>
-        <p className="cover-helper">Escolha uma mídia, confirme a imagem, ajuste a mensagem e baixe a capa da Kali França.</p>
+        <p className="cover-helper">Escolha uma mídia, confirme a imagem, ajuste a mensagem e baixe a capa da Kalì Franca.</p>
         <ol className="cover-step-list">
           {STAGES.map((item) => (
             <li className={stage === item.id ? 'is-active' : ''} key={item.id}>

@@ -1,4 +1,4 @@
--- CRM Kali França — fundação inicial de dados
+-- CRM Kalì Franca — fundação inicial de dados
 -- Esta migration não insere dados reais e não contém credenciais.
 
 create type public.app_role as enum ('administradora', 'comercial');
@@ -82,7 +82,7 @@ create table public.funnel_events (
 create table public.community_conversions (
   id uuid primary key default gen_random_uuid(),
   lead_id uuid not null unique references public.leads(id) on delete cascade,
-  community_name text not null default 'Kali França',
+  community_name text not null default 'Kalì Franca',
   entered boolean not null,
   converted_at timestamptz not null default now(),
   notes text,

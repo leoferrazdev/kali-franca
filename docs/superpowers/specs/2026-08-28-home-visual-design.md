@@ -1,5 +1,5 @@
 ---
-title: Home visual Kali França - Especificação V1
+title: Home visual Kalì Franca - Especificação V1
 date: 2026-08-28
 tags:
   - kali-franca
@@ -11,11 +11,11 @@ type: specification
 status: aprovada
 ---
 
-# Home visual Kali França — Especificação V1
+# Home visual Kalì Franca — Especificação V1
 
 ## Contexto
 
-A raiz de `https://kalifranca.com.br/` ainda usa uma página placeholder com CSS próprio, cores roxas e tipografia de sistema. O design system localizado em `D:\LEONARDO\Kali Franca\design-system` define a identidade visual da Kali França e deve orientar a primeira landing page pública demonstrativa.
+A raiz de `https://kalifranca.com.br/` ainda usa uma página placeholder com CSS próprio, cores roxas e tipografia de sistema. O design system localizado em `D:\LEONARDO\Kali Franca\design-system` define a identidade visual da Kalì Franca e deve orientar a primeira landing page pública demonstrativa.
 
 ## Decisões aprovadas
 
@@ -35,7 +35,7 @@ Aplicar na página inicial a identidade visual, a paleta, a tipografia, o vocabu
 
 ### 1. Capa — expansão
 
-Exibe o conceito `Expansão da Potência`, a marca Kali França, o rótulo `Demonstração pública · oferta em construção`, uma frase de apresentação sem promessa factual e o CTA `Conhecer o sistema` para `/brandbook/`.
+Exibe o conceito `Expansão da Potência`, a marca Kalì Franca, o rótulo `Demonstração pública · oferta em construção`, uma frase de apresentação sem promessa factual e o CTA `Conhecer o sistema` para `/brandbook/`.
 
 ### 2. A passagem
 

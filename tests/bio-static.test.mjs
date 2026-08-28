@@ -53,7 +53,7 @@ test('a bio possui estrutura acessível e estados responsivos', () => {
 
   assert.match(html, /href=["']#conteudo["'][^>]*>[^<]*Pular para o conteúdo/i);
   assert.match(html, /<main[^>]+id=["']conteudo["']/i);
-  assert.match(html, /aria-label=["']Destinos da Kali França["']/i);
+  assert.match(html, /aria-label=["']Destinos da Kalì Franca["']/i);
   assert.match(html, /target=["']_blank["']/i);
   assert.match(html, /rel=["']noopener noreferrer["']/i);
   assert.match(styles, /:focus-visible/);

@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Substituir a tela provisória da área de membros por uma fundação visual e de experiência coerente com a marca Kali França, preparada para receber autenticação e conteúdo real sem inventar dados, fluxos ou permissões.
+Substituir a tela provisória da área de membros por uma fundação visual e de experiência coerente com a marca Kalì Franca, preparada para receber autenticação e conteúdo real sem inventar dados, fluxos ou permissões.
 
 Esta especificação descreve a primeira camada do produto. A implementação funcional de login, cadastro, recuperação de acesso, sessão, conteúdo e progresso depende de um contrato técnico posterior para provedor, variáveis de ambiente, modelo de usuário e fonte de conteúdo.
 
@@ -10,9 +10,9 @@ Esta especificação descreve a primeira camada do produto. A implementação fu
 
 - `https://membros.kalifranca.com.br/` responde atualmente com HTTP 200, mas exibe apenas a tela provisória “Área de membros”.
 - `apps/kali-franca-membros/app/page.tsx` contém somente o shell provisório; não há autenticação, sessão, conteúdo, módulos ou progresso implementados.
-- `apps/kali-franca-membros/app/globals.css` usa estilos genéricos e não está conectado ao sistema visual da Kali França.
+- `apps/kali-franca-membros/app/globals.css` usa estilos genéricos e não está conectado ao sistema visual da Kalì Franca.
 - O CRM possui autenticação e regras voltadas a usuários administrativos/comerciais. Sua estrutura não deve ser copiada para a área de membros sem uma decisão explícita de domínio e autorização.
-- A fonte visual do projeto é `design-system/Kali Franca - Design System.dc.html`; a implementação de tokens existente está em `brandbook/tokens.css`.
+- A fonte visual do projeto é `design-system/Kalì Franca - Design System.dc.html`; a implementação de tokens existente está em `brandbook/tokens.css`.
 - O cofre `cofre-kali` registra como princípios de experiência: contraste mínimo, foco visível, navegação por teclado, áreas de toque de pelo menos 44px, responsividade e respeito a `prefers-reduced-motion`.
 
 ## Decisão de arquitetura
@@ -46,7 +46,7 @@ Essa separação permite evoluir a experiência sem acoplar a interface a uma de
 
 ## Direção visual
 
-A área de membros deve parecer uma extensão natural do universo Kali França: contemplativa, sofisticada e orientada a transformação, com clareza suficiente para uso recorrente.
+A área de membros deve parecer uma extensão natural do universo Kalì Franca: contemplativa, sofisticada e orientada a transformação, com clareza suficiente para uso recorrente.
 
 ### Paleta
 
@@ -76,7 +76,7 @@ A área de membros deve parecer uma extensão natural do universo Kali França: 
 
 ### Desktop
 
-1. Cabeçalho leve com marca Kali França e retorno ao domínio principal.
+1. Cabeçalho leve com marca Kalì Franca e retorno ao domínio principal.
 2. Painel visual com halo/arco e mensagem curta de acolhimento.
 3. Painel de formulário com título, explicação objetiva, campos, ação principal e links auxiliares.
 4. Rodapé mínimo com referência de privacidade/termos somente quando os destinos oficiais existirem.

@@ -26,7 +26,7 @@ O design system local do projeto está em:
 
 Arquivos identificados no início da arquitetura:
 
-- `Kali Franca - Design System.dc.html`
+- `Kalì Franca - Design System.dc.html`
 - `support.js`
 - `.thumbnail`
 

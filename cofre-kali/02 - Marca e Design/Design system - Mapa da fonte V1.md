@@ -8,7 +8,7 @@ tags:
   - auditoria
 type: source-audit
 status: preliminary
-source: D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html
+source: D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html
 area: marca
 ---
 
@@ -19,7 +19,7 @@ area: marca
 
 ## Identificação
 
-- Fonte: `D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html`
+- Fonte: `D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html`
 - Versão declarada na fonte: `Brand Design System · V1`
 - Conceito criativo observado: **Expansão da Potência**
 - Princípio visual observado: tornar visível a passagem de uma mulher da realidade que a limita para a realidade que expressa sua potência.

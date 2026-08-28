@@ -79,5 +79,5 @@ test('o entrypoint responde quando iniciado a partir da raiz do monorepo', { ski
 
   assert.equal(response.status, 200);
   assert.match(body, /Área de membros/);
-  assert.match(stdout.join(''), /Kali França Membros disponível/);
+  assert.match(stdout.join(''), /Kalì Franca Membros disponível/);
 });

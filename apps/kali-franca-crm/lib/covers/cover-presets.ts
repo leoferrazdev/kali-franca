@@ -8,7 +8,7 @@ export type CopyPosition = 'top' | 'center' | 'bottom';
 export const COPY_POSITIONS = [
   { id: 'top', label: 'Topo', description: 'Mensagem no início da área segura.' },
   { id: 'center', label: 'Centro', description: 'Mensagem no centro da área segura.' },
-  { id: 'bottom', label: 'Base', description: 'Posição editorial padrão da Kali França.' },
+  { id: 'bottom', label: 'Base', description: 'Posição editorial padrão da Kalì Franca.' },
 ] as const satisfies readonly { id: CopyPosition; label: string; description: string }[];
 
 export const META_SAFE_ZONE = {

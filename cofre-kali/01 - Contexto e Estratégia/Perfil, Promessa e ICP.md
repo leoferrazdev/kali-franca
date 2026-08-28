@@ -4,7 +4,7 @@ area: contexto
 [https://www.instagram.com/kalifrancaa/](https://www.instagram.com/kalifrancaa/)   
 @kalifrancaa
 
-Kali | Terapeuta Energética 5D | Despertar da Consciência  
+Kalì | Terapeuta Energética 5D | Despertar da Consciência
 Falo da frequência que desperta sua potência divina e cria sua nova realidade  
 Você confiante • feliz • próspera  
 \+2.500 vidas transformadas | 10 países

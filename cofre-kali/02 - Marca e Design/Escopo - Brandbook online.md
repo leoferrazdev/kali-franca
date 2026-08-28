@@ -16,7 +16,7 @@ area: marca
 
 ## Decisão registrada
 
-Criar a rota `https://kalifranca.com.br/brandbook` como uma página evolutiva para construção, consulta e registro da identidade visual e do brandbook da Kali França.
+Criar a rota `https://kalifranca.com.br/brandbook` como uma página evolutiva para construção, consulta e registro da identidade visual e do brandbook da Kalì Franca.
 
 A página deverá reunir, em uma apresentação web coerente, o conhecimento derivado de `D:\LEONARDO\Kali Franca\design-system`, mantendo o cofre como base de conhecimento e histórico das decisões.
 
@@ -57,7 +57,7 @@ O plano cobre o contrato estático em TDD, a entrada HTML, os tokens em três ca
 
 ## Fontes e limites
 
-- Fonte visual primária: `D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html`.
+- Fonte visual primária: `D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html`.
 - Base de conhecimento e histórico: cofre `cofre-kali`.
 - Camada de apresentação: rota pública `/brandbook`.
 - A indicação `Documento estratégico / Confidencial` da fonte é apenas ilustrativa e não impede a publicação pública.

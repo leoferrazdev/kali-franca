@@ -78,11 +78,11 @@ Definir e documentar o contrato técnico da autenticação real antes de conecta
 
 ## Relações
 
-- [[MOC - Kali França]]
+- [[MOC - Kalì Franca]]
 - [[Diagnóstico visual inicial - Experiência web]]
 - [[Design system como base de conhecimento]]
 - [[Design system - Mapa da fonte V1]]
-- [[Roadmap - Kali França]]
+- [[Roadmap - Kalì Franca]]
 
 
 ## Verificação pós-push — 2026-08-28

@@ -4,7 +4,7 @@
 
 ## Resultado esperado
 
-Entregar uma área de membros navegável e responsiva, coerente com o design system da Kali França, sem dados fictícios e sem acoplamento ao CRM:
+Entregar uma área de membros navegável e responsiva, coerente com o design system da Kalì Franca, sem dados fictícios e sem acoplamento ao CRM:
 
 - `/` e `/login/`: entrada visual para login, com estado de configuração ausente honesto;
 - `/cadastro/`: estrutura visual de cadastro, sem criação real de conta;
@@ -94,7 +94,7 @@ Se todas as verificações passarem, criar commit com os arquivos da implementa�
 ## Critérios de aceite
 
 - A área não exibe mais o cartão genérico provisório.
-- A interface usa os tokens, famílias tipográficas e paleta da Kali França.
+- A interface usa os tokens, famílias tipográficas e paleta da Kalì Franca.
 - Login, cadastro e área preparada têm estrutura clara em desktop e mobile.
 - Nenhum fluxo afirma que autenticação ou conteúdo funcionam quando não estão configurados.
 - Campos e feedback são acessíveis por teclado e leitores de tela.

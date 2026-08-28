@@ -7,7 +7,7 @@ Criar a página pública `https://kalifranca.com.br/bio/` como um ponto único d
 ## Direção visual
 
 - Usar a referência `https://pocket-kindness-flow.lovable.app/` somente como referência de arquitetura: perfil no topo, cartão central e destinos empilhados.
-- Aplicar os tokens compartilhados em `brandbook/tokens.css`, preservando o vocabulário visual da Kali: Umbra, Vinho Profundo, Ameixa Sagrada, Ouro Fosco, Cobre Aurora e Alabastro.
+- Aplicar os tokens compartilhados em `brandbook/tokens.css`, preservando o vocabulário visual da Kalì: Umbra, Vinho Profundo, Ameixa Sagrada, Ouro Fosco, Cobre Aurora e Alabastro.
 - Usar Cormorant Garamond para o nome e títulos, Jost para leitura e IBM Plex Mono para rótulos/estados.
 - Criar uma atmosfera de campo escuro com halos, gradientes quentes e órbitas finas, mantendo o conteúdo como foco.
 - Em telas largas, o cartão permanece centralizado com espaço respirado; em telas estreitas, ocupa a largura disponível sem simular uma moldura de telefone.
@@ -18,7 +18,7 @@ Criar a página pública `https://kalifranca.com.br/bio/` como um ponto único d
 2. **Reprogramação Energética** — cartão visível, sem `href`, com estado explícito `Em breve`.
 3. **Canal do YouTube** — link externo para `https://www.youtube.com/channel/UCeaSCWbFhL3TOuIdYxzH3OQ`.
 
-O perfil exibirá `Kali França`, o texto `Presença, clareza e expansão.` e o asset público já aprovado `/profile.jpg`. Não serão adicionados preços, métricas, depoimentos, garantias ou promessas de resultado.
+O perfil exibirá `Kalì Franca`, o texto `Presença, clareza e expansão.` e o asset público já aprovado `/profile.jpg`. Não serão adicionados preços, métricas, depoimentos, garantias ou promessas de resultado.
 
 ## Arquitetura técnica
 

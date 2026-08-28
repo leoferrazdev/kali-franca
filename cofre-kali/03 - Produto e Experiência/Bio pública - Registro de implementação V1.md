@@ -32,7 +32,7 @@ area: produto
 ## Decisões visuais
 
 - A referência https://pocket-kindness-flow.lovable.app/ foi usada apenas para a arquitetura de perfil + cartões de destino.
-- A composição foi adaptada para o sistema da Kali: campo escuro, halos, órbitas, linhas de frequência, superfícies vinho/umbra e ouro de uso restrito.
+- A composição foi adaptada para o sistema da Kalì: campo escuro, halos, órbitas, linhas de frequência, superfícies vinho/umbra e ouro de uso restrito.
 - A tipografia usa Cormorant Garamond, Jost e IBM Plex Mono.
 - O cartão de Reprogramação Energética é um estado não interativo, sem href, para não inventar um destino.
 - A página não publica métricas, preços, depoimentos, garantias ou resultados não validados.
@@ -60,8 +60,8 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 
 ## Relações
 
-- [[MOC - Kali França]]
+- [[MOC - Kalì Franca]]
 - [[Design system como base de conhecimento]]
 - [[Design system - Mapa da fonte V1]]
 - [[Home visual - Registro de implementação V1]]
-- [[Roadmap - Kali França]]
+- [[Roadmap - Kalì Franca]]

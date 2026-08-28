@@ -19,7 +19,7 @@ area: produto
 
 - Provedor escolhido: Supabase Auth.
 - Integração: @supabase/ssr com cliente browser, cliente server e cookies de sessão.
-- Escopo: identidade dos membros da Kali França, separado do CRM administrativo/comercial.
+- Escopo: identidade dos membros da Kalì Franca, separado do CRM administrativo/comercial.
 - A home /membros/ é dinâmica e valida auth.getUser() server-side antes de exibir a área protegida.
 - O proxy do Next atualiza a sessão e redireciona membros sem sessão para /login/.
 - Usuários autenticados são redirecionados de /, /login/ e /cadastro/ para /membros/.
@@ -69,15 +69,15 @@ Sem variáveis configuradas, as páginas permanecem renderizáveis e exibem esta
 
 ## Próxima etapa determinística
 
-Configurar o projeto Supabase próprio da Kali França no ambiente de deploy e validar o fluxo com um usuário de teste controlado. Somente após essa evidência implementar recuperação de senha, perfil de membro, conteúdo, módulos, progresso e regras de publicação.
+Configurar o projeto Supabase próprio da Kalì Franca no ambiente de deploy e validar o fluxo com um usuário de teste controlado. Somente após essa evidência implementar recuperação de senha, perfil de membro, conteúdo, módulos, progresso e regras de publicação.
 
 ## Relações
 
-- [[MOC - Kali França]]
+- [[MOC - Kalì Franca]]
 - [[Área de membros - Registro de implementação V1]]
 - [[Diagnóstico visual inicial - Experiência web]]
 - [[Design system como base de conhecimento]]
-- [[Roadmap - Kali França]]
+- [[Roadmap - Kalì Franca]]
 
 
 ## Verificação pública — 2026-08-28
@@ -91,7 +91,7 @@ Configurar o projeto Supabase próprio da Kali França no ambiente de deploy e v
 
 ## Configuração operacional do Supabase Auth — 2026-08-28
 
-- Projeto verificado: Kali Franca (`fjnacvlcaveoiwedmdgy`), status Healthy no painel.
+- Projeto verificado: Kalì Franca (`fjnacvlcaveoiwedmdgy`), status Healthy no painel.
 - Site URL salva: `https://membros.kalifranca.com.br`.
 - Redirect URL salva: `https://membros.kalifranca.com.br/auth/callback`.
 - Cadastro de novos usuários: habilitado.

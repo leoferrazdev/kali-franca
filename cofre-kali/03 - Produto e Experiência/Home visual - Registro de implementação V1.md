@@ -17,7 +17,7 @@ area: produto
 
 - Rota: `https://kalifranca.com.br/`
 - Arquitetura: landing page estática editorial, pública e demonstrativa.
-- Fonte visual: `D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html`.
+- Fonte visual: `D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html`.
 - Tokens compartilhados: `brandbook/tokens.css`.
 - Arquivos principais: `index.html`, `styles.css`, `brandbook/tokens.css`.
 - Contrato estático: `tests/home-static.test.mjs`.

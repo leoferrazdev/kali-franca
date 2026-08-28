@@ -1,5 +1,5 @@
 ---
-title: Arquitetura do cofre Kali Franca
+title: Arquitetura do cofre Kalì Franca
 date: 2026-08-28
 tags:
   - kali-franca
@@ -10,11 +10,11 @@ type: decision
 status: approved
 ---
 
-# Arquitetura do cofre Kali França
+# Arquitetura do cofre Kalì Franca
 
 ## Objetivo
 
-Transformar `cofre-kali` em uma base de conhecimento pessoal, navegável e evolutiva para decisões, identidade, produto, operação e roadmap da Kali França.
+Transformar `cofre-kali` em uma base de conhecimento pessoal, navegável e evolutiva para decisões, identidade, produto, operação e roadmap da Kalì Franca.
 
 ## Contexto confirmado
 
@@ -31,10 +31,10 @@ Adotar um hub central com áreas semânticas numeradas. O hub concentra a navega
 ```text
 cofre-kali/
 ├── 00 - Índice/
-│   ├── MOC - Kali França.md
-│   ├── Roadmap - Kali França.md
+│   ├── MOC - Kalì Franca.md
+│   ├── Roadmap - Kalì Franca.md
 │   ├── Como usar este cofre.md
-│   └── Arquitetura do cofre Kali Franca - Registro V1.md
+│   └── Arquitetura do cofre Kalì Franca - Registro V1.md
 ├── 01 - Contexto e Estratégia/
 ├── 02 - Marca e Design/
 ├── 03 - Produto e Experiência/
@@ -55,7 +55,7 @@ Os números estabilizam a ordem visual das pastas. Nenhum arquivo será apagado 
 
 ## Hub central
 
-`00 - Índice/MOC - Kali França.md` será a entrada principal e conterá:
+`00 - Índice/MOC - Kalì Franca.md` será a entrada principal e conterá:
 
 - estado atual dos domínios principal, membros e brandbook;
 - links para contexto e estratégia;
@@ -66,9 +66,9 @@ Os números estabilizam a ordem visual das pastas. Nenhum arquivo será apagado 
 - entregas recentes com estado verificável;
 - acesso direto ao roadmap.
 
-`00 - Índice/Roadmap - Kali França.md` conterá somente iniciativas futuras já identificadas, especialmente a substituição da página de vendas demonstrativa por uma oferta definitiva. Cada item terá estado explícito e não será apresentado como compromisso ou fato comercial.
+`00 - Índice/Roadmap - Kalì Franca.md` conterá somente iniciativas futuras já identificadas, especialmente a substituição da página de vendas demonstrativa por uma oferta definitiva. Cada item terá estado explícito e não será apresentado como compromisso ou fato comercial.
 
-`00 - Índice/Como usar este cofre.md` explicará como criar notas, escolher a área, preencher propriedades, separar evidência de hipótese e atualizar o MOC. O registro `00 - Índice/Arquitetura do cofre Kali Franca - Registro V1.md` conservará a evidência da migração e suas validações.
+`00 - Índice/Como usar este cofre.md` explicará como criar notas, escolher a área, preencher propriedades, separar evidência de hipótese e atualizar o MOC. O registro `00 - Índice/Arquitetura do cofre Kalì Franca - Registro V1.md` conservará a evidência da migração e suas validações.
 
 ## Convenção de propriedades
 

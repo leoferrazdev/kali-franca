@@ -20,7 +20,7 @@ test('a rota estática do brandbook possui entrada pública semântica', () => {
 
   assert.ok(existsSync(indexPath), 'brandbook/index.html deve existir');
   assert.match(html, /<html[^>]+lang=["']pt-BR["']/i);
-  assert.match(html, /<title>[^<]*Brandbook[^<]*Kali França/i);
+  assert.match(html, /<title>[^<]*Brandbook[^<]*Kalì Franca/i);
   assert.match(html, /<a[^>]+href=["']#conteudo["'][^>]*>[^<]*Pular/i);
   assert.match(html, /<main[^>]+id=["']conteudo["']/i);
   assert.equal((html.match(/<h1\b/gi) || []).length, 1);
@@ -55,7 +55,7 @@ test('a página explicita o conceito, as fontes tipográficas e a origem do sist
   assert.match(html, /Cormorant Garamond/i);
   assert.match(html, /Jost/i);
   assert.match(html, /IBM Plex Mono/i);
-  assert.match(html, /Kali Franca - Design System\.dc\.html/i);
+  assert.match(html, /Kalì Franca - Design System\.dc\.html/i);
 });
 
 test('os tokens preservam as três camadas do design system', () => {

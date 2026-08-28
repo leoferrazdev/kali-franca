@@ -14,7 +14,7 @@ area: marca
 # Design system como base de conhecimento
 
 > [!important] Objetivo definido
-> O design system da Kali França também deverá ser documentado dentro do cofre para consulta como base de conhecimento do projeto.
+> O design system da Kalì Franca também deverá ser documentado dentro do cofre para consulta como base de conhecimento do projeto.
 
 ## Conteúdo a documentar
 

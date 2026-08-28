@@ -18,7 +18,7 @@ area: produto
 
 ## Pergunta central
 
-Como aplicar o mesmo design system no site institucional e na área de membros sem comprometer funcionalidades existentes, criando uma experiência visual única, consistente e reconhecível como parte da marca Kali França?
+Como aplicar o mesmo design system no site institucional e na área de membros sem comprometer funcionalidades existentes, criando uma experiência visual única, consistente e reconhecível como parte da marca Kalì Franca?
 
 ## Estado público observado em 2026-08-28
 
@@ -27,7 +27,7 @@ Como aplicar o mesmo design system no site institucional e na área de membros s
 - URL: [kalifranca.com.br](https://kalifranca.com.br)
 - Resposta observada: HTTP 200;
 - conteúdo observado: página estática de preparação;
-- título: `Kali França`;
+- título: `Kalì Franca`;
 - headline: `Um novo espaço está sendo preparado.`
 
 ### Área de membros
@@ -35,7 +35,7 @@ Como aplicar o mesmo design system no site institucional e na área de membros s
 - URL: [membros.kalifranca.com.br](https://membros.kalifranca.com.br)
 - resposta observada: HTTP 200;
 - tecnologia observada: Next.js prerenderizado;
-- título: `Kali França | Área de membros`;
+- título: `Kalì Franca | Área de membros`;
 - conteúdo observado: shell com `Área de membros` e mensagem de próxima etapa.
 
 ## Estado local do repositório
@@ -53,7 +53,7 @@ O design system existe como documento visual externo e detalhado, mas a implemen
 
 ## Fonte visual observada
 
-O arquivo `D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html` declara `Brand Design System · V1`, o conceito **Expansão da Potência**, tipografia `Cormorant Garamond`, `IBM Plex Mono` e `Jost`, além da paleta quente documentada em [[Design system - Mapa da fonte V1]].
+O arquivo `D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html` declara `Brand Design System · V1`, o conceito **Expansão da Potência**, tipografia `Cormorant Garamond`, `IBM Plex Mono` e `Jost`, além da paleta quente documentada em [[Design system - Mapa da fonte V1]].
 
 ## Referência secundária de UX
 
@@ -72,7 +72,7 @@ O `ui-ux-pro-max` foi consultado como referência de auditoria. Foram retidos ap
 
 ## Recomendação conflitante descartada
 
-A busca genérica retornou rosa/lavanda, Liquid Glass, Caveat e Quicksand. Essas escolhas não serão adotadas porque contradizem a fonte visual V1 já definida para Kali França. O `ui-ux-pro-max` será usado para qualidade de UX, acessibilidade e responsividade, não para substituir a identidade aprovada.
+A busca genérica retornou rosa/lavanda, Liquid Glass, Caveat e Quicksand. Essas escolhas não serão adotadas porque contradizem a fonte visual V1 já definida para Kalì Franca. O `ui-ux-pro-max` será usado para qualidade de UX, acessibilidade e responsividade, não para substituir a identidade aprovada.
 
 ## Impacto para a arquitetura
 

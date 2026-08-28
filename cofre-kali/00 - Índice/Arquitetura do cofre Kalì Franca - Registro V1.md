@@ -1,7 +1,7 @@
 ---
-title: Arquitetura do cofre Kali Franca - Registro V1
+title: Arquitetura do cofre Kalì Franca - Registro V1
 aliases:
-  - Registro da arquitetura do cofre Kali França
+  - Registro da arquitetura do cofre Kalì Franca
 date: 2026-08-28
 tags:
   - kali-franca
@@ -13,7 +13,7 @@ status: local-validado
 area: indice
 ---
 
-# Arquitetura do cofre Kali Franca - Registro V1
+# Arquitetura do cofre Kalì Franca - Registro V1
 
 ## Entrega
 
@@ -52,8 +52,8 @@ Status controlados: `active`, `approved`, `preliminary`, `local-validado`, `publ
 
 ## Relações
 
-- [[MOC - Kali França]]
-- [[Roadmap - Kali França]]
+- [[MOC - Kalì Franca]]
+- [[Roadmap - Kalì Franca]]
 - [[Como usar este cofre]]
 
 

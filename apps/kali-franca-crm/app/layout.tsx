@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'CRM Kali França',
-  description: 'Operação comercial do ecossistema digital da Kali França.',
+  title: 'CRM Kalì Franca',
+  description: 'Operação comercial do ecossistema digital da Kalì Franca.',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

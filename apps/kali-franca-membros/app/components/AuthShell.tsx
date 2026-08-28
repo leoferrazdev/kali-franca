@@ -12,7 +12,7 @@ export function AuthShell({ children }: AuthShellProps) {
       <Atmosphere />
       <div className="auth-shell__topline">
         <BrandMark />
-        <span className="topline-note">Experiência Kali França</span>
+        <span className="topline-note">Experiência Kalì Franca</span>
       </div>
       <div className="auth-shell__layout">
         <section className="auth-story" aria-labelledby="auth-story-title">
@@ -33,7 +33,7 @@ export function AuthShell({ children }: AuthShellProps) {
           {children}
         </section>
       </div>
-      <p className="auth-shell__footer">Kali França <span aria-hidden="true">·</span> um espaço em construção consciente</p>
+      <p className="auth-shell__footer">Kalì Franca <span aria-hidden="true">·</span> um espaço em construção consciente</p>
     </main>
   );
 }

@@ -1,6 +1,6 @@
-# Kali França
+# Kalì Franca
 
-Monorepositório do ecossistema digital da Kali França. O workspace inicial é um shell técnico Next.js para `membros.kalifranca.com.br`; não há autenticação, dados ou funcionalidades fictícias. O CRM operacional permanece preparado para um roadmap futuro.
+Monorepositório do ecossistema digital da Kalì Franca. O workspace inicial é um shell técnico Next.js para `membros.kalifranca.com.br`; não há autenticação, dados ou funcionalidades fictícias. O CRM operacional permanece preparado para um roadmap futuro.
 
 ## Arquitetura
 
@@ -28,14 +28,14 @@ O servidor de produção usa `PORT` quando essa variável é fornecida pelo ambi
 PORT=3000 npm run start
 ```
 
-Para o CRM, copie `apps/kali-franca-crm/.env.example` para um arquivo de ambiente local. Para a área de membros, use `apps/kali-franca-membros/.env.example`. Em ambos os casos, preencha somente as credenciais públicas do projeto Supabase independente da Kali França:
+Para o CRM, copie `apps/kali-franca-crm/.env.example` para um arquivo de ambiente local. Para a área de membros, use `apps/kali-franca-membros/.env.example`. Em ambos os casos, preencha somente as credenciais públicas do projeto Supabase independente da Kalì Franca:
 
 ```dotenv
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
 ```
 
-Não reutilize o projeto Supabase da Uli Zarzana. Não versionamos `.env`, usuários, leads, tokens ou chaves privadas. A migration inicial é somente estrutura técnica do CRM; ela não configura conteúdo ou perfil de membros. A autenticação de membros usa o Auth do projeto Supabase da Kali França e continua em estado honesto quando as variáveis estão ausentes.
+Não reutilize o projeto Supabase da Uli Zarzana. Não versionamos `.env`, usuários, leads, tokens ou chaves privadas. A migration inicial é somente estrutura técnica do CRM; ela não configura conteúdo ou perfil de membros. A autenticação de membros usa o Auth do projeto Supabase da Kalì Franca e continua em estado honesto quando as variáveis estão ausentes.
 
 ## Publicação
 

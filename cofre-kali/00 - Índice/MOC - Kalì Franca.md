@@ -1,7 +1,7 @@
 ---
-title: MOC - Kali França
+title: MOC - Kalì Franca
 aliases:
-  - Kali França
+  - Kalì Franca
 date: 2026-08-28
 tags:
   - kali-franca
@@ -11,7 +11,7 @@ status: active
 area: indice
 ---
 
-# Kali França — MOC
+# Kalì Franca — MOC
 
 > [!abstract] Função
 > Esta é a entrada central do cofre. Use os links abaixo para consultar contexto, marca, produto, operação e próximos movimentos.
@@ -57,12 +57,12 @@ area: indice
 
 ## Próximo movimento
 
-- [[Roadmap - Kali França]]
+- [[Roadmap - Kalì Franca]]
 - [[Como usar este cofre]]
 
 ## Registro da arquitetura
 
-- [[Arquitetura do cofre Kali Franca - Registro V1]]
+- [[Arquitetura do cofre Kalì Franca - Registro V1]]
 
 ## Bio pública
 
@@ -111,3 +111,11 @@ area: indice
 - Hostinger configurou as duas variáveis públicas do Supabase e publicou o commit `c887bbe` na `main` com status Concluído.
 - `/membros` agora responde HTTP 307 para `/login/` quando acessado sem sessão; o estado público de prévia deixou de ser servido pelo runtime configurado.
 - O login real com a conta de aplicação criada permanece como validação manual controlada; credenciais não são registradas no cofre.
+
+## Decisão de assinatura da marca — 2026-08-28
+
+- Assinatura oficial: **Kalì Franca**.
+- A grafia anterior não deve ser usada em páginas, metadados, textos de interface, notas ou nomes documentais do projeto.
+- Identificadores técnicos permanecem estáveis: `kali-franca`, `cofre-kali`, os domínios `kalifranca.com.br` e `membros.kalifranca.com.br`, os caminhos de aplicação e a pasta física `D:\LEONARDO\Kali Franca`.
+- O arquivo-fonte visual passou a se chamar `D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html`; as notas centrais do cofre também foram renomeadas para a nova assinatura.
+- Validação desta atualização: nenhuma ocorrência antiga em texto público ou wikilink; somente referências técnicas preservadas.
