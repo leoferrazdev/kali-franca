@@ -1,0 +1,47 @@
+:root {
+  /* Primitivos: valores observados no design system V1 */
+  --kf-color-umbra-500: #0E0B0A;
+  --kf-color-vinho-profundo-500: #3A1424;
+  --kf-color-ameixa-sagrada-500: #7A2B44;
+  --kf-color-ouro-fosco-500: #C9A66B;
+  --kf-color-alabastro-500: #F4EDE4;
+  --kf-color-cobre-aurora-500: #C97A52;
+  --kf-color-areia-nude-500: #E2D4C3;
+  --kf-color-nevoa-mineral-500: #9AA39F;
+  --kf-color-cinza-calido-500: #B7ABA0;
+  --kf-color-verde-salvia-500: #5F7A6A;
+
+  --kf-space-1: 0.5rem;
+  --kf-space-2: 0.75rem;
+  --kf-space-3: 1rem;
+  --kf-space-4: 1.5rem;
+  --kf-space-5: 2rem;
+  --kf-space-6: 3rem;
+  --kf-space-7: 5rem;
+  --kf-space-8: 8rem;
+
+  --kf-font-display: "Cormorant Garamond", Georgia, serif;
+  --kf-font-body: "Jost", Arial, sans-serif;
+  --kf-font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  /* Semânticos: papéis de interface */
+  --kf-color-bg-canvas: var(--kf-color-umbra-500);
+  --kf-color-bg-surface: var(--kf-color-vinho-profundo-500);
+  --kf-color-bg-paper: var(--kf-color-alabastro-500);
+  --kf-color-bg-muted: var(--kf-color-areia-nude-500);
+  --kf-color-text-primary: var(--kf-color-alabastro-500);
+  --kf-color-text-secondary: var(--kf-color-cinza-calido-500);
+  --kf-color-text-on-paper: var(--kf-color-umbra-500);
+  --kf-color-accent: var(--kf-color-ouro-fosco-500);
+  --kf-color-accent-warm: var(--kf-color-cobre-aurora-500);
+  --kf-color-border-dark: rgba(244, 237, 228, 0.18);
+  --kf-color-border-light: rgba(14, 11, 10, 0.16);
+
+  /* Tokens de componente: decisões aplicadas */
+  --kf-component-card-bg: var(--kf-color-bg-surface);
+  --kf-component-card-border: var(--kf-color-border-dark);
+  --kf-component-button-primary-bg: var(--kf-color-accent);
+  --kf-component-button-primary-text: var(--kf-color-umbra-500);
+  --kf-component-code-bg: rgba(14, 11, 10, 0.08);
+  --kf-component-swatch-radius: 999px;
+}
