@@ -448,6 +448,11 @@ button:disabled {
   transform: translateY(0);
 }
 
+.primary-button:disabled {
+  opacity: 0.68;
+  transform: none;
+}
+
 .primary-button__arrow {
   font-size: 1.15rem;
 }
@@ -554,6 +559,15 @@ button:disabled {
   align-items: center;
   display: flex;
   gap: 1rem;
+}
+
+.member-header__email {
+  color: var(--members-text-muted);
+  font-size: 0.78rem;
+  max-width: 16rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .status-chip {
@@ -878,6 +892,10 @@ button:disabled {
 
   .member-header__context {
     gap: 0;
+  }
+
+  .member-header__email {
+    display: none;
   }
 
   .status-chip {

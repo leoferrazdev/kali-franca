@@ -1,9 +1,12 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
+import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { FormField } from './FormField';
 import { InlineFeedback } from './InlineFeedback';
+import { LoadingState } from './LoadingState';
 import { PrimaryButton } from './PrimaryButton';
+import { createSupabaseBrowserClient } from '../../lib/supabase/browser';
 
 export type AuthMode = 'login' | 'signup';
 
@@ -12,12 +15,60 @@ type AuthPanelProps = {
 };
 
 export function AuthPanel({ mode }: AuthPanelProps) {
+  const router = useRouter();
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [notice, setNotice] = useState('');
+  const [pending, setPending] = useState(false);
   const isSignup = mode === 'signup';
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setNotice('Acesso em preparação: a autenticação será ativada em uma próxima etapa.');
+    setNotice('');
+    setPending(true);
+
+    try {
+      const supabase = createSupabaseBrowserClient();
+
+      if (isSignup) {
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: { full_name: fullName.trim() },
+            emailRedirectTo: `${window.location.origin}/auth/callback`,
+          },
+        });
+
+        if (error) throw error;
+
+        if (data.session) {
+          router.replace('/membros/');
+          router.refresh();
+          return;
+        }
+
+        setNotice('Cadastro iniciado. Verifique seu e-mail para ativar o acesso.');
+      } else {
+        const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+        if (error) throw error;
+
+        router.replace('/membros/');
+        router.refresh();
+      }
+    } catch (cause) {
+      if (cause instanceof Error && cause.message === 'Configuração do Supabase ausente.') {
+        setNotice('Acesso em preparação: a autenticação ainda não foi configurada neste ambiente.');
+      } else if (isSignup) {
+        setNotice('Não foi possível iniciar o cadastro. Revise os dados e tente novamente.');
+      } else {
+        setNotice('E-mail ou senha não reconhecidos.');
+      }
+    } finally {
+      setPending(false);
+    }
   }
 
   function handleRecovery() {
@@ -33,10 +84,10 @@ export function AuthPanel({ mode }: AuthPanelProps) {
       </div>
 
       <form className="auth-form" onSubmit={handleSubmit}>
-        {isSignup ? <FormField id="member-name" name="name" label="Como podemos chamar você?" placeholder="Seu nome" autoComplete="name" required /> : null}
-        <FormField id="member-email" name="email" label="E-mail" type="email" placeholder="voce@exemplo.com" autoComplete="email" required />
-        <FormField id="member-password" name="password" label="Senha" type="password" placeholder="Sua senha" autoComplete={isSignup ? 'new-password' : 'current-password'} required minLength={8} />
-        <PrimaryButton type="submit">{isSignup ? 'Solicitar acesso' : 'Acessar espaço'}</PrimaryButton>
+        {isSignup ? <FormField id="member-name" label="Como podemos chamar você?" placeholder="Seu nome" autoComplete="name" value={fullName} onChange={(event: ChangeEvent<HTMLInputElement>) => setFullName(event.target.value)} required /> : null}
+        <FormField id="member-email" label="E-mail" type="email" placeholder="voce@exemplo.com" autoComplete="email" value={email} onChange={(event: ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)} required />
+        <FormField id="member-password" label="Senha" type="password" placeholder="Sua senha" autoComplete={isSignup ? 'new-password' : 'current-password'} value={password} onChange={(event: ChangeEvent<HTMLInputElement>) => setPassword(event.target.value)} required minLength={8} />
+        <PrimaryButton type="submit" disabled={pending}>{pending ? <LoadingState label={isSignup ? 'Solicitando acesso' : 'Entrando'} /> : (isSignup ? 'Solicitar acesso' : 'Acessar espaço')}</PrimaryButton>
       </form>
 
       {notice ? <InlineFeedback>{notice}</InlineFeedback> : null}
