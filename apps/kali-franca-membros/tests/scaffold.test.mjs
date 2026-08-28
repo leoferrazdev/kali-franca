@@ -19,7 +19,7 @@ test('o workspace de membros possui um shell Next.js executável', () => {
 test('o shell de membros não implementa funcionalidades fictícias', () => {
   const page = readFileSync(resolve(root, 'app', 'page.tsx'), 'utf8');
 
-  assert.match(page, /Área de membros/);
+  assert.match(page, /AuthPage/);
   assert.doesNotMatch(page, /signIn|createClient|leads|dashboard/i);
 });
 
