@@ -67,3 +67,10 @@ area: indice
 ## Bio pública
 
 - [[Bio pública - Registro de implementação V1]]
+
+
+## Atualização — Área de membros V1
+
+- [[Área de membros - Registro de implementação V1]] registra a fundação visual e de experiência implementada em 2026-08-28.
+- Estado desta entrega: Git local validado; publicação pública pendente.
+- A autenticação real, conteúdo protegido e permissões permanecem fora do escopo até contrato técnico documentado.
