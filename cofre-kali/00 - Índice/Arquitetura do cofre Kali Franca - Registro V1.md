@@ -55,4 +55,8 @@ Status controlados: `active`, `approved`, `preliminary`, `local-validado`, `publ
 - [[MOC - Kali França]]
 - [[Roadmap - Kali França]]
 - [[Como usar este cofre]]
-- [[Arquitetura do cofre Kali Franca - Registro V1]]
+
+
+## Versionamento
+
+- Commit da reorganização: 5c479e8.

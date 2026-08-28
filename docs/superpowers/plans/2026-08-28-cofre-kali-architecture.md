@@ -164,7 +164,7 @@ Expected: only planned vault/docs changes are staged; .obsidian, design-system a
 
 ## Task 5: Final delivery gate
 
-- [ ] Step 1: Confirm remote and vault
+- [x] Step 1: Confirm remote and vault
 
     git branch --show-current
     git rev-parse HEAD
@@ -175,6 +175,6 @@ Expected: only planned vault/docs changes are staged; .obsidian, design-system a
 
 Expected: branch main, local and remote SHA equal, vault path D:/LEONARDO/Kali Franca/cofre-kali, file count 15 and unresolved links 0.
 
-- [ ] Step 2: Report the final architecture
+- [x] Step 2: Report the final architecture
 
 Report the MOC path, folder distribution, property and link validation, final commit and preserved untracked directories. State separately that this task reorganized knowledge management only and did not modify web application code.
