@@ -9,7 +9,7 @@ tags:
   - supabase
   - implementacao
 type: delivery
-status: publicamente-verificado-preview
+status: supabase-auth-configurado-conta-criada
 area: produto
 ---
 
@@ -88,3 +88,24 @@ Configurar o projeto Supabase próprio da Kali França no ambiente de deploy e v
 - https://membros.kalifranca.com.br/membros/ — HTTP 200, nova experiência e estado vazio presentes.
 - A home pública exibe Prévia da experiência, não Sessão ativa; as variáveis públicas do Supabase ainda não estão configuradas no host.
 - Conclusão: deploy visual público verificado; autenticação pública ainda pendente de configuração externa.
+
+## Configuração operacional do Supabase Auth — 2026-08-28
+
+- Projeto verificado: Kali Franca (`fjnacvlcaveoiwedmdgy`), status Healthy no painel.
+- Site URL salva: `https://membros.kalifranca.com.br`.
+- Redirect URL salva: `https://membros.kalifranca.com.br/auth/callback`.
+- Cadastro de novos usuários: habilitado.
+- Provedor de e-mail: habilitado.
+- Confirmação de e-mail: habilitada para novos cadastros.
+- Usuário de aplicação criado: `leonardoferrazbrasil@gmail.com`.
+- UID confirmado: `99b9f2de-ed3b-4cb9-b2cd-67649cd45a4b`.
+- Usuário confirmado automaticamente em 2026-08-28 17:04 (horário exibido no painel); nenhum e-mail de confirmação foi enviado.
+- A senha temporária foi entregue fora do cofre e não é registrada em arquivos, Git ou notas.
+
+### Limite atual de permissões
+
+A aplicação de membros ainda não possui tabela de perfis, claim `admin`, RBAC ou operações exclusivas de administrador. Portanto, não existe tecnicamente um nível administrador com permissões adicionais neste momento. O usuário criado poderá acessar as rotas existentes quando as variáveis públicas do Supabase forem configuradas na hospedagem, mas essas rotas hoje distinguem apenas usuário autenticado de visitante; qualquer usuário autenticado teria o mesmo alcance atual. O CRM e seu modelo administrativo permanecem separados e não foram reutilizados.
+
+### Pendência de publicação
+
+O host ainda precisa receber `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` no ambiente de produção. Nenhuma chave foi registrada no cofre ou versionada. A conta criada e a configuração do Supabase não comprovam, sozinhas, o login público até essa configuração e um teste controlado de sessão.

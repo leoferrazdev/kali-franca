@@ -95,3 +95,13 @@ area: indice
 - As quatro rotas públicas da V1 respondem HTTP 200 com a nova interface.
 - A home está em modo Prévia da experiência; a autenticação ainda aguarda as variáveis públicas do Supabase no host.
 - Estado atual: deploy visual público verificado; autenticação pública pendente de configuração externa.
+
+## Atualização — Supabase Auth e usuário de aplicação — 2026-08-28
+
+- O projeto Supabase `fjnacvlcaveoiwedmdgy` foi verificado como Healthy.
+- Configurados: site URL `https://membros.kalifranca.com.br` e callback `https://membros.kalifranca.com.br/auth/callback`.
+- Cadastro e provedor de e-mail estão habilitados; confirmação de e-mail permanece habilitada para novos cadastros.
+- Criado e confirmado automaticamente o usuário de aplicação `leonardoferrazbrasil@gmail.com`; UID `99b9f2de-ed3b-4cb9-b2cd-67649cd45a4b`.
+- O código ainda não possui RBAC ou nível administrador implementado; nenhum claim admin, perfil ou permissão do CRM foi criado.
+- A publicação do login permanece pendente das variáveis públicas do Supabase no host e de um teste controlado de sessão.
+- A senha temporária não foi registrada no cofre, arquivos ou Git.
