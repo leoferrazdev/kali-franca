@@ -7,7 +7,7 @@ tags:
   - implementacao
   - design-system
 type: delivery
-status: local-validado
+status: publicamente-verificado
 area: produto
 ---
 
@@ -46,7 +46,17 @@ area: produto
 | Teste focado | node --test tests/bio-static.test.mjs — 4/4 | validado |
 | Testes estáticos integrados | npm run test:static — 16/16 | validado |
 | Smoke local | /, /bio/, /bio/styles.css e /profile.jpg — HTTP 200 | validado |
-| Publicação pública | será verificada após o push deste commit | pendente |
+| Publicação pública | `https://kalifranca.com.br/bio/`, `/bio/styles.css` e `/profile.jpg` — HTTP 200 em 2026-08-28 | validado |
+
+## Verificação pública
+
+Após o push do commit `fa32234`, a rota pública respondeu com:
+
+- `https://kalifranca.com.br/bio/` — HTTP 200, `text/html`, com os destinos de Mentoria, YouTube e o estado `Em breve`.
+- `https://kalifranca.com.br/bio/styles.css` — HTTP 200, `text/css`.
+- `https://kalifranca.com.br/profile.jpg` — HTTP 200, `image/jpeg`.
+
+O remoto `origin/main` está alinhado ao commit `fa32234`.
 
 ## Relações
 
