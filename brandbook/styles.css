@@ -94,6 +94,10 @@ button {
   color: var(--kf-color-text-secondary);
 }
 
+.sitebar-label-short {
+  display: none;
+}
+
 .eyebrow {
   margin: 0 0 var(--kf-space-3);
   color: var(--kf-color-accent);
@@ -1075,7 +1079,15 @@ main {
 
   .shell,
   .page-shell {
-    width: min(100% - 2rem, 100%);
+    width: calc(100% - 2rem);
+    max-width: none;
+    margin-inline: auto;
+  }
+
+  .cover-copy,
+  .cover-lead {
+    width: 100%;
+    max-width: 100%;
   }
 
   .sitebar {
@@ -1083,8 +1095,24 @@ main {
   }
 
   .sitebar .mono-label {
-    max-width: 125px;
+    flex: 0 1 100px;
+    width: 100px;
+    max-width: 100px;
+    min-width: 0;
     text-align: right;
+    overflow-wrap: anywhere;
+  }
+
+  .sitebar-label-full {
+    display: none;
+  }
+
+  .sitebar-label-short {
+    display: inline;
+  }
+
+  .sitebar .wordmark {
+    min-width: 0;
   }
 
   .cover-grid {
@@ -1098,11 +1126,23 @@ main {
   }
 
   .cover-title {
-    font-size: clamp(4.2rem, 18vw, 7.5rem);
+    font-size: clamp(3.6rem, 17vw, 5.5rem);
+    overflow-wrap: break-word;
+  }
+
+  .cover-title em {
+    display: block;
+  }
+
+  .cover-copy {
+    width: 100%;
+    min-width: 0;
   }
 
   .cover-lead {
     margin-top: var(--kf-space-5);
+    font-size: 1rem;
+    overflow-wrap: anywhere;
   }
 
   .cover-art {

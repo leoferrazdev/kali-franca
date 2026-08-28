@@ -8,6 +8,8 @@ const brandbookRoot = resolve(repositoryRoot, 'brandbook');
 const indexPath = resolve(brandbookRoot, 'index.html');
 const tokensPath = resolve(brandbookRoot, 'tokens.css');
 const stylesPath = resolve(brandbookRoot, 'styles.css');
+const siteIndexPath = resolve(repositoryRoot, 'index.html');
+const socialImagePath = resolve(repositoryRoot, 'profile.jpg');
 
 function readIfPresent(filePath) {
   return existsSync(filePath) ? readFileSync(filePath, 'utf8') : '';
@@ -81,4 +83,18 @@ test('o CSS documenta foco, responsividade e movimento reduzido', () => {
   assert.match(styles, /@media\s*\([^)]*prefers-reduced-motion/i);
   assert.match(styles, /@media\s*\([^)]*max-width/i);
   assert.match(styles, /min-height:\s*44px/);
+});
+
+test('o site e o brandbook usam a imagem pública na prévia de compartilhamento', () => {
+  const siteHtml = readIfPresent(siteIndexPath);
+  const brandbookHtml = readIfPresent(indexPath);
+  const imageUrl = 'https://kalifranca.com.br/profile.jpg';
+
+  assert.ok(existsSync(socialImagePath), 'profile.jpg deve existir na raiz pública');
+
+  for (const html of [siteHtml, brandbookHtml]) {
+    assert.match(html, new RegExp(`property=["']og:image["'][^>]+content=["']${imageUrl.replace('.', '\\.') }["']`, 'i'));
+    assert.match(html, /property=["']og:type["'][^>]+content=["']website["']/i);
+    assert.match(html, /name=["']twitter:card["'][^>]+content=["']summary_large_image["']/i);
+  }
 });

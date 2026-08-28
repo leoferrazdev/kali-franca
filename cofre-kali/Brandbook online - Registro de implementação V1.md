@@ -7,7 +7,7 @@ tags:
   - implementacao
   - design-system
 type: delivery
-status: em-validacao
+status: local-validado
 ---
 
 # Brandbook online - Registro de implementação V1
@@ -19,6 +19,7 @@ status: em-validacao
 - Fonte visual: `D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html`.
 - Arquivos: `brandbook/index.html`, `brandbook/tokens.css`, `brandbook/styles.css`.
 - Teste: `tests/brandbook-static.test.mjs`.
+- Asset de prévia social: `profile.jpg`, originado de `referencias/profile.jpg`.
 
 ## Decisões aplicadas
 
@@ -28,17 +29,19 @@ status: em-validacao
 - Tipografia baseada em Cormorant Garamond, Jost e IBM Plex Mono.
 - A página principal e a área de membros permanecem fora da implementação funcional do brandbook.
 - A composição usa superfícies escuras e claras, ouro com uso restrito e motivos de arco, halo e frequência.
+- O site principal e o brandbook declaram `https://kalifranca.com.br/profile.jpg` como `og:image` e imagem do Twitter Card.
 
 ## Estados de entrega
 
 | Estado | Evidência | Situação |
 | --- | --- | --- |
-| Arquivos locais | arquivos presentes no repositório | em validação |
-| Teste estático | `npm run test:static` | em validação |
-| Testes existentes | `npm test` | em validação |
-| Lint | `npm run lint` | em validação |
-| Build de membros | `npm run build` | em validação |
-| Commit | hash do commit | em validação |
+| Arquivos locais | arquivos presentes no repositório | validado |
+| Teste estático | `npm run test:static` — 6/6 | validado |
+| Testes existentes | `npm test` — contrato estático 6/6 e membros 5/5 | validado |
+| Lint | `npm run lint` — exit code 0 | validado |
+| Build de membros | `npm run build` — Next 16.3.0, exit code 0 | validado |
+| Smoke local | `/`, `/brandbook/` e `/profile.jpg` — HTTP 200 | validado |
+| Commit | será preenchido após o commit final desta entrega | em fechamento |
 | Publicação Hostinger | verificação no painel | pendente até publicação |
 | URL pública | HTTP e renderização | pendente até publicação |
 
@@ -48,4 +51,4 @@ status: em-validacao
 - [[Design system - Mapa da fonte V1]]
 - [[Design system como base de conhecimento]]
 - [[Diagnóstico visual inicial - Experiência web]]
-
+- [[Diagnóstico - Falha de compilação Hostinger]]

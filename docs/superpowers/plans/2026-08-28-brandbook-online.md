@@ -15,6 +15,7 @@
 - Tokens obrigatoriamente separados em primitivos, semânticos e tokens de componente.
 - A paleta de referência inclui Umbra `#0E0B0A`, Vinho Profundo `#3A1424`, Ameixa Sagrada `#7A2B44`, Ouro Fosco `#C9A66B`, Alabastro `#F4EDE4`, Cobre Aurora `#C97A52`, Areia Nude `#E2D4C3`, Névoa Mineral `#9AA39F`, Cinza Cálido `#B7ABA0` e Verde Sálvia `#5F7A6A`.
 - A página deve usar Cormorant Garamond, Jost e IBM Plex Mono com fallback tipográfico e `font-display` quando houver carregamento remoto.
+- A imagem `D:\LEONARDO\Kali Franca\referencias\profile.jpg` deve ser publicada como `https://kalifranca.com.br/profile.jpg` e declarada como `og:image` e Twitter Card.
 - Nenhum hexadecimal arbitrário deve ser usado em regras de componente fora da camada de tokens.
 - O site principal existente, a área de membros e o CRM não devem ter seu comportamento alterado.
 - Não adicionar CMS, autenticação, dados reais, integrações externas, checkout, métricas ou promessas comerciais.
@@ -32,6 +33,7 @@
 | `brandbook/index.html` | Documento HTML público, semântico e progressivamente navegável. |
 | `brandbook/tokens.css` | Tokens primitivos, semânticos e de componente, além das métricas base. |
 | `brandbook/styles.css` | Direção editorial, layout, componentes, responsividade, foco e movimento reduzido. |
+| `profile.jpg` | Asset público usado pela prévia de compartilhamento do site e do brandbook. |
 | `cofre-kali/Brandbook online - Registro de implementação V1.md` | Registro da implementação, fontes, decisões e evidências de validação. |
 
 ## Task 1: Criar o contrato estático em RED
@@ -43,7 +45,7 @@
 - Consumes: arquivos estáticos que serão criados nas tarefas seguintes.
 - Produces: asserções executáveis para a estrutura pública, o conteúdo editorial, a arquitetura de tokens e os requisitos CSS.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Criar `tests/brandbook-static.test.mjs` com o contrato abaixo:
 
@@ -134,13 +136,13 @@ test('o CSS documenta foco, responsividade e movimento reduzido', () => {
 });
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `node --test tests/brandbook-static.test.mjs`
 
 Expected: FAIL because `brandbook/index.html`, `brandbook/tokens.css` and `brandbook/styles.css` ainda não existem. A falha deve apontar a ausência da entrada estática, não erro de sintaxe do teste.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add tests/brandbook-static.test.mjs
@@ -157,7 +159,7 @@ git commit -m "test: define contrato estatico do brandbook"
 - Consumes: contrato de `tests/brandbook-static.test.mjs` e valores auditados em `design-system/Kali Franca - Design System.dc.html`.
 - Produces: documento público semântico e nomes de tokens estáveis para o CSS editorial.
 
-- [ ] **Step 1: Write the minimal HTML structure**
+- [x] **Step 1: Write the minimal HTML structure**
 
 O documento deve conter `doctype`, `lang="pt-BR"`, metadados de viewport/description, os links para `tokens.css` e `styles.css`, o link de salto, uma capa, índice e `main#conteudo`.
 
@@ -197,7 +199,7 @@ Cada seção deve ter um `h2` único e conteúdo real derivado da fonte, incluin
 
 As demais seções devem registrar direção visual, vocabulário gráfico, imagem, interface, aplicações, do/don't e evolução, sem inserir preço, oferta, depoimento, métrica ou promessa comercial não aprovada.
 
-- [ ] **Step 2: Criar `brandbook/tokens.css`**
+- [x] **Step 2: Criar `brandbook/tokens.css`**
 
 Usar esta base completa de nomes e aliases, expandindo os valores da paleta semântica sem inserir cores fora da fonte:
 
@@ -248,13 +250,13 @@ Usar esta base completa de nomes e aliases, expandindo os valores da paleta sem�
 }
 ```
 
-- [ ] **Step 3: Run the contracts available at this task boundary**
+- [x] **Step 3: Run the contracts available at this task boundary**
 
 Run: `node --test --test-name-pattern="rota estática|índice|explicita|tokens" tests/brandbook-static.test.mjs`
 
 Expected: os quatro testes de entrada, índice, conteúdo e tokens passam; o teste de CSS fica selecionado como skipped pelo padrão de nome e será executado integralmente na tarefa seguinte.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add brandbook/index.html brandbook/tokens.css
@@ -270,7 +272,7 @@ git commit -m "feat: adiciona entrada e tokens do brandbook"
 - Consumes: `brandbook/index.html` e `brandbook/tokens.css`.
 - Produces: layout editorial responsivo, componentes de paleta/tipografia e estados acessíveis.
 
-- [ ] **Step 1: Criar o CSS base e os componentes**
+- [x] **Step 1: Criar o CSS base e os componentes**
 
 O CSS deve começar com reset previsível e carregar as famílias aprovadas com fallback:
 
@@ -304,7 +306,7 @@ a { color: inherit; }
 
 O layout deve usar uma coluna editorial larga no desktop, índice com posição sticky quando houver espaço e uma única coluna no mobile. A capa deve trabalhar com fundo Umbra, título em Cormorant Garamond e marcador em IBM Plex Mono. O ouro deve ser reservado para índices, linhas, ênfases e pequenos sinais de navegação.
 
-- [ ] **Step 2: Implementar foco, toque e movimento reduzido**
+- [x] **Step 2: Implementar foco, toque e movimento reduzido**
 
 Adicionar regras equivalentes às seguintes:
 
@@ -344,13 +346,13 @@ button:focus-visible {
 
 Validar que os fundos claros usam texto escuro, os fundos escuros usam Alabastro e os elementos em Ouro Fosco não sejam usados como corpo longo de texto.
 
-- [ ] **Step 3: Run the contract test**
+- [x] **Step 3: Run the contract test**
 
 Run: `node --test tests/brandbook-static.test.mjs`
 
 Expected: PASS em todos os testes do contrato estático.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add brandbook/styles.css
@@ -367,7 +369,7 @@ git commit -m "feat: aplica composicao editorial do brandbook"
 - Consumes: testes e arquivos estáticos das tarefas anteriores.
 - Produces: execução do contrato pela rotina raiz e registro consultável da entrega.
 
-- [ ] **Step 1: Integrar o teste ao script da raiz**
+- [x] **Step 1: Integrar o teste ao script da raiz**
 
 Alterar somente o script `test` de `package.json`, preservando todos os demais scripts:
 
@@ -376,7 +378,7 @@ Alterar somente o script `test` de `package.json`, preservando todos os demais s
 "test:static": "node --test tests/*.test.mjs"
 ```
 
-- [ ] **Step 2: Criar a nota de implementação no cofre**
+- [x] **Step 2: Criar a nota de implementação no cofre**
 
 Criar a nota Obsidian com frontmatter e registro objetivo:
 
@@ -432,13 +434,13 @@ status: local-validado
 
 Substituir os campos de evidência por resultados reais somente depois de executar os comandos correspondentes. Não registrar sucesso sem saída verificável.
 
-- [ ] **Step 3: Run the root test suite**
+- [x] **Step 3: Run the root test suite**
 
 Run: `npm test`
 
 Expected: o contrato estático e os testes do workspace de membros terminam com exit code 0.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```powershell
 git add package.json "cofre-kali/Brandbook online - Registro de implementação V1.md"
@@ -454,13 +456,13 @@ git commit -m "docs: registra implementacao do brandbook"
 - Consumes: todos os arquivos implementados e os scripts existentes do monorepo.
 - Produces: evidência separada para testes locais, build, publicação e verificação pública.
 
-- [ ] **Step 1: Run the static test independently**
+- [x] **Step 1: Run the static test independently**
 
 Run: `npm run test:static`
 
 Expected: todos os testes da página pública passam.
 
-- [ ] **Step 2: Run the complete existing checks**
+- [x] **Step 2: Run the complete existing checks**
 
 Run, em sequência:
 
@@ -473,7 +475,7 @@ git diff --check
 
 Expected: todos os comandos terminam com exit code 0. O build e o lint continuam direcionados ao workspace de membros sem alterações funcionais nessa aplicação.
 
-- [ ] **Step 3: Smoke-test the static route locally**
+- [x] **Step 3: Smoke-test the static route locally**
 
 A partir da raiz do repositório, iniciar um servidor estático disponível no ambiente:
 
@@ -491,7 +493,7 @@ if ($response.Content -notmatch 'Expansão da Potência') { throw 'Conteúdo pri
 
 Expected: HTTP 200 e conteúdo principal presente. Encerrar o servidor depois do smoke test.
 
-- [ ] **Step 4: Verificar manualmente em desktop e mobile**
+- [x] **Step 4: Verificar manualmente em desktop e mobile**
 
 Confirmar no navegador:
 
@@ -503,16 +505,57 @@ Confirmar no navegador:
 - o texto continua legível nas superfícies claras e escuras;
 - `prefers-reduced-motion` não produz animação obrigatória.
 
-- [ ] **Step 5: Atualizar a nota do cofre com evidências**
+- [x] **Step 5: Atualizar a nota do cofre com evidências**
 
 Preencher a tabela de estados com os resultados reais dos comandos e manter `Publicação Hostinger` e `URL pública` como pendentes se essa etapa não tiver sido solicitada ou executada.
 
-- [ ] **Step 6: Commit final de evidências**
+- [x] **Step 6: Commit final de evidências**
 
 ```bash
 git add "cofre-kali/Brandbook online - Registro de implementação V1.md"
 git commit -m "docs: registra validacao do brandbook"
 ```
+
+## Task 6: Configurar imagem de prévia social
+
+**Files:**
+- Modify: `tests/brandbook-static.test.mjs`
+- Modify: `index.html`
+- Modify: `brandbook/index.html`
+- Create: `profile.jpg` a partir de `referencias/profile.jpg`
+
+**Interfaces:**
+- Consumes: o retrato aprovado em `referencias/profile.jpg`.
+- Produces: metadados Open Graph e Twitter Card para o domínio principal e para `/brandbook/`.
+
+- [x] **Step 1: Write the failing test**
+
+O contrato exige que `profile.jpg` exista na raiz pública e que os dois documentos contenham `og:image` apontando para `https://kalifranca.com.br/profile.jpg`, `og:type=website` e `twitter:card=summary_large_image`.
+
+- [x] **Step 2: Run test to verify it fails**
+
+Run: `node --test tests/brandbook-static.test.mjs`
+
+Observed: o sexto teste falhou porque `profile.jpg` e os metadados sociais ainda não existiam.
+
+- [x] **Step 3: Write minimal implementation**
+
+Copiar o asset aprovado sem alterar seu conteúdo e inserir, em cada página, os metadados correspondentes à própria URL:
+
+```html
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kalifranca.com.br/brandbook/">
+<meta property="og:image" content="https://kalifranca.com.br/profile.jpg">
+<meta property="og:image:alt" content="Retrato de Kali França">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kalifranca.com.br/profile.jpg">
+```
+
+- [x] **Step 4: Run test to verify it passes**
+
+Run: `node --test tests/brandbook-static.test.mjs`
+
+Observed: 6 testes passaram, incluindo o contrato de prévia social.
 
 ## Self-review do plano
 
