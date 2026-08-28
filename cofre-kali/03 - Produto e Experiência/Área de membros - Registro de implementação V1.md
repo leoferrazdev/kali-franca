@@ -143,3 +143,14 @@ Definir e documentar o contrato técnico da autenticação real antes de conecta
 - Auditoria visual e DOM executada no navegador local; console sem erros após a validação.
 - Plano: `docs/superpowers/plans/2026-08-28-membros-logout.md`.
 - Especificação: `docs/superpowers/specs/2026-08-28-membros-logout-design.md`.
+
+## Verificação pública — Logout e responsividade — 2026-08-28
+
+- Commit publicado: `29785aa` na branch `main`.
+- Hostinger: deployment do commit exibido como **Concluído** e **Atual**.
+- `https://kalifranca.com.br/`, `/brandbook/` e `/bio/`: HTTP 200, sem conteúdo 503.
+- `https://membros.kalifranca.com.br/login`: HTTP 200.
+- `https://membros.kalifranca.com.br/cadastro`: HTTP 200.
+- `https://membros.kalifranca.com.br/membros`: redireciona para `/login` sem sessão.
+- CSS público do app contém `.logout-button` e o contrato de `min-height: 44px`.
+- A validação autenticada do clique de logout permanece deliberadamente não executada sem uma sessão controlada; o contrato de código, build e integração no cabeçalho foram validados.

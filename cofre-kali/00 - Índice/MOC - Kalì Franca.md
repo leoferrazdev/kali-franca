@@ -133,3 +133,11 @@ area: indice
 - Diagnóstico prévio: P0 = 0; os P1 encontrados foram corrigidos; os P2 eram elementos decorativos contidos pelo layout.
 - A validação cobriu as páginas públicas, autenticação, prévia da área de membros e login do CRM em retrato e paisagem. Resultado local: sem overflow horizontal funcional e sem alvo interativo abaixo de 44×44 px.
 - Estado de entrega: código e documentação locais validados; commit/push e verificação pública desta etapa permanecem pendentes até a publicação.
+
+## Verificação pública — Logout e responsividade — 2026-08-28
+
+- O commit `29785aa` foi publicado na `main` e o deployment da Hostinger aparece como **Concluído** e **Atual**.
+- Site principal, brandbook e bio respondem HTTP 200 sem a tela 503.
+- Login e cadastro de membros respondem HTTP 200; `/membros` redireciona para `/login` sem sessão.
+- O CSS de produção contém o novo `.logout-button` e o alvo mínimo de 44 px.
+- Logout autenticado real segue pendente de teste com sessão controlada, sem registrar credenciais no cofre.
