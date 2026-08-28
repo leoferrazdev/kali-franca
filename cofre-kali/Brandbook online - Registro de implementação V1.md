@@ -41,7 +41,7 @@ status: local-validado
 | Lint | `npm run lint` — exit code 0 | validado |
 | Build de membros | `npm run build` — Next 16.3.0, exit code 0 | validado |
 | Smoke local | `/`, `/brandbook/` e `/profile.jpg` — HTTP 200 | validado |
-| Commit | será preenchido após o commit final desta entrega | em fechamento |
+| Commit | `49e8af8` — preview social, responsividade e diagnóstico registrado | validado |
 | Publicação Hostinger | verificação no painel | pendente até publicação |
 | URL pública | HTTP e renderização | pendente até publicação |
 
