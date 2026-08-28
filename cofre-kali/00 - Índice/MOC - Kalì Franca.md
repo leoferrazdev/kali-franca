@@ -119,3 +119,10 @@ area: indice
 - Identificadores técnicos permanecem estáveis: `kali-franca`, `cofre-kali`, os domínios `kalifranca.com.br` e `membros.kalifranca.com.br`, os caminhos de aplicação e a pasta física `D:\LEONARDO\Kali Franca`.
 - O arquivo-fonte visual passou a se chamar `D:\LEONARDO\Kali Franca\design-system\Kalì Franca - Design System.dc.html`; as notas centrais do cofre também foram renomeadas para a nova assinatura.
 - Validação desta atualização: nenhuma ocorrência antiga em texto público ou wikilink; somente referências técnicas preservadas.
+
+## Verificação pública da assinatura — 2026-08-28
+
+- O commit `324f1da` foi publicado na `main`; o deployment correspondente da Hostinger aparece como **Concluído** e **Atual**.
+- `https://kalifranca.com.br/`, `/brandbook/` e `/bio/` responderam HTTP `200` e exibem **Kalì Franca**.
+- `https://membros.kalifranca.com.br/login/` e `/cadastro/` responderam HTTP `200` após o deployment e exibem **Kalì Franca**.
+- A verificação pública não encontrou a grafia anterior nas páginas consultadas.
