@@ -46,8 +46,12 @@ status: local-validado
 | Smoke local | `/`, `/styles.css`, `/brandbook/` e `/profile.jpg` — HTTP 200 | validado |
 | Inspeção visual | desktop e viewport CSS mobile de 390px | validado localmente |
 | Commit da implementação visual | `2d56843` — aplica design system na home | validado |
-| Publicação Hostinger | deploy externo | pendente até publicação |
-| URL pública | HTTP e renderização após deploy | pendente até publicação |
+| Publicação Hostinger | deploy externo refletido nos domínios observados | validado |
+| URL pública | observação em 2026-08-28: `/`, `/styles.css`, `/brandbook/`, `/profile.jpg` e `membros.kalifranca.com.br/` — HTTP 200 | validado |
+
+## Verificação pública
+
+Em 2026-08-28, a home publicada respondeu com o conceito `Expansão da Potência`, o rótulo `Demonstração pública`, o CTA para `/brandbook/` e a referência `https://kalifranca.com.br/profile.jpg`. O stylesheet público respondeu `text/css` e preservou a ligação com os tokens compartilhados.
 
 ## Relações
 
