@@ -81,3 +81,10 @@ area: indice
 - O código da V1 está publicado no commit 6b64c93 da main.
 - A raiz pública ainda responde com o shell provisório; deploy público pendente.
 - As rotas /login/, /cadastro/ e /membros/ não foram consideradas publicadas sem evidência HTTP.
+
+
+## Atualização — Autenticação e cadastro V1
+
+- [[Autenticação e cadastro - Registro de implementação V1]] registra o início da integração real com Supabase Auth no workspace de membros.
+- O código está validado no commit 6011e57; configuração externa, usuário de teste e deploy público permanecem pendentes.
+- A home protegida consulta apenas o usuário autenticado e não reutiliza o CRM.
