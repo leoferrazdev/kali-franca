@@ -7,6 +7,7 @@ tags:
   - decisao
 type: decision
 status: active
+area: contexto
 ---
 
 # Registro de início do projeto

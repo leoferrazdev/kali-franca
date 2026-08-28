@@ -8,6 +8,7 @@ tags:
   - design-system
 type: delivery
 status: local-validado
+area: marca
 ---
 
 # Brandbook online - Registro de implementação V1

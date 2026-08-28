@@ -8,6 +8,7 @@ tags:
   - design-system
 type: context
 status: active
+area: contexto
 ---
 
 # Contexto digital do projeto

@@ -9,6 +9,7 @@ tags:
   - decisao
 type: decision
 status: active
+area: contexto
 ---
 
 # Escopo - Página de vendas demonstrativa

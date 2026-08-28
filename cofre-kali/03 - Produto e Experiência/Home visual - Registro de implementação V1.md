@@ -8,6 +8,7 @@ tags:
   - implementacao
 type: delivery
 status: local-validado
+area: produto
 ---
 
 # Home visual - Registro de implementação V1

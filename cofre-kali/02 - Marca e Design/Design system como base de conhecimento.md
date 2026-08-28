@@ -8,6 +8,7 @@ tags:
   - decisao
 type: decision
 status: active
+area: marca
 ---
 
 # Design system como base de conhecimento

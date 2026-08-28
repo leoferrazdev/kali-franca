@@ -8,6 +8,7 @@ tags:
   - diagnostico
 type: incident
 status: causa-nao-confirmada
+area: operacao
 ---
 
 # Diagnóstico - Falha de compilação Hostinger

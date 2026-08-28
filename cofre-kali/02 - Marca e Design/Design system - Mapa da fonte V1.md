@@ -9,6 +9,7 @@ tags:
 type: source-audit
 status: preliminary
 source: D:\LEONARDO\Kali Franca\design-system\Kali Franca - Design System.dc.html
+area: marca
 ---
 
 # Design system - Mapa da fonte V1

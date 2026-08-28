@@ -8,6 +8,7 @@ tags:
   - web
 type: source-audit
 status: preliminary
+area: produto
 ---
 
 # Diagnóstico visual inicial - Experiência web
