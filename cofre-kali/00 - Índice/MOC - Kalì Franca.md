@@ -150,3 +150,9 @@ area: indice
 - O registro foi atualizado diretamente porque o aplicativo Obsidian não estava em execução para o CLI.
 - Commit `50d2e78` publicado na `main`; a rota pública `/bio/` respondeu HTTP 200 com o snippet e o projeto oficial.
 - `npm run test:static` (18), suíte de membros (19) e `npm run build` foram aprovados.
+
+## Atualização editorial da bio — 2026-08-30
+
+- A copy do **Manifesto de abundância** foi aplicada na bio: eyebrow, título, apoio e três blocos de movimento.
+- Mentoria e YouTube preservam os destinos existentes; Reprogramação permanece sem link e sinalizada como novo movimento.
+- A tipografia dos blocos foi ajustada para exibir títulos e descrições longos sem truncamento no mobile.

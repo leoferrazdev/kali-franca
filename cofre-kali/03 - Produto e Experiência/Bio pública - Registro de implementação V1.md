@@ -90,3 +90,14 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 - `npm run test --workspace=kali-franca-membros`: 19 testes aprovados.
 - `npm run build`: build de produção aprovado.
 - O painel do Clarity permanece configurado; os dados de mapa de calor podem levar até duas horas para aparecer.
+
+## Atualização editorial — Manifesto de abundância — 2026-08-30
+
+- Cabeçalho mantido como **Kalì Franca** e **BIO / 01**.
+- Eyebrow atualizado para **DOMINE A SUA FREQUÊNCIA.**
+- Título atualizado para **Mude a sua história.** com o apoio integral do manifesto fornecido.
+- Bloco de Mentoria atualizado para **Mentoria Frequência da Abundância**, com a descrição e a ação **QUERO ME ALINHAR AGORA →**; o destino WhatsApp foi preservado.
+- Bloco intermediário atualizado para **Eleva 5D: Reprogramação, Alinhamento e Manifestação**, com estado sem link e ação **AGUARDAR O NOVO MOVIMENTO →**.
+- Bloco do YouTube atualizado para **Canal do YouTube: Manifestação Prática**, com a descrição e a ação **ASSISTIR AOS CONTEÚDOS →**; o canal foi preservado.
+- Títulos e descrições dos blocos agora quebram linha sem truncamento para comportar a copy longa em telas estreitas.
+- Contrato editorial: `tests/bio-static.test.mjs` cobre todos os textos aprovados e o estado sem link.

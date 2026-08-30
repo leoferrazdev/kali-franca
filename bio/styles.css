@@ -369,22 +369,20 @@ a.bio-destination:hover {
 }
 
 .destination-copy strong {
-  overflow: hidden;
+  overflow-wrap: anywhere;
   font-family: var(--kf-font-display);
   font-size: clamp(1.4rem, 4vw, 1.7rem);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  text-wrap: balance;
 }
 
 .destination-copy > span:last-child {
-  overflow: hidden;
   color: var(--kf-color-text-secondary);
   font-size: 0.78rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
 .destination-action,

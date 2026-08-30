@@ -20,7 +20,7 @@ test('a bio pública possui os três destinos acordados', () => {
   assert.match(html, /<html[^>]+lang=["']pt-BR["']/i);
   assert.equal((html.match(/<h1\b/gi) || []).length, 1);
   assert.match(html, /Mentoria/i);
-  assert.match(html, /Reprogramação Energética/i);
+  assert.match(html, /Eleva 5D:\s*Reprogramação, Alinhamento e Manifestação/i);
   assert.match(html, /Canal do YouTube/i);
   assert.match(html, /https:\/\/wa\.me\/message\/R6WHM3W3SGCSE1/i);
   assert.match(html, /https:\/\/www\.youtube\.com\/channel\/UCeaSCWbFhL3TOuIdYxzH3OQ/i);
@@ -60,6 +60,28 @@ test('a bio possui estrutura acessível e estados responsivos', () => {
   assert.match(styles, /@media\s*\([^)]*max-width/i);
   assert.match(styles, /@media\s*\([^)]*prefers-reduced-motion/i);
   assert.match(styles, /min-height:\s*44px/);
+});
+
+test('a bio publica o manifesto de abundância aprovado', () => {
+  const html = read(bioPath);
+
+  for (const text of [
+    'DOMINE A SUA FREQUÊNCIA.',
+    'Saia do modo sobrevivência e assuma o seu lugar de Criadora Divina. No campo da 5D, a sua vontade e a vontade do Criador se tornam uma só — e a abundância deixa de ser uma busca para se tornar o seu estado natural.',
+    'Mentoria Frequência da Abundância',
+    'O acompanhamento individual para estabilizar sua nova identidade e viver em fluxo total com a sua Fonte Divina.',
+    'QUERO ME ALINHAR AGORA →',
+    'Eleva 5D: Reprogramação, Alinhamento e Manifestação',
+    'Seu lugar sagrado para sustentar sua nova frequência e manifestar seus sonhos.',
+    'AGUARDAR O NOVO MOVIMENTO →',
+    'Canal do YouTube: Manifestação Prática',
+    'Aulas profundas sobre como unir consciência e energia para moldar a sua vida com leveza.',
+    'ASSISTIR AOS CONTEÚDOS →'
+  ]) {
+    assert.ok(html.includes(text), `a bio deve publicar: ${text}`);
+  }
+
+  assert.match(html, /<h1[^>]*>Mude a sua\s*<em>história\.<\/em><\/h1>/i);
 });
 
 test('a bio não publica afirmações comerciais não validadas', () => {
