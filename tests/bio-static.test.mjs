@@ -67,7 +67,7 @@ test('a bio publica o manifesto de abundância aprovado', () => {
 
   for (const text of [
     'DOMINE A SUA FREQUÊNCIA.',
-    'Saia do modo sobrevivência e assuma o seu lugar de Criadora Divina. No campo da 5D, a sua vontade e a vontade do Criador se tornam uma só — e a abundância deixa de ser uma busca para se tornar o seu estado natural.',
+    'Saia do modo sobrevivência e assuma o seu lugar de Criadora Divina. No campo da 5D, a sua vontade e a vontade do Criador se tornam uma só e a abundância deixa de ser uma busca para se tornar o seu estado natural.',
     'Mentoria Frequência da Abundância',
     'O acompanhamento individual para estabilizar sua nova identidade e viver em fluxo total com a sua Fonte Divina.',
     'QUERO ME ALINHAR AGORA →',
@@ -82,6 +82,10 @@ test('a bio publica o manifesto de abundância aprovado', () => {
   }
 
   assert.match(html, /<h1[^>]*>Mude a sua\s*<em>história\.<\/em><\/h1>/i);
+  const intro = html.match(/<p class="bio-intro">([\s\S]*?)<\/p>/i)?.[1] ?? '';
+  assert.doesNotMatch(intro, /—/);
+  assert.doesNotMatch(html, /\.\.\./);
+  assert.doesNotMatch(read(stylesPath), /text-overflow:\s*ellipsis/i);
 });
 
 test('a bio não publica afirmações comerciais não validadas', () => {

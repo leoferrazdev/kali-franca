@@ -102,6 +102,16 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 - Títulos e descrições dos blocos agora quebram linha sem truncamento para comportar a copy longa em telas estreitas.
 - Contrato editorial: `tests/bio-static.test.mjs` cobre todos os textos aprovados e o estado sem link.
 
+## Ajuste de UX — cards com conteúdo completo — 2026-08-30
+
+- O travessão foi removido do texto de apoio: a frase agora segue com **se tornam uma só e a abundância**.
+- A composição dos cards passou de três colunas para duas: ícone à esquerda e conteúdo empilhado à direita.
+- Cada card exibe etiqueta, título, descrição e ação em fluxo vertical; a ação recebeu tratamento visual de CTA, sem criar link ou botão aninhado.
+- A altura dos cards tornou-se automática e títulos/descrições usam quebra natural, sem `text-overflow: ellipsis`, `white-space: nowrap` ou reticências.
+- O estado Eleva 5D permanece semanticamente não interativo e exibe **AGUARDAR O NOVO MOVIMENTO →** como status visual.
+- A descrição dos cards usa 1rem para preservar legibilidade em telas pequenas, conforme a revisão `ui-ux-pro-max`.
+- O contrato `tests/bio-static.test.mjs` cobre a ausência do travessão no apoio e do truncamento visual.
+
 ## Verificação pública — Manifesto de abundância — 2026-08-30
 
 - Commit publicado na `main`: `d2dd5b7` (`feat: atualiza manifesto de abundancia da bio`).

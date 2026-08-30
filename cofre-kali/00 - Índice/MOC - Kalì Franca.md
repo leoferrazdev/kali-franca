@@ -158,3 +158,8 @@ area: indice
 - A tipografia dos blocos foi ajustada para exibir títulos e descrições longos sem truncamento no mobile.
 - Commit `d2dd5b7` publicado na `main`; `/bio/` respondeu HTTP 200 com a copy atualizada e sem 503.
 - Os testes estáticos (19), a suíte de membros (19) e o build de produção foram aprovados.
+
+## Ajuste de UX da bio — 2026-08-30
+
+- Cards reorganizados em duas colunas com conteúdo empilhado para exibir títulos, descrições e CTAs completos.
+- Removido o travessão do texto de apoio e preservado o estado sem link do Eleva 5D.

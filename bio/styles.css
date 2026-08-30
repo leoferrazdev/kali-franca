@@ -292,11 +292,11 @@ h1 em {
 
 .bio-destination {
   display: grid;
-  min-height: 5.75rem;
-  grid-template-columns: 3.25rem minmax(0, 1fr) auto;
-  align-items: center;
+  min-height: 8.25rem;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  align-items: start;
   gap: var(--kf-space-3);
-  padding: var(--kf-space-3);
+  padding: var(--kf-space-4);
   border: 1px solid var(--bio-link-border);
   border-radius: 1rem;
   background: var(--bio-link-bg);
@@ -330,6 +330,7 @@ a.bio-destination:hover {
   border-radius: 0.85rem;
   background: color-mix(in srgb, var(--kf-color-umbra-500) 44%, transparent);
   color: var(--kf-color-accent);
+  margin-top: 0.15rem;
 }
 
 .bio-destination--pending .destination-icon {
@@ -355,7 +356,8 @@ a.bio-destination:hover {
 .destination-copy {
   display: grid;
   min-width: 0;
-  gap: 0.15rem;
+  align-content: start;
+  gap: 0.35rem;
 }
 
 .destination-kicker {
@@ -364,7 +366,7 @@ a.bio-destination:hover {
 }
 
 .bio-destination--pending .destination-kicker,
-.bio-destination--pending .destination-copy > span:last-child {
+.bio-destination--pending .destination-description {
   color: var(--kf-color-text-secondary);
 }
 
@@ -378,21 +380,36 @@ a.bio-destination:hover {
   text-wrap: balance;
 }
 
-.destination-copy > span:last-child {
+.destination-description {
   color: var(--kf-color-text-secondary);
-  font-size: 0.78rem;
+  font-size: 1rem;
   line-height: 1.35;
   overflow-wrap: anywhere;
 }
 
 .destination-action,
 .destination-status {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  align-items: center;
+  justify-self: start;
+  margin-top: var(--kf-space-2);
+  padding: 0.55rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--kf-color-accent) 55%, transparent);
+  border-radius: 999px;
   align-self: center;
   color: var(--kf-color-accent);
-  white-space: nowrap;
+  font-size: 0.68rem;
+  letter-spacing: 0.11em;
+  line-height: 1.25;
+  text-align: left;
+  text-wrap: balance;
 }
 
 .destination-status {
+  border-color: color-mix(in srgb, var(--kf-color-cinza-calido-500) 45%, transparent);
   color: var(--kf-color-cinza-calido-500);
 }
 
@@ -459,18 +476,13 @@ a.bio-destination:hover {
 
   .bio-destination {
     grid-template-columns: 3rem minmax(0, 1fr);
+    min-height: 0;
+    padding: var(--kf-space-3);
   }
 
   .destination-icon {
     width: 3rem;
     height: 3rem;
-  }
-
-  .destination-action,
-  .destination-status {
-    grid-column: 2;
-    justify-self: start;
-    margin-top: -0.2rem;
   }
 }
 
