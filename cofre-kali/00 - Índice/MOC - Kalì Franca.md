@@ -163,3 +163,4 @@ area: indice
 
 - Cards reorganizados em duas colunas com conteúdo empilhado para exibir títulos, descrições e CTAs completos.
 - Removido o travessão do texto de apoio e preservado o estado sem link do Eleva 5D.
+- Commit `4087863` publicado na `main`; HTML e CSS públicos respondem HTTP 200, com cache-bust e sem truncamento por ellipsis.

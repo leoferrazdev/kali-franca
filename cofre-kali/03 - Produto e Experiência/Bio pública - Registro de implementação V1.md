@@ -112,6 +112,16 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 - A descrição dos cards usa 1rem para preservar legibilidade em telas pequenas, conforme a revisão `ui-ux-pro-max`.
 - O contrato `tests/bio-static.test.mjs` cobre a ausência do travessão no apoio e do truncamento visual.
 
+## Verificação pública — Cards com conteúdo completo — 2026-08-30
+
+- Commit publicado na `main`: `4087863` (`fix: remove truncamento dos cards da bio`).
+- `https://kalifranca.com.br/bio/` respondeu HTTP 200 com 6.472 bytes e o CSS versionado respondeu HTTP 200 com 11.975 bytes.
+- O HTML público contém `styles.css?v=20260830-cards`, forçando a leitura da folha de estilo atualizada após a divergência de cache.
+- O CSS público confirma o layout em duas colunas com conteúdo empilhado, sem `text-overflow: ellipsis`.
+- A copy pública não possui reticências e o texto de apoio não contém travessão.
+- O navegador do Codex foi recarregado e exibiu integralmente título, descrições e ações dos três cards; Eleva 5D segue sem link.
+- A rota pública não contém `503` nem `Service Unavailable`.
+
 ## Verificação pública — Manifesto de abundância — 2026-08-30
 
 - Commit publicado na `main`: `d2dd5b7` (`feat: atualiza manifesto de abundancia da bio`).
