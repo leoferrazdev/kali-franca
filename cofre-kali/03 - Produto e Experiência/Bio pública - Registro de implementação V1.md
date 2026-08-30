@@ -101,3 +101,14 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 - Bloco do YouTube atualizado para **Canal do YouTube: Manifestação Prática**, com a descrição e a ação **ASSISTIR AOS CONTEÚDOS →**; o canal foi preservado.
 - Títulos e descrições dos blocos agora quebram linha sem truncamento para comportar a copy longa em telas estreitas.
 - Contrato editorial: `tests/bio-static.test.mjs` cobre todos os textos aprovados e o estado sem link.
+
+## Verificação pública — Manifesto de abundância — 2026-08-30
+
+- Commit publicado na `main`: `d2dd5b7` (`feat: atualiza manifesto de abundancia da bio`).
+- `https://kalifranca.com.br/bio/` respondeu HTTP 200 com 6.355 bytes.
+- O HTML público contém os textos de **DOMINE A SUA FREQUÊNCIA.**, **Mude a sua história.**, Mentoria Frequência da Abundância, Eleva 5D e Canal do YouTube: Manifestação Prática.
+- A navegação pública mantém o destino WhatsApp da Mentoria e o canal oficial do YouTube; o bloco Eleva 5D continua sem elemento de link.
+- O navegador do Codex foi recarregado e confirmou a renderização sem a tela 503.
+- `npm run test:static`: 19 testes aprovados.
+- `npm run test --workspace=kali-franca-membros`: 19 testes aprovados.
+- `npm run build`: build de produção aprovado.

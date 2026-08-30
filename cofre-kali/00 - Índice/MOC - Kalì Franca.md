@@ -156,3 +156,5 @@ area: indice
 - A copy do **Manifesto de abundância** foi aplicada na bio: eyebrow, título, apoio e três blocos de movimento.
 - Mentoria e YouTube preservam os destinos existentes; Reprogramação permanece sem link e sinalizada como novo movimento.
 - A tipografia dos blocos foi ajustada para exibir títulos e descrições longos sem truncamento no mobile.
+- Commit `d2dd5b7` publicado na `main`; `/bio/` respondeu HTTP 200 com a copy atualizada e sem 503.
+- Os testes estáticos (19), a suíte de membros (19) e o build de produção foram aprovados.
