@@ -171,3 +171,9 @@ area: indice
 - O rodapé permanece com a assinatura e o domínio; a home foi mantida como movimento futuro do roadmap.
 - Commit `842eb83` publicado na `main`; `/bio/` e seu CSS respondem HTTP 200 sem `footer-home` e sem 503.
 - `npm run test:static` (20) e `npm run build` foram aprovados.
+
+## Google Analytics 4 na bio — 2026-08-30
+
+- A conta **Kalì Franca** (`406399339`), a propriedade **Kalì Franca — Bio** (`552151142`) e o fluxo web (`15528815163`) foram criados no Analytics.
+- A bio usa o ID de medição `G-RZGESTEZCK` para page views e envia `bio_destination_click` nos destinos acionáveis.
+- [[Bio pública - Registro de implementação V1]] contém os parâmetros de configuração e o estado de coleta.

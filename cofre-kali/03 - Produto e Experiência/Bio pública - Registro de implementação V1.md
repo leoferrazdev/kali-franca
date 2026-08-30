@@ -149,3 +149,16 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 - As respostas públicas não contêm `503` nem `Service Unavailable`.
 - `npm run test:static`: 20 testes aprovados.
 - `npm run build`: build de produção da área de membros aprovado.
+
+## Google Analytics 4 — acompanhamento da bio — 2026-08-30
+
+- Conta criada: **Kalì Franca** — ID `406399339`.
+- Propriedade criada: **Kalì Franca — Bio** — ID `552151142`.
+- Fluxo web: `kalifranca.com.br` — ID `15528815163`.
+- ID de medição instalado na página: `G-RZGESTEZCK`.
+- Fuso configurado: `(GMT-03:00) São Paulo Time`; categoria: **Health**; porte: **Small - 1 to 10 employees**.
+- O Enhanced Measurement permaneceu habilitado para page views, scrolls e outbound clicks.
+- A bio também envia o evento customizado `bio_destination_click` para os links de Mentoria e YouTube, com os parâmetros `destination`, `destination_url` e `transport_type: beacon`.
+- Reprogramação permanece sem evento de clique porque continua sem link interativo.
+- Nenhum e-mail, senha, token ou chave privada foi registrado no cofre.
+- O Analytics informa que a coleta pode levar até 48 horas para começar e os relatórios podem levar mais tempo para acumular dados.

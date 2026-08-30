@@ -32,6 +32,14 @@
         y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "yaiki79vjn");
     </script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZGESTEZCK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-RZGESTEZCK');
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -115,5 +123,18 @@
         </footer>
       </section>
     </main>
+    <script>
+      document.querySelectorAll('a[data-destination]').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (typeof window.gtag !== 'function') return;
+
+          window.gtag('event', 'bio_destination_click', {
+            destination: link.dataset.destination,
+            destination_url: link.href,
+            transport_type: 'beacon'
+          });
+        });
+      });
+    </script>
   </body>
 </html>
