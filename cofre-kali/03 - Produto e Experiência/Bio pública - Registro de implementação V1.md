@@ -162,3 +162,13 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 - Reprogramação permanece sem evento de clique porque continua sem link interativo.
 - Nenhum e-mail, senha, token ou chave privada foi registrado no cofre.
 - O Analytics informa que a coleta pode levar até 48 horas para começar e os relatórios podem levar mais tempo para acumular dados.
+
+## Verificação pública — Google Analytics 4 — 2026-08-30
+
+- Commit publicado na `main`: `990a568` (`feat: instala analytics e eventos na bio`).
+- `https://kalifranca.com.br/bio/` respondeu HTTP 200 com 7.131 bytes.
+- O HTML público contém o Google tag com `G-RZGESTEZCK`, a configuração de page view, o evento `bio_destination_click` e o parâmetro `destination_url`.
+- O HTML público também preserva o Microsoft Clarity e não contém `503` nem `Service Unavailable`.
+- `npm run test:static`: 21 testes aprovados.
+- `npm run test --workspace=kali-franca-membros`: 19 testes aprovados.
+- `npm run build`: build de produção da área de membros aprovado.

@@ -177,3 +177,5 @@ area: indice
 - A conta **Kalì Franca** (`406399339`), a propriedade **Kalì Franca — Bio** (`552151142`) e o fluxo web (`15528815163`) foram criados no Analytics.
 - A bio usa o ID de medição `G-RZGESTEZCK` para page views e envia `bio_destination_click` nos destinos acionáveis.
 - [[Bio pública - Registro de implementação V1]] contém os parâmetros de configuração e o estado de coleta.
+- Commit `990a568` publicado na `main`; a bio pública respondeu HTTP 200 com o tag e o evento presentes, sem 503.
+- As suítes estáticas (21), de membros (19) e o build de produção foram aprovados; a coleta do Analytics permanece sujeita à janela de processamento do Google.
