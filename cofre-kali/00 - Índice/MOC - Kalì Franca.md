@@ -141,3 +141,10 @@ area: indice
 - Login e cadastro de membros respondem HTTP 200; `/membros` redireciona para `/login` sem sessão.
 - O CSS de produção contém o novo `.logout-button` e o alvo mínimo de 44 px.
 - Logout autenticado real segue pendente de teste com sessão controlada, sem registrar credenciais no cofre.
+
+## Microsoft Clarity — bio — 2026-08-30
+
+- [[Bio pública - Registro de implementação V1]] registra o projeto **Kalì Franca — Bio** no Clarity e a instalação do rastreamento na rota `/bio/`.
+- Projeto oficial desta etapa: `yaiki79vjn`; o projeto preliminar de outra sessão não foi excluído.
+- O snippet está no `<head>` de `bio/index.html`; a coleta pode levar até duas horas para apresentar dados.
+- O registro foi atualizado diretamente porque o aplicativo Obsidian não estava em execução para o CLI.

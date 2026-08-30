@@ -65,3 +65,16 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 - [[Design system - Mapa da fonte V1]]
 - [[Home visual - Registro de implementação V1]]
 - [[Roadmap - Kalì Franca]]
+
+## Microsoft Clarity — mapa de calor da bio — 2026-08-30
+
+- Projeto oficial criado no navegador próprio do Codex: **Kalì Franca — Bio**.
+- URL monitorada: `https://kalifranca.com.br/bio/`.
+- Setor selecionado: **Saúde e Bem-estar**.
+- Dashboard de instalação: `https://clarity.microsoft.com/projects/view/yaiki79vjn/gettingstarted`.
+- O snippet oficial do projeto foi instalado no `<head>` de `bio/index.html`, usando `https://www.clarity.ms/tag/`.
+- Contrato automatizado: `tests/bio-clarity.test.mjs`.
+- A coleta pode levar até duas horas para exibir dados no painel, conforme aviso do Clarity.
+- O projeto preliminar criado em outra sessão de navegador (`yaij2gqp9z`) não foi apagado, pois a exclusão é uma ação destrutiva não solicitada. O projeto oficial desta etapa é `yaiki79vjn`.
+- Nenhuma credencial, senha ou chave privada foi registrada no cofre.
+- Registro feito diretamente no Markdown porque o aplicativo Obsidian não estava em execução e o CLI estava indisponível.
