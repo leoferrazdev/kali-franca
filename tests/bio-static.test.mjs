@@ -40,7 +40,7 @@ test('a bio preserva compartilhamento, imagem e sistema tipográfico', () => {
   assert.match(html, /property=["']og:image["'][^>]+content=["']https:\/\/kalifranca\.com\.br\/profile\.jpg["']/i);
   assert.match(html, /name=["']twitter:card["'][^>]+content=["']summary_large_image["']/i);
   assert.match(html, /\.\.\/brandbook\/tokens\.css/i);
-  assert.match(html, /styles\.css/i);
+  assert.match(html, /styles\.css\?v=20260830-cards/i);
   assert.match(styles, /Cormorant(?:\+|\s)Garamond/i);
   assert.match(styles, /Jost/i);
   assert.match(styles, /IBM(?:\+|\s)Plex(?:\+|\s)Mono/i);
