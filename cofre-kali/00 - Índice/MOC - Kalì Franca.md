@@ -169,3 +169,5 @@ area: indice
 
 - Removido o retorno para `/` do rodapé da bio, pois a home pública ainda não está definida.
 - O rodapé permanece com a assinatura e o domínio; a home foi mantida como movimento futuro do roadmap.
+- Commit `842eb83` publicado na `main`; `/bio/` e seu CSS respondem HTTP 200 sem `footer-home` e sem 503.
+- `npm run test:static` (20) e `npm run build` foram aprovados.

@@ -140,3 +140,12 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 - A definição da home permanece registrada como item de roadmap futuro.
 - O contrato `tests/bio-static.test.mjs` garante a ausência do link e do CSS associado.
 - O contrato responsivo foi atualizado para validar o alvo mínimo dos CTAs dos cards, que continuam sendo os elementos acionáveis da página.
+
+## Verificação pública — home futura — 2026-08-30
+
+- Commit publicado na `main`: `842eb83` (`fix: remove retorno para home indefinida da bio`).
+- `https://kalifranca.com.br/bio/` respondeu HTTP 200 com o rodapé preservado e sem `footer-home` no HTML.
+- `https://kalifranca.com.br/bio/styles.css?v=20260830-cards` respondeu HTTP 200 sem a regra `.footer-home`.
+- As respostas públicas não contêm `503` nem `Service Unavailable`.
+- `npm run test:static`: 20 testes aprovados.
+- `npm run build`: build de produção da área de membros aprovado.
