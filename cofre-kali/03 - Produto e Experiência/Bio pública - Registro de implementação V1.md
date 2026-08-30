@@ -78,3 +78,15 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 - O projeto preliminar criado em outra sessão de navegador (`yaij2gqp9z`) não foi apagado, pois a exclusão é uma ação destrutiva não solicitada. O projeto oficial desta etapa é `yaiki79vjn`.
 - Nenhuma credencial, senha ou chave privada foi registrada no cofre.
 - Registro feito diretamente no Markdown porque o aplicativo Obsidian não estava em execução e o CLI estava indisponível.
+
+## Verificação pública — Microsoft Clarity — 2026-08-30
+
+- Commit publicado na `main`: `50d2e78` (`feat: instala mapa de calor do Clarity na bio`).
+- `https://kalifranca.com.br/bio/` respondeu HTTP 200 com 5.924 bytes.
+- O HTML público contém `https://www.clarity.ms/tag/` e o projeto oficial `yaiki79vjn`.
+- O HTML público não contém `503` nem `Service Unavailable` e preserva o título `Kalì Franca — Bio`.
+- A aba pública do navegador do Codex foi recarregada e exibiu os três destinos previstos: Mentoria, Reprogramação Energética em breve e Canal do YouTube.
+- `npm run test:static`: 18 testes aprovados.
+- `npm run test --workspace=kali-franca-membros`: 19 testes aprovados.
+- `npm run build`: build de produção aprovado.
+- O painel do Clarity permanece configurado; os dados de mapa de calor podem levar até duas horas para aparecer.

@@ -148,3 +148,5 @@ area: indice
 - Projeto oficial desta etapa: `yaiki79vjn`; o projeto preliminar de outra sessão não foi excluído.
 - O snippet está no `<head>` de `bio/index.html`; a coleta pode levar até duas horas para apresentar dados.
 - O registro foi atualizado diretamente porque o aplicativo Obsidian não estava em execução para o CLI.
+- Commit `50d2e78` publicado na `main`; a rota pública `/bio/` respondeu HTTP 200 com o snippet e o projeto oficial.
+- `npm run test:static` (18), suíte de membros (19) e `npm run build` foram aprovados.
