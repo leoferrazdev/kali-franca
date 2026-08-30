@@ -62,6 +62,15 @@ test('a bio possui estrutura acessível e estados responsivos', () => {
   assert.match(styles, /min-height:\s*44px/);
 });
 
+test('a bio não oferece retorno para uma home ainda não definida', () => {
+  const html = read(bioPath);
+  const styles = read(stylesPath);
+
+  assert.doesNotMatch(html, /<a[^>]+class=["']footer-home["'][^>]*href=["']\/["'][^>]*>\s*↗\s*<\/a>/i);
+  assert.match(html, /<footer[^>]+class=["']bio-footer["']/i);
+  assert.doesNotMatch(styles, /\.footer-home/);
+});
+
 test('a bio publica o manifesto de abundância aprovado', () => {
   const html = read(bioPath);
 

@@ -11,5 +11,5 @@ test('páginas públicas preservam alvos de toque mínimos', () => {
     assert.match(read(stylesheet), /\.wordmark[\s\S]*?min-height:\s*44px/, stylesheet);
   }
 
-  assert.match(read('bio', 'styles.css'), /\.footer-home[\s\S]*?min-width:\s*44px/);
+  assert.match(read('bio', 'styles.css'), /\.destination-action[\s\S]*?min-height:\s*44px/);
 });

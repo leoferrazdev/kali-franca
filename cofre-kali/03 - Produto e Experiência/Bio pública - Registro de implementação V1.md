@@ -132,3 +132,11 @@ O remoto `origin/main` está alinhado ao commit `fa32234`.
 - `npm run test:static`: 19 testes aprovados.
 - `npm run test --workspace=kali-franca-membros`: 19 testes aprovados.
 - `npm run build`: build de produção aprovado.
+
+## Ajuste de navegação — home futura — 2026-08-30
+
+- O link `footer-home` que retornava para `/` foi removido da bio porque a home pública ainda não está definida.
+- O rodapé preserva apenas a marca e o domínio, sem substituir a ausência por um destino fictício.
+- A definição da home permanece registrada como item de roadmap futuro.
+- O contrato `tests/bio-static.test.mjs` garante a ausência do link e do CSS associado.
+- O contrato responsivo foi atualizado para validar o alvo mínimo dos CTAs dos cards, que continuam sendo os elementos acionáveis da página.

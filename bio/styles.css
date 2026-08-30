@@ -419,8 +419,7 @@ a.bio-destination:hover {
   color: var(--kf-color-text-secondary);
 }
 
-.footer-mark,
-.footer-home {
+.footer-mark {
   display: inline-grid;
   width: 2rem;
   height: 2rem;
@@ -428,28 +427,12 @@ a.bio-destination:hover {
   border: 1px solid var(--kf-color-border-dark);
   border-radius: 50%;
   color: var(--kf-color-accent);
-  text-decoration: none;
 }
 
 .footer-mark {
   border-color: color-mix(in srgb, var(--kf-color-accent) 45%, transparent);
   font-size: 1.35rem;
   line-height: 1;
-}
-
-.footer-home {
-  height: 2.75rem;
-  min-height: 44px;
-  min-width: 44px;
-  margin-left: auto;
-  width: 2.75rem;
-  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
-}
-
-.footer-home:hover {
-  border-color: var(--kf-color-accent);
-  color: var(--kf-color-alabastro-500);
-  transform: translateY(-2px);
 }
 
 @media (max-width: 560px) {
