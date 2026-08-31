@@ -70,8 +70,8 @@ Também foram preservados e ajustados apenas os contratos existentes necessário
 
 - Código: implementado e versionado no repositório.
 - Supabase: migrations-base e específica aplicadas no projeto informado; estrutura conferida com tabela, funções, políticas, índices e grants.
-- Hostinger/deploy: publicado a partir do commit `20013fe` na `main`.
-- URLs públicas verificadas após a propagação: página pública HTTP 200; preflight da API HTTP 204 com `Access-Control-Allow-Origin` restrito ao domínio principal; POST inválido HTTP 400 sem criação de registro; rota administrativa sem sessão HTTP 307 para autenticação.
+- Hostinger/deploy: V1 publicada a partir do commit `20013fe`; a extensão de listagem/detalhe e o ajuste da bio foram publicados no commit `d44245b`, ambos na `main`.
+- URLs públicas verificadas após a propagação: página pública HTTP 200; botão da Mentoria na bio apontando para `https://kalifranca.com.br/bio/`; preflight da API HTTP 204 com `Access-Control-Allow-Origin` restrito ao domínio principal; POST inválido HTTP 400 sem criação de registro; inbox e rota individual sem sessão HTTP 307 para autenticação.
 - Cofre: este registro e [[Mentoria Frequência da Abundância - Arquitetura aprovada]] atualizados.
 
 ## Roadmap posterior

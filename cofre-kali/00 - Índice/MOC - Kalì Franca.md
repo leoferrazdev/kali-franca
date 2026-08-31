@@ -193,4 +193,4 @@ area: indice
 - [[Mentoria Frequência da Abundância - Registro de implementação V1]] registra a separação entre a inbox de aplicações recebidas e a página de preenchimento individual.
 - A listagem usa a rota `/membros/aplicacoes/mentoria-frequencia-da-abundancia`; o detalhe usa `/membros/aplicacoes/mentoria-frequencia-da-abundancia/[id]` e permanece restrito a `administradora`.
 - A bio foi atualizada para que o botão da Mentoria aponte para `https://kalifranca.com.br/bio/`, conforme solicitado.
-- Estado atual: implementação local validada; deploy e verificação pública desta extensão aguardam a publicação do commit.
+- Estado atual: commit `d44245b` publicado na `main`; bio, API e guarda da rota individual verificados publicamente.
