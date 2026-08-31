@@ -61,3 +61,11 @@ test('a aplicação preserva acessibilidade, tokens e privacidade no navegador',
   assert.doesNotMatch(script, /localStorage|sessionStorage/i);
   assert.match(script, /membros\.kalifranca\.com\.br\/api\/mentoria-frequencia-da-abundancia\/applications/i);
 });
+
+test('a abertura da aplicação não move o foco para o título da introdução', () => {
+  const script = read(scriptPath);
+
+  assert.doesNotMatch(script, /function showIntro\(\)[\s\S]*?focusStep\(intro\)/i);
+  assert.match(script, /function showStep\(index\)[\s\S]*?focusStep\(steps\[index\]\)/i);
+  assert.match(script, /function showSuccess\(\)[\s\S]*?focusStep\(success\)/i);
+});

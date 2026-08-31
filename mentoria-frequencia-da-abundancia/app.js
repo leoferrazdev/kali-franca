@@ -82,7 +82,6 @@ function showIntro() {
   progressWrap.hidden = true;
   actions.hidden = true;
   setFeedback('');
-  focusStep(intro);
 }
 
 function showSuccess() {
