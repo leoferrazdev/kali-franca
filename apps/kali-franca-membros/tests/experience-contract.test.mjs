@@ -40,7 +40,7 @@ test('a experiência usa componentes de marca e não repete a implementação do
     read('app', 'components', 'MemberShell.tsx')
   ].join('\n');
 
-  assert.doesNotMatch(sources, /leads|dashboard|profiles|offers|tasks/i);
+  assert.doesNotMatch(sources, /leads|dashboard|offers|tasks|community_conversions/i);
   assert.match(sources, /Área de membros/);
   assert.match(sources, /conteúdo|conteudos/i);
 });

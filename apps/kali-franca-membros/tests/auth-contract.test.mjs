@@ -71,7 +71,7 @@ test('login e cadastro usam Auth do próprio app e redirecionam após sucesso', 
   assert.doesNotMatch(authPanel, /leads|profiles|offers|tasks/i);
 });
 
-test('a home valida a sessão no servidor e não consulta o CRM', () => {
+test('a home valida a sessão e consulta apenas o perfil para a navegação administrativa', () => {
   const memberPage = read('app', 'membros', 'page.tsx');
 
   assert.match(memberPage, /createSupabaseServerClient/);
@@ -79,5 +79,7 @@ test('a home valida a sessão no servidor e não consulta o CRM', () => {
   assert.match(memberPage, /redirect\(['"]\/login/);
   assert.match(memberPage, /user\.email|email/);
   assert.match(memberPage, /dynamic\s*=\s*['"]force-dynamic['"]/);
-  assert.doesNotMatch(memberPage, /leads|profiles|offers|tasks|community_conversions/i);
+  assert.match(memberPage, /profiles/);
+  assert.match(memberPage, /isAdministrator|role/);
+  assert.doesNotMatch(memberPage, /leads|offers|tasks|community_conversions/i);
 });

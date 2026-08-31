@@ -179,3 +179,11 @@ area: indice
 - [[Bio pública - Registro de implementação V1]] contém os parâmetros de configuração e o estado de coleta.
 - Commit `990a568` publicado na `main`; a bio pública respondeu HTTP 200 com o tag e o evento presentes, sem 503.
 - As suítes estáticas (21), de membros (19) e o build de produção foram aprovados; a coleta do Analytics permanece sujeita à janela de processamento do Google.
+
+## Mentoria Frequência da Abundância — arquitetura da aplicação — 2026-08-30
+
+- [[Mentoria Frequência da Abundância - Arquitetura aprovada]] registra a URL pública, o fluxo de 17 etapas, o consentimento mínimo e a separação entre aplicação pública e CRM administrativo.
+- A experiência pública ficará em `kalifranca.com.br/mentoria-frequencia-da-abundancia/`; o CRM ficará dentro de `membros.kalifranca.com.br` e será exclusivo para `administradora`.
+- A persistência será feita em tabela Supabase própria da mentoria, sem duplicação automática em leads na V1.
+- [[Mentoria Frequência da Abundância - Registro de implementação V1]] registra o fluxo público, a API, a tabela Supabase, o RLS, a caixa administrativa e as verificações da entrega.
+- Estado atual: implementação V1 concluída no código; deploy e verificação pública são acompanhados separadamente.

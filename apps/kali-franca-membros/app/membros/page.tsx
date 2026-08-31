@@ -8,10 +8,11 @@ export const dynamic = 'force-dynamic';
 
 export default async function MemberHome() {
   let memberEmail: string | undefined;
+  let isAdministrator = false;
   const preview = !isSupabaseConfigured();
 
   if (!preview) {
-    let memberUser: { email?: string } | null = null;
+    let memberUser: { id: string; email?: string } | null = null;
 
     try {
       const supabase = await createSupabaseServerClient();
@@ -26,10 +27,18 @@ export default async function MemberHome() {
     }
 
     memberEmail = memberUser.email;
+
+    try {
+      const supabase = await createSupabaseServerClient();
+      const { data: profile } = await supabase.from('profiles').select('role').eq('id', memberUser.id).maybeSingle();
+      isAdministrator = profile?.role === 'administradora';
+    } catch {
+      isAdministrator = false;
+    }
   }
 
   return (
-    <MemberShell memberEmail={memberEmail} preview={preview}>
+    <MemberShell memberEmail={memberEmail} preview={preview} isAdministrator={isAdministrator}>
       <div className="member-content__intro">
         <p className="eyebrow">Área de membros</p>
         <h1>{preview ? 'Seu próximo passo começa aqui.' : 'Bem-vinda(o) ao seu espaço.'}</h1>
