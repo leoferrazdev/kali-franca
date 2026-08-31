@@ -40,7 +40,15 @@ O design desta extensão está em `docs/superpowers/specs/2026-08-30-mentoria-ap
 
 ## Atualização da bio
 
-O botão da Mentoria na bio passou a apontar explicitamente para `https://kalifranca.com.br/bio/`, conforme a instrução desta etapa. O link não abre mais o destino de WhatsApp.
+O botão da Mentoria na bio aponta para `https://kalifranca.com.br/mentoria-frequencia-da-abundancia/`, a página pública da aplicação. O destino de WhatsApp deixou de ser usado neste botão.
+
+## Acesso administrativo
+
+O usuário Auth `leonardoferrazbrasil@gmail.com` foi associado ao perfil operacional `administradora` no projeto Supabase `fjnacvlcaveoiwedmdgy`. Com esse perfil, o usuário pode acessar a inbox de aplicações e abrir o preenchimento individual completo dentro de `membros.kalifranca.com.br`.
+
+## Correção de foco — 2026-08-30
+
+O carregamento inicial da aplicação não move mais o foco para `#intro-title`. O título deixa de receber `tabindex="-1"` dinamicamente na abertura; o foco programático permanece somente nas transições iniciadas pelo usuário para uma etapa ou para a página de sucesso.
 
 ## Banco e segurança
 
@@ -70,8 +78,9 @@ Também foram preservados e ajustados apenas os contratos existentes necessário
 
 - Código: implementado e versionado no repositório.
 - Supabase: migrations-base e específica aplicadas no projeto informado; estrutura conferida com tabela, funções, políticas, índices e grants.
-- Hostinger/deploy: V1 publicada a partir do commit `20013fe`; a extensão de listagem/detalhe e o ajuste da bio foram publicados no commit `d44245b`, ambos na `main`.
-- URLs públicas verificadas após a propagação: página pública HTTP 200; botão da Mentoria na bio apontando para `https://kalifranca.com.br/bio/`; preflight da API HTTP 204 com `Access-Control-Allow-Origin` restrito ao domínio principal; POST inválido HTTP 400 sem criação de registro; inbox e rota individual sem sessão HTTP 307 para autenticação.
+- Hostinger/deploy: V1 publicada a partir do commit `20013fe`; a extensão de listagem/detalhe e o ajuste anterior da bio foram publicados no commit `d44245b`; a correção do destino da Mentoria foi publicada no commit `7c5ef94`; a correção de foco foi publicada no commit `29af311`, todos na `main`.
+- URLs públicas verificadas após a propagação: página pública HTTP 200; botão da Mentoria na bio entregando `https://kalifranca.com.br/mentoria-frequencia-da-abundancia/`; JavaScript público HTTP 200 sem `focusStep(intro)` e preservando o foco das transições explícitas; preflight da API HTTP 204 com `Access-Control-Allow-Origin` restrito ao domínio principal; POST inválido HTTP 400 sem criação de registro; inbox e rota individual sem sessão HTTP 307 para autenticação.
+- Acesso administrativo: perfil `administradora` confirmado no Supabase para `leonardoferrazbrasil@gmail.com`; as rotas de inbox e detalhe publicadas redirecionam usuários sem sessão para `/login/` (HTTP 307).
 - Cofre: este registro e [[Mentoria Frequência da Abundância - Arquitetura aprovada]] atualizados.
 
 ## Roadmap posterior

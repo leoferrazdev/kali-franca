@@ -192,5 +192,6 @@ area: indice
 
 - [[Mentoria Frequência da Abundância - Registro de implementação V1]] registra a separação entre a inbox de aplicações recebidas e a página de preenchimento individual.
 - A listagem usa a rota `/membros/aplicacoes/mentoria-frequencia-da-abundancia`; o detalhe usa `/membros/aplicacoes/mentoria-frequencia-da-abundancia/[id]` e permanece restrito a `administradora`.
-- A bio foi atualizada para que o botão da Mentoria aponte para `https://kalifranca.com.br/bio/`, conforme solicitado.
-- Estado atual: commit `d44245b` publicado na `main`; bio, API e guarda da rota individual verificados publicamente.
+- A bio foi atualizada para que o botão da Mentoria aponte para a página pública da aplicação: `https://kalifranca.com.br/mentoria-frequencia-da-abundancia/`.
+- O usuário `leonardoferrazbrasil@gmail.com` possui perfil operacional `administradora` no Supabase, habilitando a exibição das aplicações recebidas e do preenchimento individual.
+- Estado atual: commits `7c5ef94` e `29af311` publicados na `main`; a bio responde HTTP 200 e entrega o destino público correto no HTML; a aplicação não move mais o foco para o `h1` introdutório ao abrir; as rotas administrativas estão protegidas por autenticação.
