@@ -22,10 +22,19 @@ test('a bio pública possui os três destinos acordados', () => {
   assert.match(html, /Mentoria/i);
   assert.match(html, /Eleva 5D:\s*Reprogramação, Alinhamento e Manifestação/i);
   assert.match(html, /Canal do YouTube/i);
-  assert.match(html, /https:\/\/wa\.me\/message\/R6WHM3W3SGCSE1/i);
   assert.match(html, /https:\/\/www\.youtube\.com\/channel\/UCeaSCWbFhL3TOuIdYxzH3OQ/i);
   assert.doesNotMatch(html, /(?:<a|<button)[^>]+data-destination=["']reprogramacao["']/i);
   assert.equal((html.match(/data-destination=/gi) || []).length, 3);
+});
+
+test('o botão da Mentoria na bio aponta para a própria página da bio', () => {
+  const html = read(bioPath);
+
+  assert.match(
+    html,
+    /<a[^>]+data-destination=["']mentoria["'][^>]+href=["']https:\/\/kalifranca\.com\.br\/bio\/["']/i,
+  );
+  assert.doesNotMatch(html, /<a[^>]+data-destination=["']mentoria["'][^>]+href=["']https:\/\/wa\.me\//i);
 });
 
 test('a bio preserva compartilhamento, imagem e sistema tipográfico', () => {

@@ -31,7 +31,7 @@ Como o formulário pode conter informações sobre crença/fé e áreas relacion
 
 ## CRM
 
-Rota prevista: `/membros/aplicacoes/mentoria-frequencia-da-abundancia`.
+Rotas: `/membros/aplicacoes/mentoria-frequencia-da-abundancia` para a listagem e `/membros/aplicacoes/mentoria-frequencia-da-abundancia/[id]` para o preenchimento individual.
 
 A administradora verá lista e detalhes completos em layout responsivo. Usuários sem autorização não verão a existência nem o conteúdo das aplicações.
 

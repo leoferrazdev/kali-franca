@@ -27,7 +27,20 @@ A aplicação pública da Mentoria Frequência da Abundância foi implementada c
 - `apps/kali-franca-membros/lib/mentorship/frequency-application.ts`: contrato de validação compartilhado pelo endpoint.
 - `apps/kali-franca-membros/app/api/mentoria-frequencia-da-abundancia/applications/route.ts`: endpoint `POST` com origem permitida, limite de corpo, honeypot, consentimento, validação e resposta neutra `{ accepted: true }`.
 - `apps/kali-franca-membros/app/membros/aplicacoes/mentoria-frequencia-da-abundancia/page.tsx`: inbox administrativa somente leitura, com lista, expansão e respostas completas.
+- `apps/kali-franca-membros/app/membros/aplicacoes/mentoria-frequencia-da-abundancia/[id]/page.tsx`: página individual somente leitura, com o preenchimento completo agrupado em contato, contexto e prontidão.
 - `apps/kali-franca-membros/app/components/MemberNavigation.tsx`: entrada administrativa exibida somente para `administradora`.
+
+## Extensão — listagem e preenchimento individual
+
+A inbox deixou de expandir o preenchimento completo dentro de cada item. A listagem exibe nome, e-mail, data, status e o botão `Ver aplicação completa`, que abre a rota individual usando o UUID técnico da aplicação. A tela individual valida o UUID, confirma sessão e perfil `administradora`, filtra pelo `id` e pelo slug fixo da mentoria e responde com estado neutro para erro ou registro inexistente.
+
+A tela individual mantém todas as 17 respostas, o consentimento e os metadados de recebimento, sem edição, exclusão, exportação ou alteração de status. O layout foi reorganizado para leitura desktop e mobile, com quebra integral de textos e alvos interativos acessíveis.
+
+O design desta extensão está em `docs/superpowers/specs/2026-08-30-mentoria-application-detail-design.md`.
+
+## Atualização da bio
+
+O botão da Mentoria na bio passou a apontar explicitamente para `https://kalifranca.com.br/bio/`, conforme a instrução desta etapa. O link não abre mais o destino de WhatsApp.
 
 ## Banco e segurança
 

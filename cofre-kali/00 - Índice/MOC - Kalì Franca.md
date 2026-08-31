@@ -187,3 +187,10 @@ area: indice
 - A persistência será feita em tabela Supabase própria da mentoria, sem duplicação automática em leads na V1.
 - [[Mentoria Frequência da Abundância - Registro de implementação V1]] registra o fluxo público, a API, a tabela Supabase, o RLS, a caixa administrativa e as verificações da entrega.
 - Estado atual: implementação V1 concluída; migration aplicada no Supabase; commit `20013fe` publicado na `main`; página, API e guarda administrativa verificados publicamente.
+
+## Mentoria Frequência da Abundância — detalhe individual — 2026-08-30
+
+- [[Mentoria Frequência da Abundância - Registro de implementação V1]] registra a separação entre a inbox de aplicações recebidas e a página de preenchimento individual.
+- A listagem usa a rota `/membros/aplicacoes/mentoria-frequencia-da-abundancia`; o detalhe usa `/membros/aplicacoes/mentoria-frequencia-da-abundancia/[id]` e permanece restrito a `administradora`.
+- A bio foi atualizada para que o botão da Mentoria aponte para `https://kalifranca.com.br/bio/`, conforme solicitado.
+- Estado atual: implementação local validada; deploy e verificação pública desta extensão aguardam a publicação do commit.

@@ -4,48 +4,12 @@ import { createSupabaseServerClient } from '../../../../lib/supabase/server';
 
 export const dynamic = 'force-dynamic';
 
-const responseFields = [
-  ['age_range', 'Faixa etária'],
-  ['sex', 'Sexo'],
-  ['email', 'E-mail'],
-  ['whatsapp', 'WhatsApp'],
-  ['city_state', 'Cidade e Estado'],
-  ['challenge', 'Desafio atual'],
-  ['beliefs', 'Crença, fé ou filosofia'],
-  ['energy_tools_experience', 'Experiência com frequências'],
-  ['priority_area', 'Área prioritária'],
-  ['current_state', 'Estado atual'],
-  ['predominant_feeling', 'Sentimento e pensamento predominante'],
-  ['previous_support', 'Acompanhamentos anteriores'],
-  ['perceived_block', 'Maior bloqueio percebido'],
-  ['desired_wins', 'Primeiras vitórias desejadas'],
-  ['commitment_score', 'Compromisso com a jornada'],
-  ['investment_readiness', 'Disponibilidade para investir'],
-] as const;
-
 type ApplicationRow = {
   id: string;
   full_name: string;
   status: string;
   created_at: string;
-  consent: boolean;
-  consented_at: string;
-  age_range: string;
-  sex: string;
   email: string;
-  whatsapp: string;
-  city_state: string;
-  challenge: string;
-  beliefs: string;
-  energy_tools_experience: string;
-  priority_area: string;
-  current_state: string;
-  predominant_feeling: string;
-  previous_support: string;
-  perceived_block: string;
-  desired_wins: string;
-  commitment_score: number;
-  investment_readiness: string;
 };
 
 function formatDate(value: string) {
@@ -120,27 +84,23 @@ export default async function MentorshipApplicationsPage() {
         {applications.length ? (
           <div className="application-list">
             {applications.map((application) => (
-              <details className="application-detail" key={application.id}>
-                <summary>
-                  <span>
+              <article className="application-card" key={application.id}>
+                <div className="application-card__summary">
+                  <div>
                     <strong>{application.full_name}</strong>
                     <small>{application.email} · {formatDate(application.created_at)}</small>
-                  </span>
-                  <span className="application-status">{application.status}</span>
-                </summary>
-                <dl className="application-detail__body">
-                  {responseFields.map(([key, label]) => (
-                    <div className="application-response" key={key}>
-                      <dt>{label}</dt>
-                      <dd>{String(application[key])}</dd>
-                    </div>
-                  ))}
-                  <div className="application-response">
-                    <dt>Consentimento</dt>
-                    <dd>{application.consent ? `Aceito em ${formatDate(application.consented_at)}` : 'Não aceito'}</dd>
                   </div>
-                </dl>
-              </details>
+                  <span className="application-status">{application.status}</span>
+                </div>
+                <a
+                  className="application-card__link"
+                  href={`/membros/aplicacoes/mentoria-frequencia-da-abundancia/${application.id}`}
+                  aria-label={`Ver aplicação completa de ${application.full_name}`}
+                >
+                  <span>Ver aplicação completa</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </article>
             ))}
           </div>
         ) : (

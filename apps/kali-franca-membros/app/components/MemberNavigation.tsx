@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 type MemberNavigationProps = {
   isAdministrator?: boolean;
   activePath?: 'home' | 'applications';
@@ -13,10 +15,10 @@ export function MemberNavigation({ isAdministrator = false, activePath = 'home' 
           Início
         </a>
         {isAdministrator ? (
-          <a className={`member-navigation__link${activePath === 'applications' ? ' member-navigation__link--active' : ''}`} href="/membros/aplicacoes/mentoria-frequencia-da-abundancia" aria-current={activePath === 'applications' ? 'page' : undefined}>
+          <Link className={`member-navigation__link${activePath === 'applications' ? ' member-navigation__link--active' : ''}`} href="/membros/aplicacoes/mentoria-frequencia-da-abundancia" aria-current={activePath === 'applications' ? 'page' : undefined}>
             <span aria-hidden="true">◈</span>
             Aplicações
-          </a>
+          </Link>
         ) : null}
         <span className="member-navigation__link member-navigation__link--disabled" aria-disabled="true">
           <span aria-hidden="true">◈</span>
