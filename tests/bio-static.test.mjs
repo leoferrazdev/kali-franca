@@ -27,14 +27,13 @@ test('a bio pública possui os três destinos acordados', () => {
   assert.equal((html.match(/data-destination=/gi) || []).length, 3);
 });
 
-test('o botão da Mentoria na bio aponta para a própria página da bio', () => {
+test('o botão da Mentoria na bio aponta para a página pública da aplicação', () => {
   const html = read(bioPath);
 
   assert.match(
     html,
-    /<a[^>]+data-destination=["']mentoria["'][^>]+href=["']https:\/\/kalifranca\.com\.br\/bio\/["']/i,
+    /<a[^>]+data-destination=["']mentoria["'][^>]+href=["']https:\/\/kalifranca\.com\.br\/mentoria-frequencia-da-abundancia\/["']/i,
   );
-  assert.doesNotMatch(html, /<a[^>]+data-destination=["']mentoria["'][^>]+href=["']https:\/\/wa\.me\//i);
 });
 
 test('a bio preserva compartilhamento, imagem e sistema tipográfico', () => {
