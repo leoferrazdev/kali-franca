@@ -186,4 +186,4 @@ area: indice
 - A experiência pública ficará em `kalifranca.com.br/mentoria-frequencia-da-abundancia/`; o CRM ficará dentro de `membros.kalifranca.com.br` e será exclusivo para `administradora`.
 - A persistência será feita em tabela Supabase própria da mentoria, sem duplicação automática em leads na V1.
 - [[Mentoria Frequência da Abundância - Registro de implementação V1]] registra o fluxo público, a API, a tabela Supabase, o RLS, a caixa administrativa e as verificações da entrega.
-- Estado atual: implementação V1 concluída no código; deploy e verificação pública são acompanhados separadamente.
+- Estado atual: implementação V1 concluída; migration aplicada no Supabase; commit `20013fe` publicado na `main`; página, API e guarda administrativa verificados publicamente.

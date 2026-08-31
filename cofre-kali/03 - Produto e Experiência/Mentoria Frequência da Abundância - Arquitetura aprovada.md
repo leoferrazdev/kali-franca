@@ -44,4 +44,4 @@ A administradora verá lista e detalhes completos em layout responsivo. Usuário
 
 ## Estado
 
-Arquitetura aprovada em 2026-08-30 e implementada na V1. A implementação está registrada em [[Mentoria Frequência da Abundância - Registro de implementação V1]]. O código e o banco foram validados localmente/remotamente; deploy e verificação pública permanecem estados separados e devem ser confirmados após a publicação.
+Arquitetura aprovada em 2026-08-30 e implementada na V1. A implementação está registrada em [[Mentoria Frequência da Abundância - Registro de implementação V1]]. O código, o banco, o deploy e as URLs públicas foram verificados em seus respectivos estados de entrega.
