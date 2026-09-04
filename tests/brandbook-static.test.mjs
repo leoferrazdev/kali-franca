@@ -88,13 +88,16 @@ test('o CSS documenta foco, responsividade e movimento reduzido', () => {
 test('o site e o brandbook usam a imagem pública na prévia de compartilhamento', () => {
   const siteHtml = readIfPresent(siteIndexPath);
   const brandbookHtml = readIfPresent(indexPath);
-  const imageUrl = 'https://kalifranca.com.br/profile.jpg';
+  const siteImageUrl = 'https://kalifranca.com.br/assets/kali-hero-autoridade-horizontal-02.png';
+  const brandbookImageUrl = 'https://kalifranca.com.br/profile.jpg';
 
   assert.ok(existsSync(socialImagePath), 'profile.jpg deve existir na raiz pública');
 
-  for (const html of [siteHtml, brandbookHtml]) {
-    assert.match(html, new RegExp(`property=["']og:image["'][^>]+content=["']${imageUrl.replace('.', '\\.') }["']`, 'i'));
-    assert.match(html, /property=["']og:type["'][^>]+content=["']website["']/i);
-    assert.match(html, /name=["']twitter:card["'][^>]+content=["']summary_large_image["']/i);
-  }
+  assert.match(siteHtml, new RegExp(`property=["']og:image["'][^>]+content=["']${siteImageUrl.replaceAll('.', '\\.') }["']`, 'i'));
+  assert.match(siteHtml, /property=["']og:type["'][^>]+content=["']website["']/i);
+  assert.match(siteHtml, /name=["']twitter:card["'][^>]+content=["']summary_large_image["']/i);
+  assert.match(brandbookHtml, new RegExp(`property=["']og:image["'][^>]+content=["']${brandbookImageUrl.replace('.', '\\.') }["']`, 'i'));
+  assert.match(brandbookHtml, /property=["']og:type["'][^>]+content=["']website["']/i);
+  assert.match(brandbookHtml, /name=["']twitter:card["'][^>]+content=["']summary_large_image["']/i);
 });
+

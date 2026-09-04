@@ -9,10 +9,10 @@ const read = (...segments) => {
   return existsSync(file) ? readFileSync(file, 'utf8') : '';
 };
 
-test('a página do Eleva 5D possui rota pública e estrutura semântica', () => {
-  const html = read('eleva-5d', 'index.html');
+test('a página do Eleva 5D possui a raiz como rota canônica e estrutura semântica', () => {
+  const html = read('index.html');
 
-  assert.ok(existsSync(resolve(root, 'eleva-5d', 'index.html')));
+  assert.ok(existsSync(resolve(root, 'index.html')));
   assert.match(html, /<html[^>]+lang=["']pt-BR["']/i);
   assert.match(html, /<main[^>]+id=["']conteudo["']/i);
   assert.equal((html.match(/<h1\b/gi) || []).length, 1);
@@ -21,7 +21,7 @@ test('a página do Eleva 5D possui rota pública e estrutura semântica', () => 
 });
 
 test('a página apresenta os cinco movimentos e a rotina dos três movimentos', () => {
-  const html = read('eleva-5d', 'index.html');
+  const html = read('index.html');
 
   for (const movement of ['Reprogramar', 'Alinhar', 'Manifestar', 'Sustentar', 'Elevar']) {
     assert.match(html, new RegExp(movement, 'i'));
@@ -32,20 +32,19 @@ test('a página apresenta os cinco movimentos e a rotina dos três movimentos', 
 });
 
 test('a página mantém a oferta honesta enquanto o checkout não existe', () => {
-  const html = read('eleva-5d', 'index.html');
+  const html = read('index.html');
 
   assert.match(html, /Acesso em preparação/i);
-  assert.match(html, /checkout/i);
   assert.doesNotMatch(html, /R\$\s*[0-9]/i);
   assert.doesNotMatch(html, /comprar agora|garantia de resultado|depoimento|\+2[.,]?500/i);
 });
 
 test('a página consome a identidade visual compartilhada e tem contratos de acessibilidade', () => {
-  const html = read('eleva-5d', 'index.html');
-  const styles = read('eleva-5d', 'styles.css');
+  const html = read('index.html');
+  const styles = read('styles.css');
 
-  assert.match(html, /\.\.\/brandbook\/tokens\.css/i);
-  assert.match(html, /profile\.jpg/i);
+  assert.match(html, /brandbook\/tokens\.css/i);
+  assert.match(html, /assets\/kali-hero-autoridade-horizontal-02\.png/i);
   assert.match(html, /Pular para o conteúdo/i);
   assert.match(styles, /:focus-visible/);
   assert.match(styles, /min-height:\s*44px/);
@@ -54,10 +53,18 @@ test('a página consome a identidade visual compartilhada e tem contratos de ace
 });
 
 test('a página mantém a próxima etapa separada da home e da área autenticada', () => {
-  const html = read('eleva-5d', 'index.html');
+  const html = read('index.html');
 
   assert.match(html, /href=["']#acesso["']/i);
   assert.doesNotMatch(html, /membros\.kalifranca\.com\.br/i);
   assert.doesNotMatch(html, /href=["'][^"']*checkout[^"']*["']/i);
+});
+
+test('a antiga rota do Eleva aponta para a raiz canônica sem conteúdo duplicado', () => {
+  const html = read('eleva-5d', 'index.html');
+
+  assert.match(html, /url=\/?/i);
+  assert.match(html, /href=["']\/["']/i);
+  assert.doesNotMatch(html, /profile\.jpg|oferta em construção|Regra dos 3 Movimentos/i);
 });
 

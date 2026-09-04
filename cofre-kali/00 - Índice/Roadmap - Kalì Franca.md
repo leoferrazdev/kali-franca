@@ -15,7 +15,7 @@ area: indice
 
 ## Futuro confirmado
 
-- [x] Criar a página pública V1 do Eleva 5D em `/eleva-5d/`, mantendo a oferta honesta enquanto preço, condições e checkout não estiverem definidos.
+- [x] Publicar a página canônica do Eleva 5D na raiz `/`, com humanização, autoridade e imagens aprovadas, mantendo a oferta honesta enquanto preço, condições e checkout não estiverem definidos.
 - [x] Aprovar a especificação técnica de liberação e acesso do Eleva 5D.
 - [ ] Publicar o Eleva 5D com checkout Kiwify, webhook de pagamento e acesso por entitlement na área de membros.
 

@@ -38,13 +38,14 @@ area: indice
 - [[Design system - Mapa da fonte V1]]
 - [[Escopo - Brandbook online]]
 - [[Brandbook online - Registro de implementação V1]]
+- [[Direção fotográfica da fundadora - Kalì Franca V1]]
 
 ## Produto e experiência
 
 - [[Diagnóstico visual inicial - Experiência web]]
 - [[Home visual - Registro de implementação V1]]
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]]
-- [[Eleva 5D - Página de vendas V1]] — página pública dedicada publicada e verificada; checkout permanece pendente.
+- [[Eleva 5D - Página de vendas na raiz V2]] — página canônica na raiz, com humanização, autoridade e imagens aprovadas; verificação pública pendente.
 
 ## Operação e deploy
 
@@ -57,10 +58,12 @@ area: indice
 - [[Home visual - Registro de implementação V1]]
 - [[Brandbook online - Registro de implementação V1]]
 - [[Eleva 5D - Página de vendas V1]]
+- [[Eleva 5D - Página de vendas na raiz V2]]
 
 ## Eleva 5D
 
-- [[Eleva 5D - Página de vendas V1]] — primeiro entregável comercial da ordem determinística; publicado e verificado em 2026-09-04.
+- [[Eleva 5D - Página de vendas na raiz V2]] — página canônica do primeiro entregável comercial; humanização e imagens aprovadas aplicadas em 2026-09-04.
+- [[Eleva 5D - Página de vendas V1]] — registro histórico da antiga rota dedicada.
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]] — especificação técnica aprovada em 2026-09-04; checkout, webhook, entitlement e acesso protegido permanecem pendentes.
 - Especificação no repositório: `docs/superpowers/specs/2026-09-04-eleva-5d-release-access-design.md`.
 - Especificação da página: `docs/superpowers/specs/2026-09-04-eleva-5d-sales-page-design.md`.
@@ -205,3 +208,4 @@ area: indice
 - A bio foi atualizada para que o botão da Mentoria aponte para a página pública da aplicação: `https://kalifranca.com.br/mentoria-frequencia-da-abundancia/`.
 - O usuário `leonardoferrazbrasil@gmail.com` possui perfil operacional `administradora` no Supabase, habilitando a exibição das aplicações recebidas e do preenchimento individual.
 - Estado atual: commits `7c5ef94` e `29af311` publicados na `main`; a bio responde HTTP 200 e entrega o destino público correto no HTML; a aplicação não move mais o foco para o `h1` introdutório ao abrir; as rotas administrativas estão protegidas por autenticação.
+
