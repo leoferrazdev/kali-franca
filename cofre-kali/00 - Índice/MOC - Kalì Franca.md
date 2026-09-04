@@ -44,7 +44,7 @@ area: indice
 - [[Diagnóstico visual inicial - Experiência web]]
 - [[Home visual - Registro de implementação V1]]
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]]
-- [[Eleva 5D - Página de vendas V1]] — página pública dedicada criada localmente; deployment e checkout permanecem pendentes.
+- [[Eleva 5D - Página de vendas V1]] — página pública dedicada publicada e verificada; checkout permanece pendente.
 
 ## Operação e deploy
 
@@ -60,7 +60,7 @@ area: indice
 
 ## Eleva 5D
 
-- [[Eleva 5D - Página de vendas V1]] — primeiro entregável comercial da ordem determinística; validado localmente em 2026-09-04.
+- [[Eleva 5D - Página de vendas V1]] — primeiro entregável comercial da ordem determinística; publicado e verificado em 2026-09-04.
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]] — especificação técnica aprovada em 2026-09-04; checkout, webhook, entitlement e acesso protegido permanecem pendentes.
 - Especificação no repositório: `docs/superpowers/specs/2026-09-04-eleva-5d-release-access-design.md`.
 - Especificação da página: `docs/superpowers/specs/2026-09-04-eleva-5d-sales-page-design.md`.

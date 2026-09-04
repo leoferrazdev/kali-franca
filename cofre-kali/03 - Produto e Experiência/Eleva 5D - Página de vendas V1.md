@@ -9,14 +9,14 @@ tags:
   - pagina-de-vendas
   - produto
 type: Registro de implementação
-status: validado-localmente
+status: publicamente-verificado
 area: produto
 ---
 
 # Eleva 5D — Página de vendas V1
 
 > [!abstract] Entregável
-> Página pública estática criada em `https://kalifranca.com.br/eleva-5d/` como primeiro entregável comercial do Eleva 5D.
+> Página pública estática publicada em `https://kalifranca.com.br/eleva-5d/` como primeiro entregável comercial do Eleva 5D.
 
 ## O que foi entregue
 
@@ -48,6 +48,13 @@ area: produto
 - Após a implementação, os cinco testes específicos do Eleva 5D passaram dentro da suíte estática.
 - A suíte estática passou com 31 testes no checkpoint da implementação.
 
+## Verificação pública
+
+- `https://kalifranca.com.br/eleva-5d/` respondeu HTTP 200 em 2026-09-04 e entregou o título, o conteúdo do Eleva 5D e o estado “Acesso em preparação”.
+- `https://kalifranca.com.br/eleva-5d/styles.css` respondeu HTTP 200.
+- A publicação foi refletida a partir do commit remoto `c3e6dfca7261f1341a2cab2f656484d5fe877718`.
+- A home raiz e a área autenticada não foram substituídas.
+
 ## Próximo movimento
 
 1. Definir e publicar a oferta no checkout Kiwify.
@@ -60,4 +67,3 @@ area: produto
 - [[MOC - Kalì Franca]]
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]]
 - `docs/superpowers/specs/2026-09-04-eleva-5d-sales-page-design.md`
-
