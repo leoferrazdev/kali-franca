@@ -509,9 +509,9 @@ h2 em {
   position: relative;
   z-index: 1;
   width: 100%;
-  aspect-ratio: 0.74;
+  height: clamp(29rem, 36vw, 36rem);
   object-fit: cover;
-  object-position: center;
+  object-position: 50% 20%;
   filter: saturate(0.84) contrast(1.04);
 }
 
