@@ -15,7 +15,9 @@ area: indice
 
 ## Futuro confirmado
 
-- [ ] Substituir a página de vendas demonstrativa por uma oferta definitiva, após validação própria de conteúdo, preço, condições e prova.
+- [x] Criar a página pública V1 do Eleva 5D em `/eleva-5d/`, mantendo a oferta honesta enquanto preço, condições e checkout não estiverem definidos.
+- [x] Aprovar a especificação técnica de liberação e acesso do Eleva 5D.
+- [ ] Publicar o Eleva 5D com checkout Kiwify, webhook de pagamento e acesso por entitlement na área de membros.
 
 ## Regra de entrada
 
@@ -25,3 +27,4 @@ Uma iniciativa entra aqui quando existe intenção explícita de futuro. Ela nã
 
 - [[MOC - Kalì Franca]]
 - [[Escopo - Página de vendas demonstrativa]]
+
