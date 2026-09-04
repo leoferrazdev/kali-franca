@@ -64,5 +64,4 @@ Dar ao visitante uma compreensão clara do Eleva 5D, do ciclo de cinco movimento
 - O visitante entende o produto, os cinco movimentos, a rotina e o marco inicial.
 - Não há afirmações comerciais não validadas nem falsa disponibilidade.
 - A página consome os tokens da marca e atende aos contratos estáticos de semântica, responsividade e acessibilidade.
-- O MOC e o roadmap registram a página como entregável iniciado/concluído e preservam o checkout como próxima etapa.
-
+- O MOC e o roadmap registram a página como entregável histórico; a página canônica na raiz e a integração do checkout permanecem em especificações posteriores.
