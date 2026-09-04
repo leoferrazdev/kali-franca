@@ -9,11 +9,14 @@ tags:
   - pagina-de-vendas
   - produto
 type: Registro de implementação
-status: publicamente-verificado
+status: histórico-substituído
 area: produto
 ---
 
-# Eleva 5D — Página de vendas V1
+# Eleva 5D — Página de vendas V1 (histórico)
+
+> [!warning] Estado
+> Este registro documenta a antiga rota dedicada `/eleva-5d/`. A página canônica atual está na raiz e foi registrada em [[Eleva 5D - Página de vendas na raiz V2]].
 
 > [!abstract] Entregável
 > Página pública estática publicada em `https://kalifranca.com.br/eleva-5d/` como primeiro entregável comercial do Eleva 5D.
@@ -67,3 +70,4 @@ area: produto
 - [[MOC - Kalì Franca]]
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]]
 - `docs/superpowers/specs/2026-09-04-eleva-5d-sales-page-design.md`
+

@@ -10,7 +10,7 @@ tags:
   - produto
   - autoridade
 type: Registro de implementação
-status: em-verificação
+status: publicamente-verificado
 area: produto
 ---
 
@@ -53,7 +53,9 @@ area: produto
 
 - Contrato focado: 34 testes aprovados localmente.
 - `git diff --check`: aprovado no checkpoint local.
-- Verificação pública e hash do commit: registrar após o push/deploy.
+- Verificação pública em 2026-09-04: `/`, `/styles.css`, os dois assets aprovados e `/eleva-5d/` responderam HTTP 200.
+- A raiz entregou o título, a autoria da Kalì, a nova seção da especialista e não entregou a linguagem antiga de experiência/oferta em construção nem o CTA para o brandbook.
+- Commit remoto da publicação: `3089d47ec01ae84aaaeb043d1b8e41b7be59fc71`.
 
 ## Relações
 

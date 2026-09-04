@@ -45,7 +45,7 @@ area: indice
 - [[Diagnóstico visual inicial - Experiência web]]
 - [[Home visual - Registro de implementação V1]]
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]]
-- [[Eleva 5D - Página de vendas na raiz V2]] — página canônica na raiz, com humanização, autoridade e imagens aprovadas; verificação pública pendente.
+- [[Eleva 5D - Página de vendas na raiz V2]] — página canônica na raiz, com humanização, autoridade e imagens aprovadas; publicamente verificada em 2026-09-04.
 
 ## Operação e deploy
 

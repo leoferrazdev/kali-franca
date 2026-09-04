@@ -7,11 +7,14 @@ tags:
   - pagina-de-vendas
   - produto
 type: Design specification
-status: aprovado
+status: superseded
 area: produto
 ---
 
-# Eleva 5D — Página de vendas V1
+# Eleva 5D — Página de vendas V1 (superseded)
+
+> [!warning] Estado
+> Esta especificação documenta a primeira decisão para a rota `/eleva-5d/`. Ela foi substituída pela especificação da página canônica na raiz: `docs/superpowers/specs/2026-09-04-eleva-5d-root-sales-page-design.md`.
 
 ## Decisão
 
