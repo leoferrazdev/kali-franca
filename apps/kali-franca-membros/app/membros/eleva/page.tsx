@@ -8,6 +8,7 @@ import { ElevaAccessState } from '../../components/ElevaAccessState';
 import { ElevaCalendar } from '../../components/ElevaCalendar';
 import { ElevaMovementCard } from '../../components/ElevaMovementCard';
 import { MemberShell } from '../../components/MemberShell';
+import { ElevaRoutine } from '../../components/ElevaRoutine';
 
 export const dynamic = 'force-dynamic';
 
@@ -58,6 +59,8 @@ export default async function ElevaHomePage() {
           <Link className="secondary-link" href="/membros/eleva/onboarding/">Abrir configuração inicial <span aria-hidden="true">↗</span></Link>
         </section>
       </div>
+
+      <ElevaRoutine activityDate={referenceDate} locked={access.kind !== 'active' && access.kind !== 'preview'} />
 
       <section className="eleva-movements" aria-labelledby="eleva-movements-title">
         <div className="eleva-section-heading">
