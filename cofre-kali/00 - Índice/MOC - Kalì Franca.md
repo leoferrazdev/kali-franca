@@ -46,6 +46,7 @@ area: indice
 - [[Home visual - Registro de implementação V1]]
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]]
 - [[Eleva 5D - Página de vendas na raiz V2]] — página canônica na raiz, com humanização, autoridade e imagens aprovadas; publicamente verificada em 2026-09-04.
+- [[Eleva 5D - Fundação na área de membros V1]] — shell autenticado, onboarding, rotina, cinco movimentos e base Supabase preparados em 2026-09-04; checkout e entitlement permanecem pendentes.
 
 ## Operação e deploy
 
@@ -65,6 +66,7 @@ area: indice
 - [[Eleva 5D - Página de vendas na raiz V2]] — página canônica do primeiro entregável comercial; humanização e imagens aprovadas aplicadas em 2026-09-04.
 - [[Eleva 5D - Página de vendas V1]] — registro histórico da antiga rota dedicada.
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]] — especificação técnica aprovada em 2026-09-04; checkout, webhook, entitlement e acesso protegido permanecem pendentes.
+- [[Eleva 5D - Fundação na área de membros V1]] — fundação do produto pronta para integração comercial; validação local aprovada em 2026-09-04.
 - Especificação no repositório: `docs/superpowers/specs/2026-09-04-eleva-5d-release-access-design.md`.
 - Especificação da página: `docs/superpowers/specs/2026-09-04-eleva-5d-sales-page-design.md`.
 

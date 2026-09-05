@@ -17,6 +17,7 @@ area: indice
 
 - [x] Publicar a página canônica do Eleva 5D na raiz `/`, com humanização, autoridade e imagens aprovadas, mantendo a oferta honesta enquanto preço, condições e checkout não estiverem definidos.
 - [x] Aprovar a especificação técnica de liberação e acesso do Eleva 5D.
+- [x] Preparar a fundação do Eleva 5D na área de membros: dashboard, onboarding, rotina, cinco movimentos, contratos Supabase e RLS.
 - [ ] Publicar o Eleva 5D com checkout Kiwify, webhook de pagamento e acesso por entitlement na área de membros.
 
 ## Regra de entrada
