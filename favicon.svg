@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Kalì Franca</title>
+  <desc id="desc">Ponto de partida envolvido por duas órbitas.</desc>
+  <defs>
+    <radialGradient id="halo" cx="32%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#f4ede4"/>
+      <stop offset=".22" stop-color="#c9a66b"/>
+      <stop offset=".55" stop-color="#c97a52"/>
+      <stop offset="1" stop-color="#7a2b44"/>
+    </radialGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#c9a66b" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#c9a66b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#0e0b0a"/>
+  <circle cx="32" cy="32" r="28" fill="url(#glow)"/>
+  <circle cx="32" cy="32" r="24.5" fill="none" stroke="#c9a66b" stroke-opacity=".65"/>
+  <circle cx="32" cy="32" r="14.5" fill="none" stroke="#f4ede4" stroke-opacity=".38"/>
+  <circle cx="32" cy="32" r="5.8" fill="url(#halo)"/>
+</svg>
