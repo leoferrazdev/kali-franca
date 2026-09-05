@@ -5,3 +5,7 @@
 -- insira somente o perfil operacional correspondente ao UUID desse usuário:
 -- insert into public.profiles (id, full_name, role)
 -- values ('00000000-0000-0000-0000-000000000000', 'Usuário de desenvolvimento', 'comercial');
+--
+-- O catálogo editorial do Eleva 5D é criado pela migration
+-- 202609040003_eleva_5d_foundation.sql. Não insira aqui usuários,
+-- compras, fotos, setups ou progresso de participantes.
