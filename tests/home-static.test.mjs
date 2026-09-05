@@ -79,7 +79,7 @@ test('a home não publica afirmações comerciais não validadas', () => {
 test('a home usa as fotos aprovadas recentes e não o retrato antigo', () => {
   const html = read(homePath);
 
-  assert.match(html, /property=["']og:image["'][^>]+content=["']https:\/\/kalifranca\.com\.br\/assets\/kali-hero-autoridade-horizontal-02\.png["']/i);
+  assert.match(html, /property=["']og:image["'][^>]+content=["']https:\/\/kalifranca\.com\.br\/assets\/kali-og-social-authority\.png["']/i);
   assert.match(html, /name=["']twitter:card["'][^>]+content=["']summary_large_image["']/i);
   assert.match(html, /assets\/kali-hero-autoridade-horizontal-02\.png/i);
   assert.match(html, /assets\/kali-expansao-editorial-vertical-01\.png/i);

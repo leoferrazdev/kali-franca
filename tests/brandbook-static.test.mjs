@@ -9,7 +9,7 @@ const indexPath = resolve(brandbookRoot, 'index.html');
 const tokensPath = resolve(brandbookRoot, 'tokens.css');
 const stylesPath = resolve(brandbookRoot, 'styles.css');
 const siteIndexPath = resolve(repositoryRoot, 'index.html');
-const socialImagePath = resolve(repositoryRoot, 'profile.jpg');
+const socialImagePath = resolve(repositoryRoot, 'assets/kali-og-social-authority.png');
 
 function readIfPresent(filePath) {
   return existsSync(filePath) ? readFileSync(filePath, 'utf8') : '';
@@ -88,10 +88,10 @@ test('o CSS documenta foco, responsividade e movimento reduzido', () => {
 test('o site e o brandbook usam a imagem pública na prévia de compartilhamento', () => {
   const siteHtml = readIfPresent(siteIndexPath);
   const brandbookHtml = readIfPresent(indexPath);
-  const siteImageUrl = 'https://kalifranca.com.br/assets/kali-hero-autoridade-horizontal-02.png';
-  const brandbookImageUrl = 'https://kalifranca.com.br/profile.jpg';
+  const siteImageUrl = 'https://kalifranca.com.br/assets/kali-og-social-authority.png';
+  const brandbookImageUrl = 'https://kalifranca.com.br/assets/kali-og-social-authority.png';
 
-  assert.ok(existsSync(socialImagePath), 'profile.jpg deve existir na raiz pública');
+  assert.ok(existsSync(socialImagePath), 'kali-og-social-authority.png deve existir em assets');
 
   assert.match(siteHtml, new RegExp(`property=["']og:image["'][^>]+content=["']${siteImageUrl.replaceAll('.', '\\.') }["']`, 'i'));
   assert.match(siteHtml, /property=["']og:type["'][^>]+content=["']website["']/i);

@@ -7,7 +7,7 @@ const repositoryRoot = resolve(import.meta.dirname, '..');
 const bioPath = resolve(repositoryRoot, 'bio/index.html');
 const stylesPath = resolve(repositoryRoot, 'bio/styles.css');
 const tokensPath = resolve(repositoryRoot, 'brandbook/tokens.css');
-const socialImagePath = resolve(repositoryRoot, 'profile.jpg');
+const socialImagePath = resolve(repositoryRoot, 'assets/kali-og-social-authority.png');
 
 function read(filePath) {
   return existsSync(filePath) ? readFileSync(filePath, 'utf8') : '';
@@ -43,9 +43,9 @@ test('a bio preserva compartilhamento, imagem e sistema tipográfico', () => {
 
   assert.ok(existsSync(stylesPath), 'bio/styles.css deve existir');
   assert.ok(existsSync(tokensPath), 'brandbook/tokens.css deve existir');
-  assert.ok(existsSync(socialImagePath), 'profile.jpg deve existir');
-  assert.match(html, /\.\.\/profile\.jpg/i);
-  assert.match(html, /property=["']og:image["'][^>]+content=["']https:\/\/kalifranca\.com\.br\/profile\.jpg["']/i);
+  assert.ok(existsSync(socialImagePath), 'kali-og-social-authority.png deve existir');
+  assert.match(html, /assets\/kali-og-social-authority\.png/i);
+  assert.match(html, /property=["']og:image["'][^>]+content=["']https:\/\/kalifranca\.com\.br\/assets\/kali-og-social-authority\.png["']/i);
   assert.match(html, /name=["']twitter:card["'][^>]+content=["']summary_large_image["']/i);
   assert.match(html, /\.\.\/brandbook\/tokens\.css/i);
   assert.match(html, /styles\.css\?v=20260830-cards/i);
