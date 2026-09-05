@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 type MemberNavigationProps = {
   isAdministrator?: boolean;
-  activePath?: 'home' | 'applications';
+  activePath?: 'home' | 'eleva' | 'applications';
 };
 
 export function MemberNavigation({ isAdministrator = false, activePath = 'home' }: MemberNavigationProps) {
@@ -14,6 +14,10 @@ export function MemberNavigation({ isAdministrator = false, activePath = 'home' 
           <span aria-hidden="true">◌</span>
           Início
         </a>
+        <Link className={`member-navigation__link${activePath === 'eleva' ? ' member-navigation__link--active' : ''}`} href="/membros/eleva/" aria-current={activePath === 'eleva' ? 'page' : undefined}>
+          <span aria-hidden="true">✦</span>
+          Eleva 5D
+        </Link>
         {isAdministrator ? (
           <Link className={`member-navigation__link${activePath === 'applications' ? ' member-navigation__link--active' : ''}`} href="/membros/aplicacoes/mentoria-frequencia-da-abundancia" aria-current={activePath === 'applications' ? 'page' : undefined}>
             <span aria-hidden="true">◈</span>

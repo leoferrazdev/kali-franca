@@ -67,7 +67,11 @@ test('a migration do Eleva cria catálogo, setup, atividades, eventos e RLS', ()
 });
 
 test('o onboarding e o progresso preservam acessibilidade e privacidade', () => {
-  const sources = readTree('app', 'membros', 'eleva');
+  const sources = [
+    readTree('app', 'membros', 'eleva'),
+    read('app', 'components', 'ElevaSetupForm.tsx'),
+    read('app', 'components', 'ElevaRoutine.tsx'),
+  ].join('\n');
   const globals = read('app', 'globals.css');
 
   assert.match(sources, /<label/);

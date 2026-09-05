@@ -8,7 +8,7 @@ type MemberShellProps = {
   memberEmail?: string;
   preview?: boolean;
   isAdministrator?: boolean;
-  activePath?: 'home' | 'applications';
+  activePath?: 'home' | 'eleva' | 'applications';
 };
 
 export function MemberShell({ children, memberEmail, preview = false, isAdministrator = false, activePath = 'home' }: MemberShellProps) {
