@@ -66,6 +66,21 @@ test('a oferta V4 apresenta a nova narrativa de transformação', () => {
   assert.match(offerSection, /QUERO COMEÇAR MINHA JORNADA/);
 });
 
+test('a V4 reduz fricção de compra com risco, preço, FAQ e CTA móvel', () => {
+  const html = fs.readFileSync(v4Path, 'utf8');
+  const css = fs.readFileSync(v4CssPath, 'utf8');
+  const offerSection = html.slice(html.indexOf('id="oferta"'), html.indexOf('id="faq"'));
+  const faqSection = html.slice(html.indexOf('id="faq"'), html.indexOf('class="final-cta'));
+
+  assert.match(offerSection, /7 dias de garantia\./);
+  assert.match(offerSection, /Se em uma semana você não sentir nenhuma mudança, devolvemos seu dinheiro — sem perguntas\./);
+  assert.match(faqSection, /Quanto custa o acesso ao Eleva 5D\?/);
+  assert.match(faqSection, /Existe garantia para experimentar o Método\?/);
+  assert.match(html, /class="mobile-cta" data-cta="mobile"/);
+  assert.match(css, /\.v4-flow \.mobile-cta\s*\{[\s\S]*?display:\s*none;/);
+  assert.match(css, /@media \(max-width:\s*900px\)[\s\S]*?\.v4-flow \.mobile-cta\s*\{[\s\S]*?position:\s*fixed;/);
+});
+
 test('a V4 posiciona a seção de prova entre O mecanismo e O método', () => {
   const html = fs.readFileSync(v4Path, 'utf8');
   const mechanismPosition = html.indexOf('id="mecanismo"');
