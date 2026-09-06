@@ -2194,18 +2194,36 @@ em { color: var(--b-gold); font-style: italic; }
   text-transform: uppercase;
 }
 
+.v6-flow .authority-role {
+  max-width: 100%;
+  margin: 0 0 1.5rem;
+  color: var(--v4-gold);
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
 .v6-flow .authority blockquote {
   max-width: 42rem;
   margin-top: 2.25rem;
 }
 
 @media (max-width: 56.25rem) {
+  .v6-flow .authority-role {
+    letter-spacing: .09em;
+  }
+
   .v6-flow .authority-copy > p:not(.eyebrow):not(.section-index):not(.authority-role):not(.authority-proof-line) {
     max-width: 44rem;
   }
 }
 
 @media (max-width: 37.5rem) {
+  .v6-flow .authority-role {
+    font-size: .63rem;
+    letter-spacing: .07em;
+  }
+
   .v6-flow .authority-proof-line {
     font-size: .62rem;
     letter-spacing: .07em;
@@ -2291,5 +2309,25 @@ em { color: var(--b-gold); font-style: italic; }
   .v6-flow .proof-media img,
   .v6-flow .proof-card:first-child .proof-media img {
     max-height: none;
+  }
+}
+
+/* V6 — rodapé do mockup com separação e respiro interno */
+.v6-flow .app-device-footer {
+  right: clamp(1.5rem, 3vw, 2rem);
+  bottom: clamp(1.5rem, 3vw, 2rem);
+  left: clamp(1.5rem, 3vw, 2rem);
+  align-items: center;
+  padding-top: .8rem;
+  border-top: 1px solid var(--v5-line);
+  line-height: 1.2;
+}
+
+@media (max-width: 37.5rem) {
+  .v6-flow .app-device-footer {
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    padding-top: .65rem;
   }
 }

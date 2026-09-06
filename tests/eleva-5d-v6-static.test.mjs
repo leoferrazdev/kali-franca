@@ -17,7 +17,7 @@ test('a V6 nasce como uma rota própria derivada da V5', () => {
   assert.match(html, /class="v3-flow v4-flow v5-flow v6-flow"/);
   assert.match(html, /data-v5="true"/);
   assert.match(html, /data-v6="true"/);
-  assert.match(html, /styles\.css\?v=v6-1/);
+  assert.match(html, /styles\.css\?v=v6-2/);
 });
 
 test('a V6 preserva a experiência visual e a oferta da V5', () => {
@@ -62,6 +62,23 @@ test('a V6 aplica leitura editorial responsiva ao novo bloco de autoridade', () 
   assert.match(css, /\.v6-flow \.authority-proof-line[\s\S]*?border-top/);
   assert.match(css, /@media \(max-width:\s*56\.25rem\)[\s\S]*?\.v6-flow \.authority-copy/);
   assert.match(css, /@media \(max-width:\s*37\.5rem\)[\s\S]*?\.v6-flow \.authority-proof-line/);
+});
+
+test('o rodape do mockup preserva respiro e separacao da base', () => {
+  const css = fs.readFileSync(v6CssPath, 'utf8');
+
+  assert.match(css, /\.v6-flow \.app-device-footer[\s\S]*?padding-top:\s*\.8rem/);
+  assert.match(css, /\.v6-flow \.app-device-footer[\s\S]*?border-top:\s*1px solid var\(--v5-line\)/);
+  assert.match(css, /@media \(max-width:\s*37\.5rem\)[\s\S]*?\.v6-flow \.app-device-footer/);
+});
+
+test('a identificacao da especialista se adapta a largura da coluna', () => {
+  const css = fs.readFileSync(v6CssPath, 'utf8');
+
+  assert.match(css, /\.v6-flow \.authority-role[\s\S]*?max-width:\s*100%/);
+  assert.match(css, /\.v6-flow \.authority-role[\s\S]*?line-height:\s*1\.5/);
+  assert.match(css, /\.v6-flow \.authority-role[\s\S]*?overflow-wrap:\s*break-word/);
+  assert.match(css, /\.v6-flow \.authority-role[\s\S]*?white-space:\s*normal/);
 });
 
 test('a V6 mantém a sequência editorial e usa prints reais autorizados', () => {

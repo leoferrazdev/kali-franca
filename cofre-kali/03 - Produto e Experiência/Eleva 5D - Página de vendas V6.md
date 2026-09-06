@@ -47,6 +47,13 @@ A nova seção responde diretamente à pergunta: **por que confiar na Kalì para
 
 O texto foi organizado em parágrafos curtos, com linha de leitura limitada e uma linha final de credenciais. A imagem da especialista usa carregamento prioritário na V6 por ser um elemento estrutural da seção de autoridade.
 
+## Ajustes visuais posteriores
+
+- A identificação **EU SOU KALÌ FRANCA, TERAPEUTA ENERGÉTICA E MENTORA HÁ 8 ANOS.** agora respeita a largura da coluna de autoridade, quebra linha naturalmente e não é cortada em desktop compacto, tablet ou mobile.
+- A identificação recebeu entrelinha e espaçamento de leitura próprios, preservando a hierarquia de etiqueta sem competir com o título da seção.
+- O rodapé do mockup do aplicativo recebeu divisor, respiro interno e posicionamento seguro nos breakpoints para separar o progresso da base do componente.
+- A composição permanece sem alteração editorial, com as cores e a direção visual aprovadas para a V6.
+
 ## Prova social visual
 
 Os relatos foram selecionados e organizados conforme a função narrativa da seção **03 / quando deixa de ser teoria**:
@@ -61,7 +68,7 @@ Os prints são exibidos como imagens dentro de cards nativos da página, com mol
 
 ## Validação
 
-- 6 testes específicos da V6 aprovados.
+- 8 testes específicos da V6 aprovados.
 - V6 mantém o `app.js` da V5 sem alterações comportamentais.
 - A sequência editorial 01–11 foi preservada.
 - A imagem, o título e o corpo narrativo foram verificados localmente no navegador.
