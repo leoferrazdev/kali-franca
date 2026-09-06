@@ -53,7 +53,8 @@ O texto foi organizado em parágrafos curtos, com linha de leitura limitada e um
 - V6 mantém o `app.js` da V5 sem alterações comportamentais.
 - A sequência editorial 01–11 foi preservada.
 - A imagem, o título e o corpo narrativo foram verificados localmente no navegador.
-- Publicação pública ainda depende do push realizado nesta etapa e do deployment da Hostinger.
+- Commit `b281c83` publicado na `main`.
+- Publicação pública e verificação HTTP da rota ainda dependem do deployment da Hostinger.
 
 ## Referências
 

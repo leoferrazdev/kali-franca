@@ -47,7 +47,7 @@ area: indice
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]]
 - [[Eleva 5D - Página de vendas na raiz V2]] — página canônica na raiz, com humanização, autoridade e imagens aprovadas; publicamente verificada em 2026-09-04.
 - [[Eleva 5D - Página de vendas V5]] — cópia local da V4 com prévia HTML/CSS da experiência do aplicativo, garantia revisada e FAQ ampliado; validação local concluída em 2026-09-06.
-- [[Eleva 5D - Página de vendas V6]] — cópia da V5 com reconstrução da autoridade da Kalì no bloco 08; validação local concluída em 2026-09-06.
+- [[Eleva 5D - Página de vendas V6]] — cópia da V5 com reconstrução da autoridade da Kalì no bloco 08; commit `b281c83` publicado na `main` em 2026-09-06, deployment público pendente.
 - [[Eleva 5D - Fundação na área de membros V1]] — shell autenticado, onboarding, rotina, cinco movimentos e base Supabase preparados em 2026-09-04; checkout e entitlement permanecem pendentes.
 
 ## Operação e deploy
