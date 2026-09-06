@@ -1497,3 +1497,301 @@ em { color: var(--b-gold); font-style: italic; }
     width: 100%;
   }
 }
+
+/* V4 — paleta aprovada: Umbra, Vinho Profundo, Ameixa Sagrada e Ouro Fosco */
+.v4-flow {
+  --v4-umbra: #0E0B0A;
+  --v4-wine: #3A1424;
+  --v4-plum: #7A2B44;
+  --v4-gold: #C9A66B;
+  --v4-line: rgba(201, 166, 107, .28);
+  --v3-ink: var(--v4-umbra);
+  --v3-wine: var(--v4-wine);
+  --v3-plum: var(--v4-plum);
+  --v3-paper: var(--v4-gold);
+  --v3-gold: var(--v4-gold);
+  --v3-line: var(--v4-line);
+  background: var(--v4-umbra);
+  color: var(--v4-gold);
+}
+
+.v4-flow .section-paper,
+.v4-flow .section-warm,
+.v4-flow .recognition,
+.v4-flow .spaces,
+.v4-flow .cut,
+.v4-flow .offer {
+  background: var(--v4-umbra);
+  color: var(--v4-gold);
+}
+
+.v4-flow .section-paper h1,
+.v4-flow .section-paper h2,
+.v4-flow .section-paper h3,
+.v4-flow .section-warm h1,
+.v4-flow .section-warm h2,
+.v4-flow .section-warm h3,
+.v4-flow .section-paper p,
+.v4-flow .section-paper li,
+.v4-flow .section-warm p,
+.v4-flow .section-warm li,
+.v4-flow .recognition p,
+.v4-flow .spaces p,
+.v4-flow .cut p,
+.v4-flow .offer p {
+  color: rgba(201, 166, 107, .84);
+}
+
+.v4-flow .section-paper h1,
+.v4-flow .section-paper h2,
+.v4-flow .section-paper h3,
+.v4-flow .section-warm h1,
+.v4-flow .section-warm h2,
+.v4-flow .section-warm h3,
+.v4-flow .recognition h2,
+.v4-flow .recognition h3,
+.v4-flow .spaces h2,
+.v4-flow .spaces h3,
+.v4-flow .cut h2,
+.v4-flow .offer h2,
+.v4-flow .offer h3 {
+  color: var(--v4-gold);
+}
+
+.v4-flow .section-paper .section-index,
+.v4-flow .section-warm .section-index,
+.v4-flow .section-paper .eyebrow,
+.v4-flow .section-warm .eyebrow,
+.v4-flow .recognition .card-number,
+.v4-flow .spaces-sequence span,
+.v4-flow .cut .check-list li::before,
+.v4-flow .offer .offer-pillar-label {
+  color: var(--v4-gold);
+}
+
+.v4-flow .recognition-cards article {
+  border-color: var(--v4-plum);
+  background: var(--v4-wine);
+  box-shadow: 0 1.25rem 2.5rem rgba(14, 11, 10, .28);
+}
+
+.v4-flow .recognition-cards article:nth-child(2),
+.v4-flow .recognition-cards article:nth-child(4) {
+  background: var(--v4-plum);
+}
+
+.v4-flow .mechanism-track .state-card,
+.v4-flow .mechanism-track .state-card--cold,
+.v4-flow .mechanism-track .state-card--water {
+  background: var(--v4-wine);
+  border-color: var(--v4-plum);
+}
+
+.v4-flow .mechanism-track .state-card--vapor {
+  background: var(--v4-plum);
+  border-color: var(--v4-gold);
+}
+
+.v4-flow .mechanism-track .state-card p,
+.v4-flow .mechanism-track .state-card h3,
+.v4-flow .mechanism-track .state-card strong,
+.v4-flow .mechanism-track .state-label {
+  color: var(--v4-gold);
+}
+
+.v4-flow .proof-card {
+  border-color: var(--v4-plum);
+  background: var(--v4-wine);
+}
+
+.v4-flow .proof-card:first-child {
+  background: var(--v4-plum);
+  border-color: var(--v4-gold);
+}
+
+.v4-flow .proof-card-number,
+.v4-flow .proof-highlight,
+.v4-flow .proof-quote,
+.v4-flow .proof-card p {
+  color: var(--v4-gold);
+}
+
+.v4-flow .movement-timeline .movement-row {
+  border-color: var(--v4-plum);
+  background: var(--v4-wine);
+}
+
+.v4-flow .movement-timeline .movement-row:nth-child(2) {
+  background: var(--v4-plum);
+}
+
+.v4-flow .movement-timeline .movement-row--active {
+  border-color: var(--v4-gold);
+  background: var(--v4-umbra);
+}
+
+.v4-flow .movement-timeline .movement-row h3,
+.v4-flow .movement-timeline .movement-row p,
+.v4-flow .movement-timeline .movement-row .movement-number,
+.v4-flow .movement-timeline .movement-row .movement-word {
+  color: var(--v4-gold);
+}
+
+.v4-flow .routine-cards article,
+.v4-flow .routine-cards article:nth-child(2),
+.v4-flow .routine-cards article:nth-child(3) {
+  border-color: var(--v4-plum);
+  background: var(--v4-wine);
+}
+
+.v4-flow .routine-cards article:nth-child(2) { background: var(--v4-plum); }
+.v4-flow .routine-cards article:nth-child(3) { background: var(--v4-umbra); border-color: var(--v4-gold); }
+
+.v4-flow .routine-cards h3,
+.v4-flow .routine-cards p,
+.v4-flow .routine-cards span,
+.v4-flow .routine-cards small {
+  color: var(--v4-gold);
+}
+
+.v4-flow .app-preview {
+  border-color: var(--v4-gold);
+  background: var(--v4-wine);
+}
+
+.v4-flow .phone-card {
+  border-color: var(--v4-gold);
+  background: var(--v4-umbra);
+}
+
+.v4-flow .spaces-sequence {
+  background: var(--v4-plum);
+}
+
+.v4-flow .spaces-sequence article,
+.v4-flow .spaces-sequence article:first-child {
+  border-color: var(--v4-plum);
+  background: var(--v4-wine);
+}
+
+.v4-flow .spaces-sequence article:nth-child(3) {
+  background: var(--v4-plum);
+}
+
+.v4-flow .spaces-sequence article:first-child h3,
+.v4-flow .spaces-sequence article:first-child p,
+.v4-flow .spaces-sequence article:first-child span,
+.v4-flow .spaces-sequence article h3,
+.v4-flow .spaces-sequence article p,
+.v4-flow .spaces-sequence article span {
+  color: var(--v4-gold);
+}
+
+.v4-flow .cut {
+  background: var(--v4-umbra);
+}
+
+.v4-flow .cut-visual {
+  border: 1px solid var(--v4-plum);
+  background: var(--v4-wine);
+}
+
+.v4-flow .cut h2,
+.v4-flow .cut .section-lead,
+.v4-flow .cut blockquote,
+.v4-flow .cut .check-list li {
+  color: var(--v4-gold);
+}
+
+.v4-flow .cut blockquote {
+  border-color: var(--v4-gold);
+}
+
+.v4-flow .authority {
+  background: linear-gradient(115deg, var(--v4-wine) 0 45%, var(--v4-umbra) 45% 100%);
+}
+
+.v4-flow .authority-copy > p,
+.v4-flow .authority-role,
+.v4-flow .authority-stats b,
+.v4-flow .authority-stats span,
+.v4-flow .authority blockquote {
+  color: var(--v4-gold);
+}
+
+.v4-flow .authority-image {
+  border-color: var(--v4-gold);
+}
+
+.v4-flow .offer .offer-pillars {
+  background: transparent;
+}
+
+.v4-flow .offer .offer-pillar {
+  border-color: var(--v4-plum);
+  background: var(--v4-wine);
+}
+
+.v4-flow .offer .offer-pillar:nth-child(2),
+.v4-flow .offer .offer-pillar:nth-child(4) {
+  background: var(--v4-plum);
+}
+
+.v4-flow .offer .offer-pillar h3,
+.v4-flow .offer .offer-pillar p:not(.offer-pillar-label),
+.v4-flow .offer .offer-pillar-emphasis,
+.v4-flow .offer .offer-journey h3,
+.v4-flow .offer .offer-journey p {
+  color: var(--v4-gold);
+}
+
+.v4-flow .offer .offer-pillar--last {
+  background: var(--v4-plum);
+  border-color: var(--v4-gold);
+}
+
+.v4-flow .offer-decision {
+  border: 1px solid var(--v4-gold);
+  background: var(--v4-wine);
+}
+
+.v4-flow .offer-price strong,
+.v4-flow .offer-price span,
+.v4-flow .offer-safety strong,
+.v4-flow .offer-safety span {
+  color: var(--v4-gold);
+}
+
+.v4-flow .offer-decision .button,
+.v4-flow .button-primary {
+  background: var(--v4-gold);
+  color: var(--v4-umbra);
+}
+
+.v4-flow .faq {
+  background: var(--v4-wine);
+}
+
+.v4-flow .faq .faq-list details {
+  border-color: var(--v4-plum);
+  background: var(--v4-umbra);
+}
+
+.v4-flow .faq h2,
+.v4-flow .faq summary,
+.v4-flow .faq details p,
+.v4-flow .faq .section-index,
+.v4-flow .faq .eyebrow {
+  color: var(--v4-gold);
+}
+
+.v4-flow .final-cta,
+.v4-flow .site-footer {
+  background: var(--v4-umbra);
+}
+
+@media (max-width: 56.25rem) {
+  .v4-flow .authority {
+    background: var(--v4-wine);
+  }
+}

@@ -164,3 +164,17 @@ test('a V4 tem uma composição visual distinta por etapa da jornada', () => {
   assert.match(css, /\.v4-flow \.faq \.faq-list details\s*\{[\s\S]*?border-radius:/);
   assert.match(css, /@media \(max-width:\s*56\.25rem\)[\s\S]*?\.v4-flow \.proof-card:first-child\s*\{[\s\S]*?grid-row:\s*auto;/);
 });
+
+test('a V4 aplica exclusivamente a paleta cromática aprovada nas seções ajustadas', () => {
+  const css = fs.readFileSync(v4CssPath, 'utf8');
+
+  assert.match(css, /--v4-umbra:\s*#0E0B0A;/);
+  assert.match(css, /--v4-wine:\s*#3A1424;/);
+  assert.match(css, /--v4-plum:\s*#7A2B44;/);
+  assert.match(css, /--v4-gold:\s*#C9A66B;/);
+  assert.match(css, /\.v4-flow \.section-paper,[\s\S]*?\.v4-flow \.section-warm[\s\S]*?background:\s*var\(--v4-umbra\);/);
+  assert.match(css, /\.v4-flow \.movement-timeline \.movement-row\s*\{[\s\S]*?background:\s*var\(--v4-wine\);/);
+  assert.match(css, /\.v4-flow \.spaces-sequence article\s*\{[\s\S]*?background:\s*var\(--v4-wine\);/);
+  assert.match(css, /\.v4-flow \.cut\s*\{[\s\S]*?background:\s*var\(--v4-umbra\);/);
+  assert.match(css, /\.v4-flow \.offer\s*\{[\s\S]*?background:\s*var\(--v4-umbra\);/);
+});
