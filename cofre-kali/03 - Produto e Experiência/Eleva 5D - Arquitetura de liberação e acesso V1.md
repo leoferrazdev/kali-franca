@@ -10,11 +10,14 @@ tags:
   - checkout
   - produto
 type: Registro de decisão
-status: aprovado-para-implementacao
+status: aprovado
 area: produto
 ---
 
 # Eleva 5D — Arquitetura de liberação e acesso V1
+
+> [!success] Aprovação técnica
+> Especificação técnica aprovada em 2026-09-04. A implementação do fluxo de checkout, webhook, entitlement e proteção de acesso está autorizada; a publicação do produto ainda não está concluída.
 
 > [!success] Decisão aprovada
 > O Eleva 5D será vendido em checkout externo e liberado automaticamente na área de membros por um entitlement registrado no Supabase.

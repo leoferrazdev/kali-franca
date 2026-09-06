@@ -27,16 +27,17 @@ test('a página apresenta os cinco movimentos e a rotina dos três movimentos', 
     assert.match(html, new RegExp(movement, 'i'));
   }
 
-  assert.match(html, /Regra dos 3 Movimentos/i);
+  assert.match(html, /20 minutos por dia/i);
+  assert.match(html, /Eu Soul/i);
   assert.match(html, /Corte Energético/i);
 });
 
-test('a página mantém a oferta honesta enquanto o checkout não existe', () => {
+test('a página mantém o acesso separado do checkout enquanto ele não existe', () => {
   const html = read('index.html');
 
-  assert.match(html, /Acesso em preparação/i);
-  assert.doesNotMatch(html, /R\$\s*[0-9]/i);
-  assert.doesNotMatch(html, /comprar agora|garantia de resultado|depoimento|\+2[.,]?500/i);
+  assert.match(html, /data-cta=["']offer["'][^>]+href=["']#oferta["']/i);
+  assert.doesNotMatch(html, /href=["'][^"']*checkout[^"']*["']/i);
+  assert.doesNotMatch(html, /membros\.kalifranca\.com\.br/i);
 });
 
 test('a página consome a identidade visual compartilhada e tem contratos de acessibilidade', () => {
@@ -44,7 +45,7 @@ test('a página consome a identidade visual compartilhada e tem contratos de ace
   const styles = read('styles.css');
 
   assert.match(html, /brandbook\/tokens\.css/i);
-  assert.match(html, /assets\/kali-hero-autoridade-horizontal-02\.png/i);
+  assert.match(html, /fotos\/geradas-ia\/kali-hero-autoridade-horizontal-02\.png/i);
   assert.match(html, /Pular para o conteúdo/i);
   assert.match(styles, /:focus-visible/);
   assert.match(styles, /min-height:\s*44px/);
@@ -55,7 +56,7 @@ test('a página consome a identidade visual compartilhada e tem contratos de ace
 test('a página mantém a próxima etapa separada da home e da área autenticada', () => {
   const html = read('index.html');
 
-  assert.match(html, /href=["']#acesso["']/i);
+  assert.match(html, /href=["']#oferta["']/i);
   assert.doesNotMatch(html, /membros\.kalifranca\.com\.br/i);
   assert.doesNotMatch(html, /href=["'][^"']*checkout[^"']*["']/i);
 });

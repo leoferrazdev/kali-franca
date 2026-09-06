@@ -29,3 +29,9 @@ Uma iniciativa entra aqui quando existe intenção explícita de futuro. Ela nã
 
 - [[MOC - Kalì Franca]]
 - [[Escopo - Página de vendas demonstrativa]]
+
+
+## Fundação do produto — 2026-09-04
+
+- [x] Preparar o Eleva 5D na área de membros: dashboard, onboarding, rotina, cinco movimentos, contratos Supabase e RLS.
+- [[Eleva 5D - Fundação na área de membros V1]]

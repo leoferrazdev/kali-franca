@@ -211,3 +211,10 @@ area: indice
 - O usuário `leonardoferrazbrasil@gmail.com` possui perfil operacional `administradora` no Supabase, habilitando a exibição das aplicações recebidas e do preenchimento individual.
 - Estado atual: commits `7c5ef94` e `29af311` publicados na `main`; a bio responde HTTP 200 e entrega o destino público correto no HTML; a aplicação não move mais o foco para o `h1` introdutório ao abrir; as rotas administrativas estão protegidas por autenticação.
 
+## Atualização — Publicação da página Eleva 5D na raiz — 2026-09-06
+
+- A versão visual revisada foi promovida para `https://kalifranca.com.br/`.
+- A FAQ usa texto claro sobre fundo escuro, com divisores visíveis, e o CSS foi versionado com `?v=faq-contrast-1` para evitar cache antigo.
+- O rodapé público exibe apenas `Eleva 5D` e `kalifranca.com.br`; o rótulo interno `variação B` não é publicado.
+- A validação local confirmou as imagens aprovadas carregadas, ausência de overflow horizontal e `npm run test:static` com 37 testes aprovados.
+

@@ -1,7 +1,8 @@
 ---
 title: Eleva 5D - Liberação e acesso por compra
-status: Aprovado para implementação
+status: aprovado
 date: 2026-09-04
+approved_at: 2026-09-04
 ---
 
 # Eleva 5D — Liberação e acesso por compra
