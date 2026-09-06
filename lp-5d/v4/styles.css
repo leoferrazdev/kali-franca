@@ -400,3 +400,192 @@ em { color: var(--b-gold); font-style: italic; }
   .v4-flow .proof-strip { padding-top: .9rem; }
   .v4-flow .proof-strip li { min-width: auto; flex: 1 1 0; }
 }
+
+/* V4 — prova social em ritmo editorial, com relatos reais aguardando inserção */
+.v4-flow .proof-intro {
+  display: grid;
+  grid-template-columns: minmax(11rem, .65fr) minmax(0, 1.35fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.v4-flow .proof-intro h2 {
+  max-width: 14ch;
+  color: var(--v3-paper);
+}
+
+.v4-flow .proof-intro .section-lead {
+  max-width: 42rem;
+  color: rgba(244, 237, 228, .78);
+}
+
+.v4-flow .proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 4rem;
+  border-top: 1px solid var(--v3-line);
+  border-bottom: 1px solid var(--v3-line);
+}
+
+.v4-flow .proof-card {
+  min-height: 19rem;
+  padding: 2rem 1.5rem 1.75rem;
+  border-right: 1px solid var(--v3-line);
+}
+
+.v4-flow .proof-card:last-child { border-right: 0; }
+
+.v4-flow .proof-quote {
+  min-height: 11rem;
+  padding: 0;
+  margin: 0;
+  color: rgba(244, 237, 228, .68);
+  font: italic 1.45rem/1.2 var(--b-display);
+}
+
+.v4-flow .proof-quote p { margin: 0; color: inherit; }
+
+.v4-flow .proof-quote[data-proof-status="pending-real-testimonial"]::before {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: var(--v3-gold);
+  content: 'relato real a inserir';
+  font: .62rem/1.2 var(--b-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.v4-flow .proof-highlight {
+  padding-top: 1rem;
+  margin: 0;
+  border-top: 1px solid var(--v3-line);
+  color: var(--v3-gold);
+  font: .7rem/1.35 var(--b-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.v4-flow .proof-conclusion {
+  display: grid;
+  grid-template-columns: minmax(11rem, .65fr) minmax(0, 1.35fr);
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+.v4-flow .proof-conclusion h3 {
+  max-width: 13ch;
+  color: var(--v3-paper);
+}
+
+.v4-flow .proof-conclusion p {
+  max-width: 42rem;
+  color: rgba(244, 237, 228, .78);
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .v4-flow .proof-intro,
+  .v4-flow .proof-conclusion { grid-template-columns: 1fr; gap: 1rem; }
+  .v4-flow .proof-grid { grid-template-columns: 1fr; }
+  .v4-flow .proof-card { min-height: auto; border-right: 0; border-bottom: 1px solid var(--v3-line); }
+  .v4-flow .proof-card:last-child { border-bottom: 0; }
+  .v4-flow .proof-quote { min-height: auto; margin-bottom: 2rem; }
+}
+
+/* V4 — oferta editorial: cinco motivos para transformar prática em identidade */
+.v4-flow .offer-editorial-intro {
+  display: grid;
+  grid-template-columns: minmax(11rem, .65fr) minmax(0, 1.35fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.v4-flow .offer-editorial-intro h2 {
+  max-width: 17ch;
+}
+
+.v4-flow .offer-editorial-intro .section-lead {
+  max-width: 44rem;
+}
+
+.v4-flow .offer-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2rem;
+  margin-top: 4rem;
+  border-top: 1px solid var(--v3-line);
+}
+
+.v4-flow .offer-pillar {
+  padding: 2rem 0 2.25rem;
+  border-bottom: 1px solid var(--v3-line);
+}
+
+.v4-flow .offer-pillar--last {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 1rem);
+}
+
+.v4-flow .offer-pillar-label {
+  margin-bottom: 1.25rem;
+  color: var(--v3-gold);
+  font: .68rem/1.35 var(--b-mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.v4-flow .offer-pillar h3 {
+  max-width: 18ch;
+  margin-bottom: 1rem;
+  color: var(--v3-paper);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.v4-flow .offer-pillar > p:not(.offer-pillar-label):not(.offer-pillar-emphasis) {
+  max-width: 32rem;
+  color: rgba(244, 237, 228, .78);
+}
+
+.v4-flow .offer-pillar-emphasis {
+  max-width: 32rem;
+  margin-bottom: 0;
+  color: var(--v3-paper);
+}
+
+.v4-flow .offer-journey {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, .8fr);
+  gap: 2rem 4rem;
+  align-items: end;
+  padding-top: 4rem;
+}
+
+.v4-flow .offer-journey h3 {
+  max-width: 18ch;
+  margin-bottom: 0;
+  color: var(--v3-paper);
+}
+
+.v4-flow .offer-journey p {
+  max-width: 34rem;
+  margin-bottom: 0;
+  color: rgba(244, 237, 228, .78);
+}
+
+.v4-flow .offer-journey p strong {
+  color: var(--v3-paper);
+}
+
+.v4-flow .offer-journey .button {
+  grid-column: 2;
+  justify-self: start;
+}
+
+@media (max-width: 900px) {
+  .v4-flow .offer-editorial-intro { grid-template-columns: 1fr; gap: 1rem; }
+  .v4-flow .offer-pillars { grid-template-columns: 1fr; }
+  .v4-flow .offer-pillar--last { grid-column: auto; max-width: none; }
+  .v4-flow .offer-journey { grid-template-columns: 1fr; gap: 1rem; }
+  .v4-flow .offer-journey .button { grid-column: auto; }
+}

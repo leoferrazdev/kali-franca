@@ -6,7 +6,6 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const v4Path = path.join(root, 'lp-5d', 'v4', 'index.html');
-const v3Path = path.join(root, 'lp-5d', 'v3', 'index.html');
 const v4CssPath = path.join(root, 'lp-5d', 'v4', 'styles.css');
 
 test('a V4 publica a nova primeira dobra do Eleva 5D', () => {
@@ -26,16 +25,76 @@ test('a V4 publica a nova primeira dobra do Eleva 5D', () => {
   assert.match(html, /QUERO COMEÇAR MINHA JORNADA NO ELEVA 5D/);
 });
 
-test('a V4 altera somente a primeira dobra em relação à V3', () => {
-  const v3 = fs.readFileSync(v3Path, 'utf8');
-  const v4 = fs.readFileSync(v4Path, 'utf8');
-  const downstreamMarker = '<section class="section section-paper recognition"';
+test('a V4 mantém as demais seções da jornada', () => {
+  const html = fs.readFileSync(v4Path, 'utf8');
+  const expectedSections = ['method', 'routine', 'spaces', 'cut', 'authority', 'offer', 'faq'];
 
-  assert.equal(
-    v4.slice(v4.indexOf(downstreamMarker)),
-    v3.slice(v3.indexOf(downstreamMarker)),
-    'O conteúdo posterior à primeira dobra deve permanecer idêntico'
-  );
+  for (const section of expectedSections) {
+    assert.match(html, new RegExp(`data-scroll-marker="${section}"`));
+  }
+  assert.doesNotMatch(html, /id="eusoul"|Eu Soul|sua guia particular/);
+});
+
+test('a V4 mantém a sequência editorial contínua após a nova seção', () => {
+  const html = fs.readFileSync(v4Path, 'utf8');
+  const indices = [...html.matchAll(/<p class="section-index">(\d{2}) \/ /g)].map((match) => match[1]);
+
+  assert.deepEqual(indices, ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11']);
+});
+
+test('a oferta V4 não promete a guia de IA removida temporariamente', () => {
+  const html = fs.readFileSync(v4Path, 'utf8');
+  assert.doesNotMatch(html, /IA Eu Soul|Eu Soul/);
+});
+
+test('a oferta V4 apresenta a nova narrativa de transformação', () => {
+  const html = fs.readFileSync(v4Path, 'utf8');
+  const offerSection = html.slice(html.indexOf('id="oferta"'), html.indexOf('id="faq"'));
+
+  assert.match(offerSection, /09 \/ agora você não precisa depender apenas de motivação/);
+  assert.match(offerSection, /Tudo o que você precisa para transformar um novo estado em uma nova identidade\./);
+  assert.match(offerSection, /O Eleva 5D não foi criado para ser mais um conteúdo que você consome, se inspira por alguns dias e depois deixa de lado\./);
+  assert.equal((offerSection.match(/class="offer-pillar(?:\s|\")/g) || []).length, 5);
+  assert.match(offerSection, /30 dias de áudios de reprogramação \+ Caderno da Criadora/);
+  assert.match(offerSection, /Âncoras Divinas/);
+  assert.match(offerSection, /Mapa da Realização \+ Habitar guiado/);
+  assert.match(offerSection, /Sustentar \+ Elevar/);
+  assert.match(offerSection, /Corte Energético/);
+  assert.match(offerSection, /Sua jornada acontece dentro do aplicativo Eleva 5D\./);
+  assert.match(offerSection, /QUERO COMEÇAR MINHA JORNADA/);
+});
+
+test('a V4 posiciona a seção de prova entre O mecanismo e O método', () => {
+  const html = fs.readFileSync(v4Path, 'utf8');
+  const mechanismPosition = html.indexOf('id="mecanismo"');
+  const proofPosition = html.indexOf('id="prova"');
+  const methodPosition = html.indexOf('id="metodo"');
+
+  assert.ok(mechanismPosition < proofPosition, 'A prova deve vir depois de O mecanismo');
+  assert.ok(proofPosition < methodPosition, 'A prova deve vir antes de O método');
+  assert.match(html, /<p class="section-index">03 \/ quando deixa de ser teoria<\/p>/);
+  assert.match(html, /<h2 id="proof-title">Você não precisa acreditar antes de viver\.<\/h2>/);
+  assert.match(html, /Existe um momento em que aquilo que você entende sobre si deixa de ser apenas conhecimento e começa a aparecer na forma como você sente, escolhe e vive\./);
+  assert.match(html, /Foi assim para mulheres que também conheciam o caminho, mas ainda voltavam ao medo, à dúvida e ao controle\./);
+  assert.match(html, /\[DEPOIMENTO REAL 1\]/);
+  assert.match(html, /\[DEPOIMENTO REAL 2\]/);
+  assert.match(html, /\[DEPOIMENTO REAL 3\]/);
+  assert.match(html, /De oscilação para sustentação/);
+  assert.match(html, /De entendimento para movimento/);
+  assert.match(html, /De esforço para confiança/);
+  assert.match(html, /<h3>O objetivo não é nunca mais sentir medo\.<\/h3>/);
+  assert.match(html, /É perceber mais rápido quando você saiu de si e saber o caminho de volta\./);
+  assert.match(html, /E é exatamente para transformar esse retorno em uma prática diária que existe o Eleva 5D\./);
+});
+
+test('a seção de prova usa estrutura editorial acessível sem fabricar depoimentos', () => {
+  const html = fs.readFileSync(v4Path, 'utf8');
+  const proofSection = html.slice(html.indexOf('id="prova"'), html.indexOf('id="metodo"'));
+
+  assert.match(proofSection, /aria-labelledby="proof-title"/);
+  assert.match(proofSection, /aria-label="Depoimentos reais pendentes de inserção"/);
+  assert.equal((proofSection.match(/data-proof-status="pending-real-testimonial"/g) || []).length, 3);
+  assert.equal((proofSection.match(/class="proof-highlight"/g) || []).length, 3);
 });
 
 test('a V4 organiza a primeira dobra desktop para leitura, imagem e CTA', () => {
