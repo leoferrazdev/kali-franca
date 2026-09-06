@@ -160,7 +160,7 @@ test('a V4 tem uma composição visual distinta por etapa da jornada', () => {
   assert.match(css, /\.v4-flow \.recognition-cards\s*\{[\s\S]*?grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\);/);
   assert.match(css, /\.v4-flow \.mechanism-track\s*\{[\s\S]*?gap:\s*1rem;/);
   assert.match(css, /\.v4-flow \.proof-card:first-child\s*\{[\s\S]*?grid-row:\s*span 2;/);
-  assert.match(css, /\.v4-flow \.movement-timeline\s*\{[\s\S]*?grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\);/);
+  assert.match(css, /\.v4-flow \.movement-timeline\s*\{[\s\S]*?display:\s*grid;[\s\S]*?grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\);/);
   assert.match(css, /\.v4-flow \.offer-decision\s*\{[\s\S]*?background:\s*var\(--v3-wine\);/);
   assert.match(css, /\.v4-flow \.faq \.faq-list details\s*\{[\s\S]*?border-radius:/);
   assert.match(css, /@media \(max-width:\s*56\.25rem\)[\s\S]*?\.v4-flow \.proof-card:first-child\s*\{[\s\S]*?grid-row:\s*auto;/);
