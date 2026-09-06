@@ -17,7 +17,7 @@ test('a versão B existe em rota separada e mantém a oferta principal', () => {
   assert.match(html, /Eleva 5D/i);
   assert.match(html, /R\$497/i);
   assert.match(html, /7 dias de garantia/i);
-  assert.match(html, /acesso mensal/i);
+  assert.match(html, /acesso anual ao Método/i);
 });
 
 test('a versão B preserva o conteúdo estratégico do material-fonte', () => {
