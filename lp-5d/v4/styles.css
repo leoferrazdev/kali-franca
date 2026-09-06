@@ -1798,4 +1798,35 @@ em { color: var(--b-gold); font-style: italic; }
   .v4-flow .authority {
     background: var(--v4-wine);
   }
+
+  .v4-flow .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .v4-flow .authority-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .v4-flow .proof-grid {
+    gap: 1rem;
+  }
+
+  .v4-flow .proof-card {
+    min-height: auto;
+  }
+
+  .v4-flow .authority-grid {
+    gap: 2.5rem;
+  }
+
+  .v4-flow .authority-image {
+    position: relative;
+    top: auto;
+    max-width: 34rem;
+  }
+
+  .v4-flow .authority-copy {
+    min-width: 0;
+    padding-block: 0;
+  }
 }
