@@ -1220,9 +1220,12 @@ em { color: var(--b-gold); font-style: italic; }
 .v4-flow .offer .section-lead,
 .v4-flow .offer .offer-pillar-emphasis,
 .v4-flow .offer .offer-journey h3,
-.v4-flow .offer .offer-journey p,
-.v4-flow .offer .offer-journey p strong {
+.v4-flow .offer .offer-journey p {
   color: var(--v3-ink);
+}
+
+.v4-flow .offer .offer-journey p strong {
+  color: var(--v4-gold);
 }
 
 .v4-flow .offer .offer-pillars {
