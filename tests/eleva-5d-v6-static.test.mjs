@@ -64,14 +64,29 @@ test('a V6 aplica leitura editorial responsiva ao novo bloco de autoridade', () 
   assert.match(css, /@media \(max-width:\s*37\.5rem\)[\s\S]*?\.v6-flow \.authority-proof-line/);
 });
 
-test('a V6 mantém a sequência editorial e não fabrica depoimentos', () => {
+test('a V6 mantém a sequência editorial e usa prints reais autorizados', () => {
   const html = fs.readFileSync(v6Path, 'utf8');
   const indices = [...html.matchAll(/<p class="section-index">(\d{2}) \/ /g)].map((match) => match[1]);
   const v6App = fs.readFileSync(path.join(root, 'lp-5d', 'v6', 'app.js'), 'utf8');
   const v5App = fs.readFileSync(path.join(root, 'lp-5d', 'v5', 'app.js'), 'utf8');
 
   assert.deepEqual(indices, ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11']);
-  assert.match(html, /data-proof-status="pending-real-testimonial"/);
+  assert.doesNotMatch(html, /data-proof-status="pending-real-testimonial"/);
+  assert.match(html, /data-proof-status="real-testimonial"/g);
+  assert.equal(html.match(/data-proof-status="real-testimonial"/g)?.length, 3);
+  assert.match(html, /\.\.\/\.\.\/depoimentos\/4\.jpeg/);
+  assert.match(html, /\.\.\/\.\.\/depoimentos\/3\.jpeg/);
+  assert.match(html, /\.\.\/\.\.\/depoimentos\/5\.jpeg/);
+  assert.match(html, /Relato real compartilhado com autorização de uso/);
+  assert.match(html, /De oscilação para sustentação/);
+  assert.match(html, /De entendimento para movimento/);
+  assert.match(html, /De esforço para confiança/);
   assert.doesNotMatch(html, /Eu Soul|sua guia particular/);
   assert.equal(v6App, v5App);
+});
+
+test('os três prints selecionados existem como assets locais da prova social', () => {
+  for (const file of ['4.jpeg', '3.jpeg', '5.jpeg']) {
+    assert.ok(fs.existsSync(path.join(root, 'depoimentos', file)), `depoimentos/${file} deve existir`);
+  }
 });
