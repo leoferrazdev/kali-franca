@@ -144,3 +144,23 @@ test('a V4 preserva leitura e decisão nos breakpoints intermediários', () => {
   assert.match(css, /@media \(min-width:\s*56\.3125rem\) and \(max-width:\s*68\.75rem\)[\s\S]*?\.v4-flow \.offer-journey \.button\s*\{[\s\S]*?grid-column:\s*1 \/ -1;/);
   assert.match(css, /@media \(max-width:\s*37\.5rem\)[\s\S]*?\.v4-flow \.offer-decision\s*\{[\s\S]*?grid-template-columns:\s*1fr;/);
 });
+
+test('a V4 tem uma composição visual distinta por etapa da jornada', () => {
+  const html = fs.readFileSync(v4Path, 'utf8');
+  const css = fs.readFileSync(v4CssPath, 'utf8');
+
+  assert.match(html, /class="shell hero-grid hero-composition"/);
+  assert.match(html, /class="shell recognition-grid recognition-cards"/);
+  assert.match(html, /class="shell state-grid mechanism-track"/);
+  assert.match(html, /class="shell movement-list movement-timeline"/);
+  assert.match(html, /class="shell routine-grid routine-cards"/);
+  assert.match(html, /class="shell spaces-grid spaces-sequence"/);
+  assert.match(css, /\.v4-flow \.site-header\s*\{[\s\S]*?position:\s*fixed;/);
+  assert.match(css, /\.v4-flow \.recognition-cards\s*\{[\s\S]*?grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\);/);
+  assert.match(css, /\.v4-flow \.mechanism-track\s*\{[\s\S]*?gap:\s*1rem;/);
+  assert.match(css, /\.v4-flow \.proof-card:first-child\s*\{[\s\S]*?grid-row:\s*span 2;/);
+  assert.match(css, /\.v4-flow \.movement-timeline\s*\{[\s\S]*?grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\);/);
+  assert.match(css, /\.v4-flow \.offer-decision\s*\{[\s\S]*?background:\s*var\(--v3-wine\);/);
+  assert.match(css, /\.v4-flow \.faq \.faq-list details\s*\{[\s\S]*?border-radius:/);
+  assert.match(css, /@media \(max-width:\s*56\.25rem\)[\s\S]*?\.v4-flow \.proof-card:first-child\s*\{[\s\S]*?grid-row:\s*auto;/);
+});
