@@ -91,7 +91,7 @@ test('a V6 mantém a sequência editorial e usa prints reais autorizados', () =>
   assert.doesNotMatch(html, /data-proof-status="pending-real-testimonial"/);
   assert.match(html, /data-proof-status="real-testimonial"/g);
   assert.equal(html.match(/data-proof-status="real-testimonial"/g)?.length, 3);
-  assert.match(html, /\.\.\/\.\.\/depoimentos\/4\.jpeg/);
+  assert.match(html, /\.\.\/\.\.\/depoimentos\/1\.jpeg/);
   assert.match(html, /\.\.\/\.\.\/depoimentos\/3\.jpeg/);
   assert.match(html, /\.\.\/\.\.\/depoimentos\/5\.jpeg/);
   assert.match(html, /Relato real compartilhado com autorização de uso/);
@@ -103,7 +103,7 @@ test('a V6 mantém a sequência editorial e usa prints reais autorizados', () =>
 });
 
 test('os três prints selecionados existem como assets locais da prova social', () => {
-  for (const file of ['4.jpeg', '3.jpeg', '5.jpeg']) {
+  for (const file of ['1.jpeg', '3.jpeg', '5.jpeg']) {
     assert.ok(fs.existsSync(path.join(root, 'depoimentos', file)), `depoimentos/${file} deve existir`);
   }
 });

@@ -60,7 +60,7 @@ Os relatos foram selecionados e organizados conforme a função narrativa da se�
 
 | Posição | Arquivo | Destaque |
 | --- | --- | --- |
-| 01 | `depoimentos/4.jpeg` | De oscilação para sustentação |
+| 01 | `depoimentos/1.jpeg` | De oscilação para sustentação |
 | 02 | `depoimentos/3.jpeg` | De entendimento para movimento |
 | 03 | `depoimentos/5.jpeg` | De esforço para confiança |
 
@@ -72,7 +72,7 @@ Os prints são exibidos como imagens dentro de cards nativos da página, com mol
 - V6 mantém o `app.js` da V5 sem alterações comportamentais.
 - A sequência editorial 01–11 foi preservada.
 - A imagem, o título e o corpo narrativo foram verificados localmente no navegador.
-- Commit `b281c83` publicado na `main`.
+- Histórico de implementação e ajustes visuais da V6 publicado na `main`.
 - Publicação pública e verificação HTTP da rota ainda dependem do deployment da Hostinger.
 
 - Os três prints autorizados são referenciados por caminhos locais e nenhum depoimento ou resultado foi fabricado.
