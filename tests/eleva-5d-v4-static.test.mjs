@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const v4Path = path.join(root, 'lp-5d', 'v4', 'index.html');
 const v3Path = path.join(root, 'lp-5d', 'v3', 'index.html');
+const v4CssPath = path.join(root, 'lp-5d', 'v4', 'styles.css');
 
 test('a V4 publica a nova primeira dobra do Eleva 5D', () => {
   assert.ok(fs.existsSync(v4Path), 'A rota lp-5d/v4 deve existir');
@@ -35,4 +36,13 @@ test('a V4 altera somente a primeira dobra em relação à V3', () => {
     v3.slice(v3.indexOf(downstreamMarker)),
     'O conteúdo posterior à primeira dobra deve permanecer idêntico'
   );
+});
+
+test('a V4 organiza a primeira dobra desktop para leitura, imagem e CTA', () => {
+  const css = fs.readFileSync(v4CssPath, 'utf8');
+
+  assert.match(css, /@media \(min-width:\s*64rem\)[\s\S]*?\.v4-flow \.hero-grid\s*\{[\s\S]*?align-items:\s*start;/);
+  assert.match(css, /\.v4-flow h1\s*\{[\s\S]*?max-width:\s*14ch;[\s\S]*?font-size:\s*clamp\(/);
+  assert.match(css, /\.v4-flow \.hero-image\s*\{[\s\S]*?align-self:\s*start;/);
+  assert.match(css, /\.v4-flow \.hero-actions\s*\{[\s\S]*?margin:\s*1\.75rem 0 1\.5rem;/);
 });

@@ -350,3 +350,53 @@ em { color: var(--b-gold); font-style: italic; }
   .v3-flow .state-card { border-right: 0; border-bottom: 1px solid var(--v3-line); }
   .v3-flow .state-card:last-child { border-bottom: 0; }
 }
+
+/* V4 — primeira dobra desktop com hierarquia, imagem e CTA no mesmo campo de leitura */
+@media (min-width: 64rem) {
+  .v4-flow .hero { padding-top: 7rem; }
+  .v4-flow .hero-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(24rem, .9fr);
+    align-items: start;
+    gap: clamp(2.5rem, 4vw, 5rem);
+    min-height: 36rem;
+  }
+  .v4-flow .hero-copy { max-width: 44rem; }
+  .v4-flow h1 {
+    max-width: 14ch;
+    font-size: clamp(3.5rem, 5.1vw, 6.2rem);
+    line-height: .94;
+  }
+  .v4-flow .hero-lead {
+    max-width: 40rem;
+    font-size: clamp(1rem, 1.25vw, 1.18rem);
+  }
+  .v4-flow .hero-note {
+    max-width: 34rem;
+    margin-bottom: 1rem;
+    color: var(--v3-paper);
+    opacity: .78;
+  }
+  .v4-flow .hero-steps {
+    max-width: 42rem;
+    margin-bottom: 0;
+    color: rgba(244, 237, 228, .78);
+    font-size: .95rem;
+    line-height: 1.5;
+  }
+  .v4-flow .hero-steps strong {
+    display: block;
+    margin-bottom: .6rem;
+    color: var(--v3-gold);
+    font: .72rem/1.2 var(--b-mono);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .v4-flow .hero-actions { margin: 1.75rem 0 1.5rem; }
+  .v4-flow .hero-image {
+    align-self: start;
+    margin-top: clamp(3rem, 6vw, 5.5rem);
+  }
+  .v4-flow .hero-manifesto { padding-top: 1.5rem; }
+  .v4-flow .proof-strip { padding-top: .9rem; }
+  .v4-flow .proof-strip li { min-width: auto; flex: 1 1 0; }
+}
