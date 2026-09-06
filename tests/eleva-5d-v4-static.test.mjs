@@ -61,6 +61,8 @@ test('a oferta V4 apresenta a nova narrativa de transformação', () => {
   assert.match(offerSection, /Sustentar \+ Elevar/);
   assert.match(offerSection, /Corte Energético/);
   assert.match(offerSection, /Sua jornada acontece dentro do aplicativo Eleva 5D\./);
+  assert.match(offerSection, /<strong>R\$497<\/strong>/);
+  assert.match(offerSection, /acesso anual ao Método, pelo seu aplicativo personalizado/);
   assert.match(offerSection, /QUERO COMEÇAR MINHA JORNADA/);
 });
 

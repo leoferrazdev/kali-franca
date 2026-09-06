@@ -596,6 +596,23 @@ em { color: var(--b-gold); font-style: italic; }
   color: var(--v3-paper);
 }
 
+.v4-flow .offer-price {
+  display: grid;
+  gap: .3rem;
+  align-self: end;
+  padding-top: 1.5rem;
+}
+
+.v4-flow .offer-price strong {
+  color: var(--v3-gold);
+  font: clamp(3.25rem, 5vw, 4.5rem)/.85 var(--b-display);
+}
+
+.v4-flow .offer-price span {
+  color: rgba(244, 237, 228, .78);
+  font-size: .8rem;
+}
+
 .v4-flow .offer-journey .button {
   grid-column: 2;
   justify-self: start;
