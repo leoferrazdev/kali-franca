@@ -97,6 +97,17 @@ test('a seção de prova usa estrutura editorial acessível sem fabricar depoime
   assert.equal((proofSection.match(/class="proof-highlight"/g) || []).length, 3);
 });
 
+test('a seção de prova V4 usa o espaço desktop para hierarquia e leitura horizontal', () => {
+  const html = fs.readFileSync(v4Path, 'utf8');
+  const css = fs.readFileSync(v4CssPath, 'utf8');
+
+  assert.equal((html.match(/class="proof-card-number"/g) || []).length, 3);
+  assert.match(css, /\.v4-flow \.proof-intro > div:last-child\s*\{[\s\S]*?display:\s*grid;/);
+  assert.match(css, /\.v4-flow \.proof-grid\s*\{[\s\S]*?grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\);/);
+  assert.match(css, /\.v4-flow \.proof-card\s*\{[\s\S]*?border:\s*1px solid var\(--v3-line\);/);
+  assert.match(css, /\.v4-flow \.proof-card-number\s*\{[\s\S]*?color:\s*var\(--v3-gold\);/);
+});
+
 test('a V4 organiza a primeira dobra desktop para leitura, imagem e CTA', () => {
   const css = fs.readFileSync(v4CssPath, 'utf8');
 
