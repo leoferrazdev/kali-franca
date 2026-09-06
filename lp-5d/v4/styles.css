@@ -352,6 +352,21 @@ em { color: var(--b-gold); font-style: italic; }
 }
 
 /* V4 — primeira dobra desktop com hierarquia, imagem e CTA no mesmo campo de leitura */
+.v4-flow h1,
+.v4-flow h2,
+.v4-flow h3 {
+  text-wrap: balance;
+}
+
+.v4-flow p,
+.v4-flow li {
+  overflow-wrap: anywhere;
+}
+
+.v4-flow [id] {
+  scroll-margin-top: 1.5rem;
+}
+
 @media (min-width: 64rem) {
   .v4-flow .hero { padding-top: 7rem; }
   .v4-flow .hero-grid {
@@ -678,4 +693,76 @@ em { color: var(--b-gold); font-style: italic; }
 
   .v4-flow .mobile-cta:focus-visible,
   .v4-flow .mobile-cta:hover { background: var(--v3-paper); }
+}
+
+/* V4 — tablet e desktop compacto: preserva duas colunas sem comprimir a decisão */
+@media (min-width: 56.3125rem) and (max-width: 68.75rem) {
+  .v4-flow .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, .8fr);
+    gap: 2.5rem;
+    min-height: 34rem;
+  }
+
+  .v4-flow h1 {
+    max-width: 13ch;
+    font-size: clamp(3.4rem, 5.8vw, 5.6rem);
+  }
+
+  .v4-flow .hero-image {
+    margin-top: 2rem;
+  }
+
+  .v4-flow .offer-decision {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem 1.5rem;
+  }
+
+  .v4-flow .offer-journey .button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+/* V4 — telas estreitas: reduz densidade e mantém a ação final acessível */
+@media (max-width: 37.5rem) {
+  .v4-flow .shell,
+  .v4-flow .narrow-heading {
+    width: min(100% - 2rem, 78rem);
+  }
+
+  .v4-flow h1 {
+    max-width: 11ch;
+    font-size: clamp(2.8rem, 14vw, 4.2rem);
+  }
+
+  .v4-flow h2 {
+    font-size: clamp(2.45rem, 12vw, 3.6rem);
+  }
+
+  .v4-flow .proof-card {
+    padding: 1.25rem;
+  }
+
+  .v4-flow .offer-pillars {
+    margin-top: 2.5rem;
+  }
+
+  .v4-flow .offer-decision {
+    grid-template-columns: 1fr;
+  }
+
+  .v4-flow .offer-journey .button {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .v4-flow .final-cta {
+    padding-bottom: calc(clamp(5rem, 10vw, 9rem) + 5rem);
+  }
+
+  .v4-flow .mobile-cta {
+    right: .75rem;
+    left: .75rem;
+    font-size: .65rem;
+  }
 }

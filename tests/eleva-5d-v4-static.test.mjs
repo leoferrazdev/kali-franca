@@ -133,3 +133,14 @@ test('a V4 organiza a primeira dobra desktop para leitura, imagem e CTA', () => 
   assert.match(css, /\.v4-flow \.hero-image\s*\{[\s\S]*?align-self:\s*start;/);
   assert.match(css, /\.v4-flow \.hero-actions\s*\{[\s\S]*?margin:\s*1\.75rem 0 1\.5rem;/);
 });
+
+test('a V4 preserva leitura e decisão nos breakpoints intermediários', () => {
+  const css = fs.readFileSync(v4CssPath, 'utf8');
+
+  assert.match(css, /\.v4-flow h1,\s*\.v4-flow h2,\s*\.v4-flow h3\s*\{[\s\S]*?text-wrap:\s*balance;/);
+  assert.match(css, /\.v4-flow p,\s*\.v4-flow li\s*\{[\s\S]*?overflow-wrap:\s*anywhere;/);
+  assert.match(css, /@media \(min-width:\s*56\.3125rem\) and \(max-width:\s*68\.75rem\)[\s\S]*?\.v4-flow \.hero-grid\s*\{[\s\S]*?grid-template-columns:\s*minmax\(0,\s*1fr\) minmax\(18rem,\s*\.8fr\);/);
+  assert.match(css, /@media \(min-width:\s*56\.3125rem\) and \(max-width:\s*68\.75rem\)[\s\S]*?\.v4-flow \.offer-decision\s*\{[\s\S]*?grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\);/);
+  assert.match(css, /@media \(min-width:\s*56\.3125rem\) and \(max-width:\s*68\.75rem\)[\s\S]*?\.v4-flow \.offer-journey \.button\s*\{[\s\S]*?grid-column:\s*1 \/ -1;/);
+  assert.match(css, /@media \(max-width:\s*37\.5rem\)[\s\S]*?\.v4-flow \.offer-decision\s*\{[\s\S]*?grid-template-columns:\s*1fr;/);
+});
