@@ -48,6 +48,7 @@ area: indice
 - [[Eleva 5D - Página de vendas na raiz V2]] — página canônica na raiz, com humanização, autoridade e imagens aprovadas; publicamente verificada em 2026-09-04.
 - [[Eleva 5D - Página de vendas V5]] — cópia local da V4 com prévia HTML/CSS da experiência do aplicativo, garantia revisada e FAQ ampliado; validação local concluída em 2026-09-06.
 - [[Eleva 5D - Página de vendas V6]] — cópia da V5 com reconstrução da autoridade da Kalì no bloco 08; commit `b281c83` publicado na `main` em 2026-09-06, deployment público pendente.
+- [[Eleva 5D - Página de vendas V8]] — texto final do PDF editorial aplicado sobre uma cópia independente da V7; validação local concluída em 2026-09-07, deployment público pendente.
 - [[Eleva 5D - Fundação na área de membros V1]] — shell autenticado, onboarding, rotina, cinco movimentos e base Supabase preparados em 2026-09-04; checkout e entitlement permanecem pendentes.
 
 ## Operação e deploy
@@ -68,6 +69,7 @@ area: indice
 - [[Eleva 5D - Página de vendas na raiz V2]] — página canônica do primeiro entregável comercial; humanização e imagens aprovadas aplicadas em 2026-09-04.
 - [[Eleva 5D - Página de vendas V5]] — experimento de composição com prévia visual do aplicativo, sem imagens geradas por API e sem alegação de produto finalizado.
 - [[Eleva 5D - Página de vendas V6]] — versão de autoridade conectada ao problema central da jornada, sem referência à neurociência.
+- [[Eleva 5D - Página de vendas V8]] — revisão editorial final com nova primeira dobra, mecanismo detalhado, rotina de alta frequência, prova autorizada, oferta e FAQ preservados.
 - [[Eleva 5D - Página de vendas V1]] — registro histórico da antiga rota dedicada.
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]] — especificação técnica aprovada em 2026-09-04; checkout, webhook, entitlement e acesso protegido permanecem pendentes.
 - [[Eleva 5D - Fundação na área de membros V1]] — fundação do produto pronta para integração comercial; validação local aprovada em 2026-09-04.
