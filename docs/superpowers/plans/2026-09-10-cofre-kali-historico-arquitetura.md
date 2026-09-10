@@ -105,4 +105,4 @@
 - [x] **Step 2: Confirmar visualmente** o Graph View e o Explorador na instância aberta do Obsidian.
 - [x] **Step 3: Conferir `git diff --check`** e garantir que arquivos temporários e credenciais não foram incluídos.
 - [x] **Step 4: Fazer commit somente dos arquivos do plano** na branch `main`, preservando as alterações não relacionadas do worktree.
-- [ ] **Step 5: Fazer push para `origin/main`** e registrar o hash final no estado de continuidade e na linha do tempo.
+- [x] **Step 5: Fazer push para `origin/main`** e registrar o hash final no estado de continuidade e na linha do tempo.
