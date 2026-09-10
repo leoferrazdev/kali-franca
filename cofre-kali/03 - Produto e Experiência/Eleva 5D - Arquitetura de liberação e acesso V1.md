@@ -63,7 +63,7 @@ flowchart TD
 
 ## Relação com o produto
 
-Depois da liberação, a pessoa inicia o marco “Corte Energético” e acessa o ciclo de cinco movimentos definido em [[../../aplicativo-eleva-5d/Estrutura Aplicativo - Eleva 5d|Estrutura Aplicativo - Eleva 5D]]:
+Depois da liberação, a pessoa inicia o marco “Corte Energético” e acessa o ciclo de cinco movimentos definido no arquivo local `D:\LEONARDO\Kali Franca\aplicativo-eleva-5d\Estrutura Aplicativo - Eleva 5d.md`.
 
 1. Reprogramar
 2. Alinhar

@@ -1,0 +1,70 @@
+/* Cofre Kalì Franca — diferenciação visual da arquitetura */
+
+:root {
+  --kf-umbra: #0e0b0a;
+  --kf-vinho: #3a1424;
+  --kf-ameixa: #7a2b44;
+  --kf-ouro: #c9a66b;
+  --kf-alabastro: #f4ede4;
+  --kf-nevoa: #9aa39f;
+  --kf-cobre: #c97a52;
+}
+
+.nav-folder-title[data-path="00 - Índice"],
+.nav-folder-title[data-path^="00 - Índice/"] {
+  --kf-folder-color: var(--kf-ouro);
+}
+
+.nav-folder-title[data-path="01 - Contexto e Estratégia"],
+.nav-folder-title[data-path^="01 - Contexto e Estratégia/"] {
+  --kf-folder-color: var(--kf-nevoa);
+}
+
+.nav-folder-title[data-path="02 - Marca e Design"],
+.nav-folder-title[data-path^="02 - Marca e Design/"] {
+  --kf-folder-color: var(--kf-ameixa);
+}
+
+.nav-folder-title[data-path="03 - Produto e Experiência"],
+.nav-folder-title[data-path^="03 - Produto e Experiência/"] {
+  --kf-folder-color: var(--kf-vinho);
+}
+
+.nav-folder-title[data-path="04 - Operação e Deploy"],
+.nav-folder-title[data-path^="04 - Operação e Deploy/"] {
+  --kf-folder-color: var(--kf-cobre);
+}
+
+.nav-folder-title[data-path="05 - Evidências e Histórico"],
+.nav-folder-title[data-path^="05 - Evidências e Histórico/"] {
+  --kf-folder-color: var(--kf-ouro);
+}
+
+.nav-folder-title[data-path="90 - Arquivo"],
+.nav-folder-title[data-path^="90 - Arquivo/"] {
+  --kf-folder-color: var(--kf-nevoa);
+}
+
+.nav-folder-title[data-path] {
+  border-left: 3px solid var(--kf-folder-color, var(--kf-ouro));
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.nav-folder-title[data-path]:hover,
+.nav-folder-title[data-path].is-active {
+  background-color: color-mix(in srgb, var(--kf-folder-color, var(--kf-ouro)) 14%, transparent);
+}
+
+.nav-folder-title[data-path] > .nav-folder-title-content,
+.nav-file-title[data-path] > .nav-file-title-content {
+  color: color-mix(in srgb, var(--kf-folder-color, var(--kf-ouro)) 82%, var(--kf-alabastro));
+}
+
+.nav-file-title[data-path^="00 - Índice/"],
+.nav-file-title[data-path^="01 - Contexto e Estratégia/"],
+.nav-file-title[data-path^="02 - Marca e Design/"],
+.nav-file-title[data-path^="03 - Produto e Experiência/"],
+.nav-file-title[data-path^="04 - Operação e Deploy/"],
+.nav-file-title[data-path^="05 - Evidências e Histórico/"] {
+  border-left: 1px solid color-mix(in srgb, var(--kf-ouro) 42%, transparent);
+}

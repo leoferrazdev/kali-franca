@@ -40,3 +40,17 @@ area: indice
 
 - [[MOC - Kalì Franca]]
 - [[Roadmap - Kalì Franca]]
+
+## Registro de continuidade
+
+Para que o projeto não dependa do histórico do chat:
+
+1. Consulte [[Estado atual e continuidade]] antes de iniciar uma nova frente.
+2. Registre cada entrega na área semântica correspondente.
+3. Atualize [[Linha do tempo do projeto]] quando uma etapa mudar o estado do projeto.
+4. Atualize [[Matriz de entregas e evidências]] quando houver nova validação, publicação ou pendência.
+5. Consulte [[Inventário de commits]] para recuperar a sequência da `main`.
+
+## Organização visual
+
+As pastas numeradas representam áreas de decisão. O snippet `.obsidian/snippets/cofre-kali.css` usa a paleta da marca para diferenciá-las no Explorador. O `graph.json` usa grupos de tags para colorir o Graph View sem esconder nós órfãos ou anexos.

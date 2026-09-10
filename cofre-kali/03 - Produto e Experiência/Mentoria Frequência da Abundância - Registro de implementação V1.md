@@ -6,6 +6,13 @@ status: Implementado V1
 tipo: Registro de implementação
 dominio: Mentoria Frequência da Abundância
 data: 2026-08-30
+tags:
+  - kali-franca
+  - mentoria
+  - crm
+  - implementacao
+type: delivery
+area: produto
 ---
 
 # Mentoria Frequência da Abundância — Registro de implementação V1

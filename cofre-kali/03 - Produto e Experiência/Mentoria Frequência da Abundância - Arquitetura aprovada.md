@@ -6,6 +6,13 @@ status: Implementado V1
 tipo: Registro de decisão
 dominio: Mentoria Frequência da Abundância
 data: 2026-08-30
+tags:
+  - kali-franca
+  - mentoria
+  - produto
+  - acesso
+type: decision
+area: produto
 ---
 
 # Mentoria Frequência da Abundância — Arquitetura aprovada
@@ -39,8 +46,8 @@ A administradora verá lista e detalhes completos em layout responsivo. Usuário
 
 - [[MOC - Kalì Franca]]
 - Especificação completa no repositório: `docs/superpowers/specs/2026-08-30-mentoria-frequencia-da-abundancia-application-design.md`
-- [[Brandbook - Kalì Franca]]
-- [[Design System - Kalì Franca]]
+- [[Escopo - Brandbook online]]
+- [[Design system - Mapa da fonte V1]]
 
 ## Estado
 

@@ -1,0 +1,79 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#indice",
+      "color": {
+        "a": 1,
+        "rgb": 13215339
+      }
+    },
+    {
+      "query": "tag:#contexto",
+      "color": {
+        "a": 1,
+        "rgb": 10134431
+      }
+    },
+    {
+      "query": "tag:#design-system",
+      "color": {
+        "a": 1,
+        "rgb": 8006468
+      }
+    },
+    {
+      "query": "tag:#brandbook",
+      "color": {
+        "a": 1,
+        "rgb": 8006468
+      }
+    },
+    {
+      "query": "tag:#produto",
+      "color": {
+        "a": 1,
+        "rgb": 3806244
+      }
+    },
+    {
+      "query": "tag:#eleva-5d",
+      "color": {
+        "a": 1,
+        "rgb": 3806244
+      }
+    },
+    {
+      "query": "tag:#operacao",
+      "color": {
+        "a": 1,
+        "rgb": 13204050
+      }
+    },
+    {
+      "query": "tag:#evidencias",
+      "color": {
+        "a": 1,
+        "rgb": 13215339
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.18462326225858108,
+  "close": false
+}

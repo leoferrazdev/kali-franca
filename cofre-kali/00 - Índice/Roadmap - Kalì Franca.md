@@ -35,3 +35,15 @@ Uma iniciativa entra aqui quando existe intenção explícita de futuro. Ela nã
 
 - [x] Preparar o Eleva 5D na área de membros: dashboard, onboarding, rotina, cinco movimentos, contratos Supabase e RLS.
 - [[Eleva 5D - Fundação na área de membros V1]]
+
+## Estado de continuidade — 2026-09-10
+
+- [x] Consolidar a linha do tempo do projeto e o inventário da `main`.
+- [x] Criar a área `05 - Evidências e Histórico`.
+- [x] Configurar cores do Explorador e grupos do Graph View.
+- [x] Registrar a análise do PDF de estrutura dos Produtos 1 e 2 e a revisão do mapa no Whimsical.
+- [ ] Integrar checkout, webhook e entitlement do Eleva 5D.
+- [ ] Publicar conteúdos reais e concluir a experiência autenticada do aplicativo.
+- [ ] Revisar juridicamente claims de saúde, relatos e tratamento de dados sensíveis.
+
+Relações: [[Linha do tempo do projeto]], [[Estado atual e continuidade]], [[Matriz de entregas e evidências]].

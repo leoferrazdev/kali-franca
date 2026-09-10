@@ -64,5 +64,5 @@ Suíte completa: 34 testes estáticos e 32 testes do workspace aprovados; 1 test
 - [[Eleva 5D - Arquitetura de liberação e acesso V1]]
 - [[Eleva 5D - Página de vendas na raiz V2]]
 - [[Roadmap - Kalì Franca]]
-- [Especificação no repositório](../docs/superpowers/specs/2026-09-04-eleva-5d-member-foundation-design.md)
-- [Plano no repositório](../docs/superpowers/plans/2026-09-04-eleva-5d-member-foundation.md)
+- Especificação no repositório: `D:\LEONARDO\Kali Franca\docs\superpowers\specs\2026-09-04-eleva-5d-member-foundation-design.md`.
+- Plano no repositório: `D:\LEONARDO\Kali Franca\docs\superpowers\plans\2026-09-04-eleva-5d-member-foundation.md`.

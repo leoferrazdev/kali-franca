@@ -55,6 +55,14 @@ area: indice
 
 - [[Diagnóstico - Falha de compilação Hostinger]]
 
+## Evidências e histórico
+
+- [[Linha do tempo do projeto]]
+- [[Inventário de commits]]
+- [[Matriz de entregas e evidências]]
+- [[Estado atual e continuidade]]
+- [[05 - Evidências e Histórico/README|Evidências e Histórico — Guia]]
+
 ## Decisões e entregas
 
 - [[Escopo - Página de vendas demonstrativa]]
@@ -84,6 +92,14 @@ area: indice
 ## Registro da arquitetura
 
 - [[Arquitetura do cofre Kalì Franca - Registro V1]]
+
+## Continuidade documental — 2026-09-10
+
+- O cofre foi auditado e ampliado com uma área de evidências e histórico.
+- A linha do tempo consolida as etapas do bootstrap ao estado atual, sem depender do histórico do chat.
+- O inventário registra a branch `main`; a matriz separa código, validação local, publicação, verificação pública e pendências.
+- O Graph View e o Explorador receberam configuração visual derivada do design system.
+- O mapa de produtos do Whimsical foi revisado contra o PDF do Produto 1 e Produto 2.
 
 ## Bio pública
 

@@ -1,4 +1,12 @@
 ---
+title: Perfil, Promessa e ICP
+date: 2026-08-28
+tags:
+  - kali-franca
+  - contexto
+  - estrategia
+type: context
+status: active
 area: contexto
 ---
 [https://www.instagram.com/kalifrancaa/](https://www.instagram.com/kalifrancaa/)   
