@@ -31,11 +31,11 @@
 - Consumes: os 29 registros Markdown existentes e a taxonomia atual.
 - Produces: um hub que aponta para as seis áreas semânticas, linha do tempo, inventário de commits e matriz de evidências.
 
-- [ ] **Step 1: Criar a área de evidências e histórico** com README contendo escopo, classificação de evidência e links para os novos registros.
-- [ ] **Step 2: Atualizar o MOC** com a nova área, linha do tempo, inventário de commits, matriz de entregas e estado atual.
-- [ ] **Step 3: Atualizar o guia de uso** com a regra de que cada mudança deve ter data, estado, evidência e link relacionado.
-- [ ] **Step 4: Atualizar o roadmap** para distinguir concluído, pendente de integração e pendente de publicação.
-- [ ] **Step 5: Validar navegação** com `obsidian vault=cofre-kali unresolved verbose format=tsv`.
+- [x] **Step 1: Criar a área de evidências e histórico** com README contendo escopo, classificação de evidência e links para os novos registros.
+- [x] **Step 2: Atualizar o MOC** com a nova área, linha do tempo, inventário de commits, matriz de entregas e estado atual.
+- [x] **Step 3: Atualizar o guia de uso** com a regra de que cada mudança deve ter data, estado, evidência e link relacionado.
+- [x] **Step 4: Atualizar o roadmap** para distinguir concluído, pendente de integração e pendente de publicação.
+- [x] **Step 5: Validar navegação** com `obsidian vault=cofre-kali unresolved verbose format=tsv`.
 
 ### Task 2: Registrar o histórico completo e o estado atual
 
@@ -49,12 +49,12 @@
 - Consumes: histórico `git log`, notas existentes, PDF do Produto 1/2, mapa do Whimsical e estado atual do worktree.
 - Produces: registro factual de etapas de 27/08/2026 a 10/09/2026, sem credenciais e sem converter pendências em fatos.
 
-- [ ] **Step 1: Reunir o histórico Git** com hash curto, data e assunto de cada commit, preservando a ordem cronológica.
-- [ ] **Step 2: Agrupar a linha do tempo** em bootstrap/503, marca e brandbook, home e cofre, bio/analytics, mentoria/CRM, autenticação, Eleva 5D e produto/documentação.
-- [ ] **Step 3: Registrar o mapa de produtos** com Produto 1, Produto 2, módulos M1–M5, relatos e pontos de validação.
-- [ ] **Step 4: Criar a matriz de evidências** separando `confirmado no repositório`, `validado localmente`, `publicado`, `verificado publicamente`, `pendente` e `não confirmado`.
-- [ ] **Step 5: Registrar o estado de continuidade** com último commit, branch, alterações não relacionadas, próximos movimentos e regras de segurança.
-- [ ] **Step 6: Revisar o conteúdo** procurando `senha`, `token`, `secret`, chaves, valores sensíveis e placeholders indevidos.
+- [x] **Step 1: Reunir o histórico Git** com hash curto, data e assunto de cada commit, preservando a ordem cronológica.
+- [x] **Step 2: Agrupar a linha do tempo** em bootstrap/503, marca e brandbook, home e cofre, bio/analytics, mentoria/CRM, autenticação, Eleva 5D e produto/documentação.
+- [x] **Step 3: Registrar o mapa de produtos** com Produto 1, Produto 2, módulos M1–M5, relatos e pontos de validação.
+- [x] **Step 4: Criar a matriz de evidências** separando `confirmado no repositório`, `validado localmente`, `publicado`, `verificado publicamente`, `pendente` e `não confirmado`.
+- [x] **Step 5: Registrar o estado de continuidade** com último commit, branch, alterações não relacionadas, próximos movimentos e regras de segurança.
+- [x] **Step 6: Revisar o conteúdo** procurando `senha`, `token`, `secret`, chaves, valores sensíveis e placeholders indevidos.
 
 ### Task 3: Normalizar notas sem apagar histórico
 
@@ -67,11 +67,11 @@
 - Consumes: propriedades atuais e taxonomia definida no guia.
 - Produces: frontmatter mínimo consistente (`title`, `date`, `tags`, `type`, `status`, `area`) e links internos resolvíveis.
 
-- [ ] **Step 1: Corrigir apenas metadados ausentes ou inválidos**, preservando o corpo e o histórico das notas.
-- [ ] **Step 2: Normalizar `area`** para `indice`, `contexto`, `marca`, `produto`, `operacao` ou `evidencias`.
-- [ ] **Step 3: Normalizar `type` e `status`** sem alterar o significado dos registros existentes.
-- [ ] **Step 4: Corrigir links relativos** que apontam para documentos externos ao vault, convertendo-os em links Markdown externos ou marcando-os como fonte de repositório.
-- [ ] **Step 5: Verificar** `obsidian vault=cofre-kali properties counts format=tsv` e `obsidian vault=cofre-kali unresolved verbose format=tsv`.
+- [x] **Step 1: Corrigir apenas metadados ausentes ou inválidos**, preservando o corpo e o histórico das notas.
+- [x] **Step 2: Normalizar `area`** para `indice`, `contexto`, `marca`, `produto`, `operacao` ou `evidencias`.
+- [x] **Step 3: Normalizar `type` e `status`** sem alterar o significado dos registros existentes.
+- [x] **Step 4: Corrigir links relativos** que apontam para documentos externos ao vault, convertendo-os em links Markdown externos ou marcando-os como fonte de repositório.
+- [x] **Step 5: Verificar** `obsidian vault=cofre-kali properties counts format=tsv` e `obsidian vault=cofre-kali unresolved verbose format=tsv`.
 
 ### Task 4: Aplicar diferenciação visual ao Explorador e ao Graph View
 
@@ -83,11 +83,11 @@
 - Consumes: paleta oficial documentada em `Design system - Mapa da fonte V1.md`.
 - Produces: cores consistentes para seis áreas no Explorador e grupos de nós por tags no Graph View.
 
-- [ ] **Step 1: Criar o snippet CSS** com seletores por `data-path`, contraste acessível e estados de hover/foco.
-- [ ] **Step 2: Configurar quatro cores da paleta oficial** no Graph View e usar cores derivadas apenas quando necessário para diferenciar áreas.
-- [ ] **Step 3: Configurar grupos por tags sem esconder órfãos ou anexos** e manter o gráfico legível.
-- [ ] **Step 4: Habilitar o snippet** com `obsidian vault=cofre-kali snippet:enable name=cofre-kali`.
-- [ ] **Step 5: Recarregar o vault** e validar a configuração com `obsidian vault=cofre-kali snippets:enabled` e leitura do `graph.json`.
+- [x] **Step 1: Criar o snippet CSS** com seletores por `data-path`, contraste acessível e estados de hover/foco.
+- [x] **Step 2: Configurar quatro cores da paleta oficial** no Graph View e usar cores derivadas apenas quando necessário para diferenciar áreas.
+- [x] **Step 3: Configurar grupos por tags sem esconder órfãos ou anexos** e manter o gráfico legível.
+- [x] **Step 4: Habilitar o snippet** com `obsidian vault=cofre-kali snippet:enable name=cofre-kali`.
+- [x] **Step 5: Recarregar o vault** e validar a configuração com `obsidian vault=cofre-kali snippets:enabled` e leitura do `graph.json`.
 
 ### Task 5: Validar e versionar a entrega
 
@@ -101,8 +101,8 @@
 - Consumes: todos os artefatos das tarefas anteriores.
 - Produces: cofre navegável, colorido, auditável e com estado de entrega explicitamente separado.
 
-- [ ] **Step 1: Executar validação do Obsidian CLI** para arquivos, links, tags, propriedades e snippets.
-- [ ] **Step 2: Confirmar visualmente** o Graph View e o Explorador na instância aberta do Obsidian.
-- [ ] **Step 3: Conferir `git diff --check`** e garantir que arquivos temporários e credenciais não foram incluídos.
-- [ ] **Step 4: Fazer commit somente dos arquivos do plano** na branch `main`, preservando as alterações não relacionadas do worktree.
+- [x] **Step 1: Executar validação do Obsidian CLI** para arquivos, links, tags, propriedades e snippets.
+- [x] **Step 2: Confirmar visualmente** o Graph View e o Explorador na instância aberta do Obsidian.
+- [x] **Step 3: Conferir `git diff --check`** e garantir que arquivos temporários e credenciais não foram incluídos.
+- [x] **Step 4: Fazer commit somente dos arquivos do plano** na branch `main`, preservando as alterações não relacionadas do worktree.
 - [ ] **Step 5: Fazer push para `origin/main`** e registrar o hash final no estado de continuidade e na linha do tempo.
