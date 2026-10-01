@@ -67,11 +67,11 @@ test('a versão B aplica a marca, acessibilidade, responsividade e tracking da v
   assert.match(styles, /\.faq-list\s+summary\s*\{[^}]*color:\s*var\(--b-paper\)/i);
 });
 
-test('a variação B promovida usa a raiz como produção e não expõe rótulo interno', () => {
-  const html = read('index.html');
+test('a variação B anterior preserva seu endereço histórico e não expõe rótulo interno', () => {
+  const html = read('historico/home-anterior-2026-10-01/index.html');
 
   assert.match(html, /data-ab-variant=["']B["']/i);
-  assert.match(html, /property=["']og:url["'][^>]+content=["']https:\/\/kalifranca\.com\.br\/["']/i);
+  assert.match(html, /property=["']og:url["'][^>]+content=["']https:\/\/kalifranca\.com\.br\/historico\/home-anterior-2026-10-01\/["']/i);
   assert.doesNotMatch(html, /variação B/i);
   assert.doesNotMatch(html, /\.\.[\\/]fotos|\.\.[\\/]assets|\.\.[\\/]brandbook/i);
 });

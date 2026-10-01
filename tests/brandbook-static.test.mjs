@@ -88,7 +88,7 @@ test('o CSS documenta foco, responsividade e movimento reduzido', () => {
 test('o site e o brandbook usam a imagem pública na prévia de compartilhamento', () => {
   const siteHtml = readIfPresent(siteIndexPath);
   const brandbookHtml = readIfPresent(indexPath);
-  const siteImageUrl = 'https://kalifranca.com.br/assets/kali-og-social-authority.png';
+  const siteImageUrl = 'https://kalifranca.com.br/lp-5d/v9/assets/kali-social.jpg';
   const brandbookImageUrl = 'https://kalifranca.com.br/assets/kali-og-social-authority.png';
 
   assert.ok(existsSync(socialImagePath), 'kali-og-social-authority.png deve existir em assets');

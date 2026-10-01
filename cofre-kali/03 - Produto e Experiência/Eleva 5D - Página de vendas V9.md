@@ -84,7 +84,17 @@ Os prints `depoimentos/1.jpeg`, `3.jpeg` e `5.jpeg` permanecem integrais. Os met
 - O botão da oferta abre o WhatsApp já existente para orientações. Não há checkout novo integrado nesta entrega.
 - A página não foi promovida para a raiz e não houve upload FTP neste escopo. Commit/push e publicação pública são estados diferentes.
 
-## Arquivos desta entrega
+## Promoção para a raiz — 01/10/2026
+
+- O usuário autorizou guardar a home anterior e instalar a V9 no domínio principal.
+- A home pública anterior foi comparada à cópia local por SHA-256, com normalização de quebras de linha: ambas `9185152254711781a4c2ef2ac48e669c3d6c20a277f7d55dfef4c841f8f561ab`.
+- HTML, CSS e JavaScript anteriores preservados em `historico/home-anterior-2026-10-01/`. A cópia usa `noindex,follow`, endereço canônico próprio e caminhos resolvidos. Arquivos compartilhados e demais páginas não foram removidos.
+- `index.html` agora contém a V9 integral, com canonical e `og:url` na raiz. CSS, JavaScript e fotografias referenciam `/lp-5d/v9/`; essa rota continua disponível.
+- Hostinger confirmou GitHub conectado, implantação automática ativa, branch `main` e destino `public_html`. A publicação será feita pelo fluxo Git existente, sem expor credenciais ou realizar upload FTP paralelo.
+- Validação local da nova raiz: 85 testes estáticos aprovados; nove viewports e interações aprovados, sem overflow horizontal, imagens quebradas ou erros JavaScript.
+- Implantação pública: aguardando envio e verificação neste ponto do registro.
+
+## Arquivos da implementação inicial
 
 - `lp-5d/v9/index.html`, `styles.css`, `app.js` e quatro assets.
 - `scripts/prepare-eleva-v9-assets.cjs` — exportação das fotografias.

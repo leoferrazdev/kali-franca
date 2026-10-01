@@ -9,10 +9,10 @@ const read = (...segments) => {
   return existsSync(file) ? readFileSync(file, 'utf8') : '';
 };
 
-test('a página do Eleva 5D possui a raiz como rota canônica e estrutura semântica', () => {
-  const html = read('index.html');
+test('a página anterior do Eleva 5D arquivada preserva estrutura e estrutura semântica', () => {
+  const html = read('historico/home-anterior-2026-10-01/index.html');
 
-  assert.ok(existsSync(resolve(root, 'index.html')));
+  assert.ok(existsSync(resolve(root, 'historico/home-anterior-2026-10-01/index.html')));
   assert.match(html, /<html[^>]+lang=["']pt-BR["']/i);
   assert.match(html, /<main[^>]+id=["']conteudo["']/i);
   assert.equal((html.match(/<h1\b/gi) || []).length, 1);
@@ -20,8 +20,8 @@ test('a página do Eleva 5D possui a raiz como rota canônica e estrutura semân
   assert.match(html, /Eleva 5D/i);
 });
 
-test('a página apresenta os cinco movimentos e a rotina dos três movimentos', () => {
-  const html = read('index.html');
+test('a página anterior apresenta os cinco movimentos e a rotina dos três movimentos', () => {
+  const html = read('historico/home-anterior-2026-10-01/index.html');
 
   for (const movement of ['Reprogramar', 'Alinhar', 'Manifestar', 'Sustentar', 'Elevar']) {
     assert.match(html, new RegExp(movement, 'i'));
@@ -32,17 +32,17 @@ test('a página apresenta os cinco movimentos e a rotina dos três movimentos', 
   assert.match(html, /Corte Energético/i);
 });
 
-test('a página mantém o acesso separado do checkout enquanto ele não existe', () => {
-  const html = read('index.html');
+test('a página anterior mantém o acesso separado do checkout enquanto ele não existe', () => {
+  const html = read('historico/home-anterior-2026-10-01/index.html');
 
   assert.match(html, /data-cta=["']offer["'][^>]+href=["']#oferta["']/i);
   assert.doesNotMatch(html, /href=["'][^"']*checkout[^"']*["']/i);
   assert.doesNotMatch(html, /membros\.kalifranca\.com\.br/i);
 });
 
-test('a página consome a identidade visual compartilhada e tem contratos de acessibilidade', () => {
-  const html = read('index.html');
-  const styles = read('styles.css');
+test('a página anterior consome a identidade visual compartilhada e tem contratos de acessibilidade', () => {
+  const html = read('historico/home-anterior-2026-10-01/index.html');
+  const styles = read('historico/home-anterior-2026-10-01/styles.css');
 
   assert.match(html, /brandbook\/tokens\.css/i);
   assert.match(html, /fotos\/geradas-ia\/kali-hero-autoridade-horizontal-02\.png/i);
@@ -53,8 +53,8 @@ test('a página consome a identidade visual compartilhada e tem contratos de ace
   assert.match(styles, /@media\s*\([^)]*max-width/i);
 });
 
-test('a página mantém a próxima etapa separada da home e da área autenticada', () => {
-  const html = read('index.html');
+test('a página anterior mantém a próxima etapa separada da home e da área autenticada', () => {
+  const html = read('historico/home-anterior-2026-10-01/index.html');
 
   assert.match(html, /href=["']#oferta["']/i);
   assert.doesNotMatch(html, /membros\.kalifranca\.com\.br/i);

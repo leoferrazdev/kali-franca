@@ -4,16 +4,16 @@ import test from 'node:test';
 import { resolve } from 'node:path';
 
 const repositoryRoot = resolve(import.meta.dirname, '..');
-const homePath = resolve(repositoryRoot, 'index.html');
-const stylesPath = resolve(repositoryRoot, 'styles.css');
-const scriptPath = resolve(repositoryRoot, 'app.js');
+const homePath = resolve(repositoryRoot, 'historico/home-anterior-2026-10-01/index.html');
+const stylesPath = resolve(repositoryRoot, 'historico/home-anterior-2026-10-01/styles.css');
+const scriptPath = resolve(repositoryRoot, 'historico/home-anterior-2026-10-01/app.js');
 const tokensPath = resolve(repositoryRoot, 'brandbook/tokens.css');
 
 function read(filePath) {
   return existsSync(filePath) ? readFileSync(filePath, 'utf8') : '';
 }
 
-test('a raiz publica a página Eleva 5D promovida e mantém estrutura semântica', () => {
+test('a home anterior arquivada publica a página Eleva 5D promovida e mantém estrutura semântica', () => {
   const html = read(homePath);
 
   assert.ok(existsSync(homePath));
@@ -25,7 +25,7 @@ test('a raiz publica a página Eleva 5D promovida e mantém estrutura semântica
   assert.match(html, /Kalì Franca/i);
 });
 
-test('a raiz apresenta os cinco movimentos e as seções principais da jornada', () => {
+test('a home anterior arquivada apresenta os cinco movimentos e as seções principais da jornada', () => {
   const html = read(homePath);
 
   for (const id of ['metodo', 'especialista', 'oferta']) {
@@ -44,7 +44,7 @@ test('a raiz apresenta os cinco movimentos e as seções principais da jornada',
   assert.match(html, /Corte Energético/i);
 });
 
-test('a raiz usa a identidade compartilhada e os caminhos de produção', () => {
+test('a home anterior arquivada usa a identidade compartilhada e os caminhos de produção', () => {
   const html = read(homePath);
   const styles = read(stylesPath);
   const tokens = read(tokensPath);
@@ -63,7 +63,7 @@ test('a raiz usa a identidade compartilhada e os caminhos de produção', () => 
   assert.match(tokens, /--kf-component-button-primary-bg:\s*var\(--kf-color-accent\)/i);
 });
 
-test('a raiz usa contratos de acessibilidade, movimento e tracking', () => {
+test('a home anterior arquivada usa contratos de acessibilidade, movimento e tracking', () => {
   const html = read(homePath);
   const styles = read(stylesPath);
   const script = read(scriptPath);
@@ -91,7 +91,7 @@ test('a FAQ publicada mantém contraste legível e cache-busting do CSS', () => 
   assert.match(styles, /\.faq-list\s+details\s+p\s*\{[^}]*color:\s*rgba\(244,237,228,.72\)/i);
 });
 
-test('a raiz usa as fotos aprovadas e não expõe rótulo interno da variação', () => {
+test('a home anterior arquivada usa as fotos aprovadas e não expõe rótulo interno da variação', () => {
   const html = read(homePath);
 
   assert.match(html, /property=["']og:image["'][^>]+content=["']https:\/\/kalifranca\.com\.br\/assets\/kali-og-social-authority\.png["']/i);
@@ -101,7 +101,7 @@ test('a raiz usa as fotos aprovadas e não expõe rótulo interno da variação'
   assert.doesNotMatch(html, /Conhecer o brandbook|Abrir o brandbook/i);
 });
 
-test('a raiz humaniza a especialista com autoria explícita', () => {
+test('a home anterior arquivada humaniza a especialista com autoria explícita', () => {
   const html = read(homePath);
 
   assert.match(html, /Condução criada por/i);

@@ -123,6 +123,14 @@ Registro: [[Eleva 5D - Página de vendas V8]].
 
 Registros: [[Eleva 5D - Conteúdo final e estratégia comercial V9]], [[Eleva 5D - Página de vendas V9]].
 
+## 2026-10-01 — Promoção da V9 ao domínio principal
+
+- Home anterior preservada com HTML/CSS/JavaScript em `/historico/home-anterior-2026-10-01/`, após confirmação de igualdade entre HTML público e local.
+- V9 instalada em `index.html`, preservando `/lp-5d/v9/`, arquivos compartilhados e demais versões.
+- 85 testes estáticos e verificação da raiz em nove viewports aprovados. Publicação usa a implantação automática da Hostinger vinculada à `main`.
+
+Registro: [[Eleva 5D - Página de vendas V9]].
+
 ## Relações
 
 - [[MOC - Kalì Franca]]
