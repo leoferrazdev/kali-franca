@@ -92,7 +92,10 @@ Os prints `depoimentos/1.jpeg`, `3.jpeg` e `5.jpeg` permanecem integrais. Os met
 - `index.html` agora contém a V9 integral, com canonical e `og:url` na raiz. CSS, JavaScript e fotografias referenciam `/lp-5d/v9/`; essa rota continua disponível.
 - Hostinger confirmou GitHub conectado, implantação automática ativa, branch `main` e destino `public_html`. A publicação será feita pelo fluxo Git existente, sem expor credenciais ou realizar upload FTP paralelo.
 - Validação local da nova raiz: 85 testes estáticos aprovados; nove viewports e interações aprovados, sem overflow horizontal, imagens quebradas ou erros JavaScript.
-- Implantação pública: aguardando envio e verificação neste ponto do registro.
+- Implantação pública concluída: commit `16e9526`, push confirmado na `main`; Hostinger exibiu estado **Concluído**, destino `public_html`, em 01/10/2026 às 20:42 (10 segundos de implantação).
+- A raiz pública retorna HTTP 200 e o título da V9; o histórico retorna HTTP 200 com `noindex,follow`. Bio e aplicação da mentoria também continuam retornando HTTP 200.
+- Verificação de produção concluída em `https://kalifranca.com.br/?v=root-v9-20261001`: nove viewports, imagens, FAQ, ampliação dos prints, retorno de foco, CTA móvel, conteúdo sem JavaScript e movimento reduzido aprovados. Nenhum erro JavaScript ou overflow horizontal encontrado.
+- Evidência local da publicação: `tmp/eleva-v9-audit/browser-report.json` (URL de produção) e capturas das seções em 390, 768 e 1440 px. A rota `/lp-5d/v9/` permanece disponível, enquanto a raiz é o endereço principal promovido.
 
 ## Arquivos da implementação inicial
 

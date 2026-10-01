@@ -19,7 +19,7 @@ area: indice
 
 - Em 2026-10-01, a nova [[Eleva 5D - Página de vendas V9]] foi implementada em `/lp-5d/v9/` e, por solicitação posterior, promovida para `index.html`. A home anterior foi guardada em `/historico/home-anterior-2026-10-01/`; V3–V8 permanecem preservadas.
 - [[Eleva 5D - Conteúdo final e estratégia comercial V9]] é a análise mais recente da oferta: três masterclasses, ciclo de 30 dias de áudio + vídeo de Hiperfluxo e oito ferramentas bônus. A adequação do produto autenticado e a integração comercial continuam como tarefas próprias.
-- A V9 utiliza WhatsApp para orientação de entrada porque nenhum checkout do Portal consta da configuração atual. A promoção utiliza a implantação automática GitHub → Hostinger (`main` → `public_html`); a verificação pública está em andamento.
+- A V9 utiliza WhatsApp para orientação de entrada porque nenhum checkout do Portal consta da configuração atual. A promoção foi publicada pelo commit `16e9526` via GitHub → Hostinger (`main` → `public_html`), com implantação concluída e verificação pública aprovada em nove viewports. Raiz, histórico, bio e aplicação da mentoria retornam HTTP 200.
 - Branch de trabalho: `main`.
 - Commit desta reorganização documental: `3cd8558` — `docs: organiza cofre e registra historico do projeto` — 2026-09-10 17:22:30 -0300.
 - Commit de fechamento do registro de continuidade: `132f83d` — `docs: fecha registro de continuidade do cofre` — 2026-09-10 17:23:33 -0300.
