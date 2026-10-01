@@ -77,6 +77,8 @@ Os prints `depoimentos/1.jpeg`, `3.jpeg` e `5.jpeg` permanecem integrais. Os met
 
 ## Estado de publicação
 
+- Implementação e documentação versionadas no commit `984a29e` (`feat: cria landing Eleva 5D V9 baseada no conteudo final`), com push para `origin/main` confirmado em 01/10/2026.
+- O Markdown original mantém seus espaços de quebra de linha e o PDF foi preservado integralmente; os avisos de whitespace da fonte não foram tratados como defeitos da implementação.
 - Prévia local: `http://127.0.0.1:4173/lp-5d/v9/`.
 - Caminho público previsto: `https://kalifranca.com.br/lp-5d/v9/`.
 - O botão da oferta abre o WhatsApp já existente para orientações. Não há checkout novo integrado nesta entrega.
