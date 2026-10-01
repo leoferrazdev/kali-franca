@@ -29,6 +29,7 @@ area: evidencias
 | Mentoria pública | 17 etapas, consentimento e agradecimento | [[Mentoria Frequência da Abundância - Registro de implementação V1]] | publicamente verificado conforme registro |
 | CRM da Mentoria | Inbox e detalhe individual restritos à administradora | rotas e RLS documentados | publicamente verificado conforme registro |
 | Eleva 5D — vendas | Raiz, V3–V8 e versões editoriais | registros V1, V2, V5, V6, V7 e V8 | raiz pública registrada; V8 local-validada |
+| Eleva 5D — conteúdo final e V9 | Auditoria de Markdown/PDF e nova página com masterclasses, áudio/vídeo diário, quatro fases e bônus | [[Eleva 5D - Conteúdo final e estratégia comercial V9]], [[Eleva 5D - Página de vendas V9]]; 82 testes estáticos e nove viewports | local-validado em 2026-10-01; publicação pública pendente |
 | Eleva 5D — produto | Dashboard, onboarding, cinco movimentos, progresso e RLS | [[Eleva 5D - Fundação na área de membros V1]] | ready-for-integration |
 | Eleva 5D — liberação | Kiwify, webhook, entitlement e revogação especificados | [[Eleva 5D - Arquitetura de liberação e acesso V1]] | aprovado; implementação comercial pendente |
 | Produto 1 e Produto 2 | PDF analisado e mapa mental revisado | PDF local e Whimsical | análise documentada; escopo comercial ainda requer decisão |

@@ -113,6 +113,16 @@ Registro: [[Eleva 5D - Página de vendas V8]].
 - O cofre foi auditado: 29 notas, 6 áreas semânticas existentes, gráfico sem grupos de cor e 5 links internos não resolvidos no estado anterior.
 - Foi criada a área de evidências e histórico, a linha do tempo, o inventário da `main`, a matriz de entregas e o registro de continuidade.
 
+## 2026-10-01 — Conteúdo final e página de vendas V9
+
+- Os dois arquivos em `conteudo-eleva-5d` foram auditados integralmente; as quatro páginas do PDF confirmam a mesma estrutura do Markdown.
+- A V9 foi construída em rota própria com os três movimentos Despertar/Reprogramar/Manifestar, três masterclasses, ciclo de 30 áudios + 30 vídeos e oito bônus.
+- Currículo integral dos 30 dias, prévia ilustrativa da rotina, fotos otimizadas, prints da mentoria identificados e ampliáveis, autoridade, R$497 anual e garantia de 7 dias compõem a jornada.
+- A responsividade e as interações foram verificadas em nove viewports; a raiz e versões anteriores foram preservadas.
+- O botão de acesso utiliza o WhatsApp existente; checkout/entitlement e publicação pública continuam separados da implementação.
+
+Registros: [[Eleva 5D - Conteúdo final e estratégia comercial V9]], [[Eleva 5D - Página de vendas V9]].
+
 ## Relações
 
 - [[MOC - Kalì Franca]]

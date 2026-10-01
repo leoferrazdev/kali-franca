@@ -74,6 +74,8 @@ area: indice
 
 ## Eleva 5D
 
+- [[Eleva 5D - Conteúdo final e estratégia comercial V9]] — auditoria integral dos dois arquivos finais, inventário da nova estrutura e rastreabilidade das decisões em 2026-10-01.
+- [[Eleva 5D - Página de vendas V9]] — nova rota independente baseada em três masterclasses, áudio/vídeo de Hiperfluxo por dia, quatro fases e oito bônus; validada localmente em desktop/tablet/mobile.
 - [[Eleva 5D - Página de vendas na raiz V2]] — página canônica do primeiro entregável comercial; humanização e imagens aprovadas aplicadas em 2026-09-04.
 - [[Eleva 5D - Página de vendas V5]] — experimento de composição com prévia visual do aplicativo, sem imagens geradas por API e sem alegação de produto finalizado.
 - [[Eleva 5D - Página de vendas V6]] — versão de autoridade conectada ao problema central da jornada, sem referência à neurociência.

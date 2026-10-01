@@ -47,3 +47,15 @@ Uma iniciativa entra aqui quando existe intenção explícita de futuro. Ela nã
 - [ ] Revisar juridicamente claims de saúde, relatos e tratamento de dados sensíveis.
 
 Relações: [[Linha do tempo do projeto]], [[Estado atual e continuidade]], [[Matriz de entregas e evidências]].
+
+## Conteúdo oficial atualizado — 2026-10-01
+
+- [x] Auditar integralmente o Markdown e PDF finais de `conteudo-eleva-5d`.
+- [x] Implementar a página comercial V9 em rota própria, com fidelidade aos 30 temas, masterclasses e bônus.
+- [x] Verificar layout e comportamento em desktop, tablet, mobile, sem JavaScript e com movimento reduzido.
+- [ ] Adaptar o produto autenticado à estrutura atualizada: três masterclasses, 30 áudios, 30 vídeos de Hiperfluxo, quatro fases e ferramentas.
+- [ ] Disponibilizar arquivos reais de todas as aulas e práticas.
+- [ ] Integrar checkout ao CTA e concluir a liberação por compra.
+- [ ] Publicar e verificar publicamente a V9; decidir sua promoção para a raiz em etapa própria.
+
+Registros: [[Eleva 5D - Conteúdo final e estratégia comercial V9]], [[Eleva 5D - Página de vendas V9]].
