@@ -15,7 +15,7 @@ test('a raiz promove a V9 integralmente sem alterar conteúdo e comportamentos',
   assert.match(html, /rel="canonical" href="https:\/\/kalifranca.com.br\/"/);
   assert.match(html, /property="og:url" content="https:\/\/kalifranca.com.br\/"/);
   assert.match(html, /href="\/lp-5d\/v9\/styles.css\?v=9.1"/);
-  assert.match(html, /src="\/lp-5d\/v9\/app.js\?v=9.1"/);
+  assert.match(html, /src="\/lp-5d\/v9\/app.js\?v=9.2"/);
 });
 
 test('a raiz mantém imagens e recursos resolvidos após a mudança de endereço', () => {

@@ -6,13 +6,17 @@
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(payload);
     if (typeof window.gtag === 'function') window.gtag('event', event, payload);
+    if (typeof window.clarity === 'function') window.clarity('event', event);
   }
 
   document.querySelectorAll('[data-cta]').forEach((link) => {
-    link.addEventListener('click', () => track('eleva5d_cta_click', {
-      cta: link.dataset.cta,
-      destination: link.getAttribute('href'),
-    }));
+    link.addEventListener('click', () => {
+      const details = { cta: link.dataset.cta, destination: link.getAttribute('href') };
+      track('eleva5d_cta_click', details);
+      if (['offer-contact', 'faq-contact'].includes(link.dataset.cta)) {
+        track('eleva5d_contact_click', details);
+      }
+    });
   });
 
   document.querySelectorAll('details').forEach((item) => {
