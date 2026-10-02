@@ -44,6 +44,10 @@ Scripts adicionados apenas ao HTML da home; a URL V9 conserva a instrumentação
 - A política de privacidade e o mecanismo de consentimento precisam de avaliação própria; esta instalação não equivale a uma certificação de conformidade.
 - Painéis podem demorar a consolidar dados; ausência inicial de relatórios não é prova de falha da tag.
 
+### Publicação confirmada
+
+Commit de implementação `3beaa3d` enviado à main. HTML público verificado com as duas tags e JS v9.2. Em uma sessão controlada no domínio público, a tag Clarity respondeu HTTP 200 e os coletores GA4 (`G-RZGESTEZCK`) e Clarity responderam HTTP 204. Isso confirma envio aceito, não consolidação de relatórios. Na verificação inicial, os painéis ainda não exibiam a sessão nova; não foram declaradas compras ou conversões reais. Evidência visual local: `tmp/clarity-home-configurado.png`.
+
 ## Referências técnicas
 
 - [Eventos GA4](https://developers.google.com/analytics/devguides/collection/ga4/events).
