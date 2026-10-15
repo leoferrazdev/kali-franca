@@ -32,3 +32,5 @@ Mesmo CSS, grids, fotos, fontes, paleta, seções, depoimentos e funções. Ativ
 ## Validação
 
 90 testes estáticos aprovados após dois testes preventivos inicialmente falharem por ausência da V10. QA em navegador nas larguras 320, 375, 390, 591, 768, 1024, 1440, 1920 e 844 px: sem overflow, imagens quebradas ou erros JavaScript. FAQ, ampliação de prints, devolução de foco, CTA mobile, movimento reduzido e leitura sem JavaScript verificados. Evidências em `tmp/eleva-v9-audit/` (relatório identifica a URL V10). Verificar publicação pública separadamente do push. Arquivos externos e alterações pré-existentes do workspace não fazem parte desta entrega.
+
+Publicação: implementação `4699445` enviada à main. Após o processamento da hospedagem, home pública respondeu HTTP 200 com identificação V10, caixa de ferramentas PPM e sem Hiperfluxo. Rota `/lp-5d/v10/` publicada; V9 mantida para consulta.
