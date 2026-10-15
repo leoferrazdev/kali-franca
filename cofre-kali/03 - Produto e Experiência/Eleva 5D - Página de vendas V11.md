@@ -34,3 +34,5 @@ Condições comerciais e de entrega fornecidas e aprovadas pelo usuário no PDF.
 Mesmo CSS-base da V9/V10, fotos, grids, seções e funções. Pequeno ajuste isolado em `content.css` coloca o prefixo do parcelamento em linha própria para impedir overflow mobile. Analytics mantido com identificação v11. 92 testes estáticos aprovados; verificação responsiva e publicação são etapas separadas.
 
 QA responsivo aprovado em nove larguras: 320, 375, 390, 591, 768, 1024, 1440, 1920 e 844 px. Sem overflow, imagens quebradas ou erros JavaScript. FAQ, prints ampliados, Escape/foco, CTA mobile, movimento reduzido e conteúdo sem JavaScript verificados. Relatório e screenshots locais em `tmp/eleva-v9-audit/`, identificando a URL V11.
+
+Publicação confirmada: commit `23ee588` enviado à main; após processamento da hospedagem, home e rota V11 responderam HTTP 200 com identificação v11, parcelamento e novo CTA. CSS complementar público respondeu HTTP 200. Rota V10 respondeu HTTP 200 com identificação v10 preservada.
