@@ -1,0 +1,2 @@
+/* Mesmo layout da V10; acomoda o novo parcelamento em telas estreitas. */
+.price > span { display: block; font-size: 24px; margin: 0 0 6px; }

@@ -7,7 +7,7 @@ const root = path.resolve(import.meta.dirname, '..');
 const read = p => fs.readFileSync(path.join(root, p), 'utf8');
 
 test('home publica o conteúdo PPM aprovado e mantém as condições comerciais', () => {
-  const html = read('index.html');
+  const html = read('lp-5d/v10/index.html');
   assert.match(html, /data-page-version="v10"/);
   assert.doesNotMatch(html, /Hiperfluxo|HIPERFLUXO|áudio teórico|referência aprovada/);
   for (const name of ['Protocolos de Permissão e Manifestação (PPM)', 'PPM | Minha vida sensacional', 'PPM | Soluções Mágicas Divinas', 'PPM | DNA da Riqueza', 'PPM | Saúde e Vitalidade', 'Playlist Oficial Eleva 5D', 'Mapa da Vida Sensacional &amp; Salto de Linha do Tempo', 'O segredo para receber mais é decidir e permitir.']) {

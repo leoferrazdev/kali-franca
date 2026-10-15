@@ -7,7 +7,7 @@ import vm from 'node:vm';
 const root = path.resolve(import.meta.dirname, '..');
 const read = p => fs.readFileSync(path.join(root, p), 'utf8');
 const html = read('index.html');
-const script = read('lp-5d/v10/app.js');
+const script = read('lp-5d/v11/app.js');
 
 test('a home instala uma única tag GA4 da propriedade existente e seu projeto Clarity específico', () => {
   assert.equal((html.match(/googletagmanager\.com\/gtag\/js\?id=G-RZGESTEZCK/g) || []).length, 1);
@@ -32,7 +32,7 @@ test('o clique no WhatsApp emite contato sem simular compra e encaminha eventos 
   assert.ok(clarityEvents.some(([command, event]) => command === 'event' && event === 'eleva5d_contact_click'));
   assert.ok(!commands.some(([_,event]) => ['purchase', 'generate_lead'].includes(event)));
   const params = commands.find(([_,event]) => event === 'eleva5d_contact_click')[2];
-  assert.equal(params.version, 'v10');
+  assert.equal(params.version, 'v11');
   assert.equal(params.cta, 'offer-contact');
   assert.ok(!('email' in params || 'phone' in params || 'user_id' in params));
 });
