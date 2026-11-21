@@ -1,5 +1,12 @@
 import { trilhas } from "./catalogo.js";
 
+const checkouts = {
+  abundancia: "https://pay.kiwify.com.br/Q9Q6VVG",
+  "amor-proprio": "https://pay.kiwify.com.br/nGbHQLH",
+  oportunidades: "https://pay.kiwify.com.br/SAG1h8P",
+  leveza: "https://pay.kiwify.com.br/SCgFVpU",
+};
+
 const perfis = [
   ["Alerta e culpa financeira", "Controle e esforço", "Oscilação financeira", "Abertura para receber"],
   ["Medo da rejeição", "Busca por aprovação", "Oscilação afetiva", "Reciprocidade"],
@@ -73,6 +80,9 @@ function resultado() {
   texto("p", "Tema para refletir a partir das suas respostas — " + perfis[foco][perfil] + ".");
   texto("h3", "Diário Nova Eu — " + trilhas[foco].book);
   texto("p", "Uma jornada de 30 dias com exercícios de escrita e áudios de acompanhamento.");
+  const checkout = texto("a", "Ir para o checkout · R$ 88,00");
+  checkout.className = "checkout";
+  checkout.href = checkouts[trilhas[foco].id];
   botao("Revisar a última resposta", () => {
     passo = trilhas[foco].questions.length - 1;
     pergunta();
