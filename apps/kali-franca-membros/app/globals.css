@@ -2034,3 +2034,93 @@ button:disabled {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Diário Nova Eu */
+.nova-eu-tracks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin-block: 2rem;
+}
+
+.nova-eu-tracks a,
+.nova-eu-action {
+  align-items: center;
+  border: 1px solid var(--members-border);
+  border-radius: 999px;
+  color: var(--members-accent);
+  display: inline-flex;
+  min-height: 44px;
+  padding: .5rem 1rem;
+}
+
+.nova-eu-journey {
+  margin-block: 2.5rem;
+  max-width: 52rem;
+  scroll-margin-top: 1rem;
+}
+
+.nova-eu-journey h2 {
+  font-family: var(--kf-font-display);
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+}
+
+.nova-eu-steps {
+  counter-reset: nova-eu-step;
+  display: grid;
+  gap: .75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nova-eu-steps li { counter-increment: nova-eu-step; }
+
+.nova-eu-journey details {
+  background: color-mix(in srgb, var(--kf-color-vinho-profundo-500) 42%, transparent);
+  border: 1px solid var(--members-border);
+  border-radius: var(--members-radius-md);
+  padding: 0 clamp(.85rem, 3vw, 1.35rem);
+}
+
+.nova-eu-journey details[open] { padding-bottom: 1.2rem; }
+
+.nova-eu-journey summary {
+  cursor: pointer;
+  font-weight: 650;
+  line-height: 1.45;
+  padding-block: .95rem;
+}
+
+.nova-eu-steps summary::before {
+  color: var(--members-accent);
+  content: counter(nova-eu-step, decimal-leading-zero) ' ';
+  margin-inline-end: .5rem;
+}
+
+.nova-eu-journey p {
+  color: var(--members-text-muted);
+  line-height: 1.65;
+  margin-block: .5rem 1rem;
+  max-width: 58ch;
+}
+
+.nova-eu-extra { margin-top: 1rem; }
+
+.nova-eu-audio {
+  display: grid;
+  gap: .45rem;
+  margin: .75rem 0 1rem;
+}
+
+.nova-eu-audio audio { width: min(100%, 28rem); }
+.nova-eu-audio a { color: var(--members-accent); width: fit-content; }
+.nova-eu-journey summary:focus-visible,
+.nova-eu-journey a:focus-visible,
+.nova-eu-tracks a:focus-visible {
+  outline: 2px solid var(--members-accent);
+  outline-offset: 3px;
+}
