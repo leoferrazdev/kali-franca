@@ -10,17 +10,27 @@ const products = new Map([
 ]);
 
 export async function POST(request: Request) {
-  const secret = process.env.KIWIFY_NOVA_EU_WEBHOOK_TOKEN;
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!secret || !serviceKey) return new Response(null, { status: 503 });
+  const secrets = [
+    ['amor-proprio', process.env.KIWIFY_NOVA_EU_WEBHOOK_TOKEN],
+    ['abundancia', process.env.KIWIFY_NOVA_EU_ABUNDANCIA_TOKEN],
+    ['oportunidades', process.env.KIWIFY_NOVA_EU_OPORTUNIDADES_TOKEN],
+    ['leveza', process.env.KIWIFY_NOVA_EU_LEVEZA_TOKEN],
+  ] as const;
+  if (!serviceKey || !secrets.some(([, secret]) => secret)) {
+    return new Response(null, { status: 503 });
+  }
 
   const signature = new URL(request.url).searchParams.get('signature') ?? '';
   if (!/^[a-f\d]{40}$/i.test(signature)) return new Response(null, { status: 401 });
 
   const bytes = Buffer.from(await request.arrayBuffer());
   if (bytes.length > 256_000) return new Response(null, { status: 413 });
-  const expected = createHmac('sha1', secret).update(bytes).digest();
-  if (!timingSafeEqual(expected, Buffer.from(signature, 'hex'))) {
+  const received = Buffer.from(signature, 'hex');
+  const authorized = secrets.filter(([, secret]) =>
+    secret && timingSafeEqual(createHmac('sha1', secret).update(bytes).digest(), received),
+  );
+  if (!authorized.length) {
     return new Response(null, { status: 401 });
   }
 
@@ -35,6 +45,9 @@ export async function POST(request: Request) {
   if (!revoked && order?.order_status !== 'paid') return new Response(null, { status: 204 });
   const slug = products.get(order?.Product?.product_id);
   if (!slug) return new Response(null, { status: 204 });
+  if (!authorized.some(([track]) => track === slug)) {
+    return new Response(null, { status: 403 });
+  }
 
   const email = order?.Customer?.email;
   const id = order?.order_id;
