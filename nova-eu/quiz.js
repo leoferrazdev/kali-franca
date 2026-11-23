@@ -81,8 +81,30 @@ function historico() {
       return;
     }
     painelQuiz.classList.remove("quiz-intro");
-    inicio();
+    if (jaFez) escolherBloqueio();
+    else inicio();
   }
+}
+
+function escolherBloqueio() {
+  const titulo = tela("Qual é o seu bloqueio?");
+  const voltar = botao("Voltar", () => {
+    painelQuiz.classList.add("quiz-intro");
+    historico();
+  });
+  voltar.className = "quiz-back";
+  titulo.before(voltar);
+  progresso(titulo, "Etapa 3 de 3", 3, 3);
+
+  texto("p", "Selecione seu bloqueio abaixo para abrir o checkout correspondente.");
+  const opcoes = texto("div", "");
+  opcoes.className = "quiz-block-options";
+  for (const trilha of trilhas) {
+    const opcao = texto("a", trilha.name, opcoes);
+    opcao.href = checkouts[trilha.id];
+  }
+  botao("Ainda não sei. Quero fazer o teste.", inicio).className = "quiz-back";
+  titulo.focus();
 }
 
 function texto(tag, conteudo, destino = etapa) {
