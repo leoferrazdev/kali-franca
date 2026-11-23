@@ -6,6 +6,15 @@ h1, h2 { font-family: Georgia, serif; line-height: 1.14; }
 h1 { font-size: clamp(2rem, 7vw, 3.5rem); margin: .25em 0 .7em; }
 button { display: block; width: 100%; margin: .65rem 0; padding: .85rem 1rem; border: 1px solid #a77d92; border-radius: .65rem; background: white; color: inherit; text-align: left; font: inherit; cursor: pointer; }
 button:hover, button[aria-pressed="true"] { background: #f0dfe8; }
+button[aria-pressed="true"] { border-color: #74445d; box-shadow: inset .25rem 0 #74445d; font-weight: 600; }
+.quiz-back { width: fit-content; min-height: 44px; padding: .5rem .85rem; margin: 0 0 1rem; color: #68364f; font-weight: 600; }
+.quiz-back::before { content: "←" / ""; margin-inline-end: .5em; }
+.quiz-status { margin: 0 0 .35rem; color: #68364f; font-weight: 600; }
+.quiz-progress { display: block; appearance: none; width: 100%; height: .55rem; border: 0; border-radius: 1rem; overflow: hidden; background: #e9dae2; }
+.quiz-progress::-webkit-progress-bar { background: #e9dae2; }
+.quiz-progress::-webkit-progress-value { background: #74445d; border-radius: 1rem; }
+.quiz-progress::-moz-progress-bar { background: #74445d; border-radius: 1rem; }
+.quiz-hint { margin: -.35rem 0 1rem; color: #68364f; }
 button:focus-visible, h2:focus-visible { outline: 2px solid #74445d; outline-offset: 3px; }
 .checkout { display: block; padding: .85rem 1rem; border-radius: .65rem; background: #74445d; color: white; text-align: center; font-weight: 600; }
 .checkout:focus-visible { outline: 2px solid #74445d; outline-offset: 3px; }
