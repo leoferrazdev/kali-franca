@@ -15,7 +15,7 @@ let respostas = [];
 const painelQuiz = etapa.closest("main");
 const contato = { nome: "", email: "", celular: "" };
 
-function cadastro() {
+function cadastro({ veioDaEtapaSeguinte = false } = {}) {
   painelQuiz.classList.add("quiz-intro");
   const titulo = tela("Preencha seus dados para começar");
   const form = texto("form", "");
@@ -49,7 +49,7 @@ function cadastro() {
     for (const chave of Object.keys(contato)) contato[chave] = form.elements[chave].value.trim();
     historico();
   });
-  titulo.focus();
+  if (veioDaEtapaSeguinte) titulo.focus();
 }
 
 function historico() {
@@ -58,7 +58,7 @@ function historico() {
   const escolhas = [
     botao("Sim", () => registrar(true)),
     botao("Não", () => registrar(false)),
-    botao("Voltar aos meus dados", cadastro),
+    botao("Voltar aos meus dados", () => cadastro({ veioDaEtapaSeguinte: true })),
   ];
   escolhas[2].className = "quiz-back";
   const status = texto("p", "");
