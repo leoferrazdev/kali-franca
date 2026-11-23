@@ -124,8 +124,14 @@ function resultado() {
   capa.alt = "";
   capa.loading = "lazy";
   texto("p", oferta.description, painel);
+  const [diario, audioNovaEu, audioBastaPermitir] = oferta.materials;
+  const entregaveis = texto("section", "", painel);
+  entregaveis.className = "quiz-deliverables";
+  texto("h4", "Você recebe 2 áudios de reprogramação + Diário Nova Eu", entregaveis);
+  texto("p", "Os áudios são as ativações da sua Nova Eu e servem de âncora para a prática. No diário, a escrita guiada ajuda a fixar o que você pratica e a levar essa intenção para o dia a dia.", entregaveis);
+  const materiais = texto("ul", "", entregaveis);
+  [audioNovaEu, audioBastaPermitir, diario].forEach(item => texto("li", item, materiais));
   lista("O que você vai praticar", oferta.benefits, painel);
-  lista("O que você recebe", oferta.materials, painel);
   texto("p", "R$ 88,00 em pagamento único", painel).className = "quiz-status";
   const checkout = texto("a", oferta.cta, painel);
   checkout.className = "checkout";
