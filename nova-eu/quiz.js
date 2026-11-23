@@ -120,7 +120,9 @@ function resultado() {
   texto("p", "Seu próximo passo", painel).className = "quiz-status";
   texto("h3", oferta.title, painel);
   const capa = texto("img", "", painel);
-  capa.src = `./capas/${trilha.id}.webp`;
+  capa.src = `./capas/${trilha.id}-audios.webp`;
+  capa.width = 1200;
+  capa.height = 400;
   capa.alt = "";
   capa.loading = "lazy";
   texto("p", oferta.description, painel);
