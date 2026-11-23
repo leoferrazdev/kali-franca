@@ -12,6 +12,78 @@ const etapa = document.querySelector("#etapa");
 let foco = 0;
 let passo = 0;
 let respostas = [];
+const painelQuiz = etapa.closest("main");
+const contato = { nome: "", email: "", celular: "" };
+
+function cadastro() {
+  painelQuiz.classList.add("quiz-intro");
+  const titulo = tela("Preencha seus dados para começar");
+  const form = texto("form", "");
+  const campos = [
+    ["nome", "Nome", "text", "name", 100],
+    ["email", "E-mail", "email", "email", 254],
+    ["celular", "Celular com DDD", "tel", "tel", 24],
+  ];
+  for (const [chave, rotulo, tipo, autocomplete, limite] of campos) {
+    const label = texto("label", rotulo, form);
+    const input = texto("input", "", label);
+    input.name = chave;
+    input.type = tipo;
+    input.autocomplete = autocomplete;
+    input.maxLength = limite;
+    input.required = true;
+    input.value = contato[chave];
+    input.addEventListener("input", () => input.setCustomValidity(""));
+  }
+  texto("p", "Seus dados de contato serão registrados junto com a informação de que você já fez ou não o teste.", form).className = "quiz-hint";
+  texto("button", "Continuar", form).type = "submit";
+  form.addEventListener("submit", evento => {
+    evento.preventDefault();
+    const telefone = form.elements.celular;
+    const digitos = telefone.value.replace(/\D/g, "");
+    if (!/^(?:55)?[1-9]\d9\d{8}$/.test(digitos)) {
+      telefone.setCustomValidity("Informe um celular válido com DDD.");
+      telefone.reportValidity();
+      return;
+    }
+    for (const chave of Object.keys(contato)) contato[chave] = form.elements[chave].value.trim();
+    historico();
+  });
+  titulo.focus();
+}
+
+function historico() {
+  const titulo = tela("Você já fez o Teste de Bloqueio Emocional Invisível antes?");
+  const escolhas = [
+    botao("Sim", () => registrar(true)),
+    botao("Não", () => registrar(false)),
+    botao("Voltar aos meus dados", cadastro),
+  ];
+  escolhas[2].className = "quiz-back";
+  const status = texto("p", "");
+  status.setAttribute("role", "status");
+  titulo.focus();
+
+  async function registrar(jaFez) {
+    escolhas.forEach(botao => { botao.disabled = true; });
+    status.textContent = "Registrando seus dados…";
+    try {
+      const resposta = await fetch("./cadastro.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...contato, jaFez }),
+      });
+      if (resposta.status !== 204) throw new Error("Cadastro indisponível");
+    } catch {
+      status.textContent = "Não foi possível registrar seus dados. Tente novamente.";
+      escolhas.forEach(botao => { botao.disabled = false; });
+      escolhas[jaFez ? 0 : 1].focus();
+      return;
+    }
+    painelQuiz.classList.remove("quiz-intro");
+    inicio();
+  }
+}
 
 function texto(tag, conteudo, destino = etapa) {
   const elemento = document.createElement(tag);
@@ -151,4 +223,4 @@ function lista(titulo, itens, destino) {
   itens.forEach(item => texto("li", item, lista));
 }
 
-inicio();
+cadastro();

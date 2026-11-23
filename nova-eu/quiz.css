@@ -29,3 +29,13 @@ h4 + p { margin-top: 0; }
 .quiz-deliverables { padding: 1rem; margin: 1rem 0; background: #fffaf8; border-inline-start: .25rem solid #74445d; border-radius: .65rem; }
 .quiz-deliverables h4 { margin-top: 0; color: #68364f; font-size: 1.15rem; }
 .quiz-deliverables ul { margin-bottom: 0; }
+.quiz-intro { max-width: 32rem; border: 1px solid #e5d5de; box-shadow: 0 1rem 2.5rem #38212d18; }
+.quiz-intro .brand, .quiz-intro h1, .quiz-intro h2 { text-align: center; }
+.quiz-intro h1 { font-size: clamp(1.9rem, 6vw, 2.75rem); margin-bottom: .55em; }
+.quiz-intro h2 { font-size: 1.25rem; }
+.quiz-intro label { display: block; margin: 1rem 0; font-weight: 600; }
+.quiz-intro input { display: block; width: 100%; margin-top: .35rem; padding: .7rem .85rem; border: 1px solid #a77d92; border-radius: .65rem; background: #fff; color: inherit; font: inherit; }
+.quiz-intro input:focus-visible { outline: 2px solid #74445d; outline-offset: 2px; }
+.quiz-intro form .quiz-hint { margin: 1rem 0; font-size: .85rem; }
+.quiz-intro button[type="submit"] { background: #74445d; color: #fff; text-align: center; font-weight: 600; }
+.quiz-intro button:disabled { opacity: .65; cursor: wait; }
