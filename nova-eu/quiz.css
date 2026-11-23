@@ -32,6 +32,7 @@ h4 + p { margin-top: 0; }
 .quiz-intro { max-width: 32rem; border: 1px solid #e5d5de; box-shadow: 0 1rem 2.5rem #38212d18; }
 .quiz-intro .brand, .quiz-intro h1, .quiz-intro h2 { text-align: center; }
 .quiz-intro h1 { font-size: clamp(1.9rem, 6vw, 2.75rem); margin-bottom: .55em; }
+.quiz-intro #etapa > h1 { font-size: clamp(.875rem, 4.5vw, 1.45rem); text-wrap: balance; }
 .quiz-intro h2 { font-size: 1.25rem; }
 .quiz-intro label { display: block; margin: 1rem 0; font-weight: 600; }
 .quiz-intro input { display: block; width: 100%; margin-top: .35rem; padding: .7rem .85rem; border: 1px solid #a77d92; border-radius: .65rem; background: #fff; color: inherit; font: inherit; }
