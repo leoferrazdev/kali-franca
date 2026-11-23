@@ -53,6 +53,7 @@ function cadastro() {
 }
 
 function historico() {
+  painelQuiz.classList.add("quiz-intro");
   const titulo = tela("Você já fez o Teste de Bloqueio Emocional Invisível antes?");
   const escolhas = [
     botao("Sim", () => registrar(true)),
@@ -88,10 +89,7 @@ function historico() {
 
 function escolherBloqueio() {
   const titulo = tela("Qual é o seu bloqueio?");
-  const voltar = botao("Voltar", () => {
-    painelQuiz.classList.add("quiz-intro");
-    historico();
-  });
+  const voltar = botao("Voltar", historico);
   voltar.className = "quiz-back";
   titulo.before(voltar);
   progresso(titulo, "Etapa 3 de 3", 3, 3);
@@ -146,6 +144,9 @@ function progresso(cabecalho, rotulo, respondidas, total) {
 
 function inicio() {
   const cabecalho = tela("Qual área você quer cultivar nos próximos 30 dias?");
+  const voltar = botao("Voltar", historico);
+  voltar.className = "quiz-back";
+  cabecalho.before(voltar);
   texto("p", "Escolha um foco e responda a quatro perguntas sobre a sua rotina.");
   trilhas.forEach((trilha, indice) => botao(trilha.name, () => {
     if (foco !== indice) respostas = [];
