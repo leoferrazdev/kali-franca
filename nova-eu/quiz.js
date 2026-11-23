@@ -1,4 +1,5 @@
 import { trilhas } from "./catalogo.js";
+import { resultados } from "./resultados.js";
 
 const checkouts = {
   abundancia: "https://pay.kiwify.com.br/Q9Q6VVG",
@@ -7,22 +8,15 @@ const checkouts = {
   leveza: "https://pay.kiwify.com.br/SCgFVpU",
 };
 
-const perfis = [
-  ["Alerta e culpa financeira", "Controle e esforço", "Oscilação financeira", "Abertura para receber"],
-  ["Medo da rejeição", "Busca por aprovação", "Oscilação afetiva", "Reciprocidade"],
-  ["Receio de aparecer e errar", "Esforço e perfeccionismo", "Oscilação profissional", "Impacto e reconhecimento"],
-  ["Culpa ao descansar", "Mente acelerada e controle", "Oscilação no cuidado pessoal", "Vitalidade e leveza"],
-];
-
 const etapa = document.querySelector("#etapa");
 let foco = 0;
 let passo = 0;
 let respostas = [];
 
-function texto(tag, conteudo) {
+function texto(tag, conteudo, destino = etapa) {
   const elemento = document.createElement(tag);
   elemento.textContent = conteudo;
-  etapa.append(elemento);
+  destino.append(elemento);
   return elemento;
 }
 
@@ -98,26 +92,55 @@ function pergunta() {
 function resultado() {
   const contagem = [0, 0, 0, 0];
   respostas.forEach(resposta => contagem[resposta]++);
-  const perfil = contagem.indexOf(Math.max(...contagem));
-  const cabecalho = tela("Seu foco para os próximos 30 dias");
-  const total = trilhas[foco].questions.length;
+  // A primeira ocorrência do máximo resolve empates pela ordem A, B, C e D.
+  const trilha = trilhas[foco];
+  const oferta = resultados[trilha.id];
+  const perfil = oferta.profiles[contagem.indexOf(Math.max(...contagem))];
+  const cabecalho = tela("Seu diagnóstico Nova Eu");
+  const total = trilha.questions.length;
   progresso(cabecalho, `Quiz concluído · ${total} de ${total} perguntas`, total, total);
-  texto("p", trilhas[foco].name);
-  texto("p", "Tema para refletir a partir das suas respostas — " + perfis[foco][perfil] + ".");
-  texto("h3", "Diário Nova Eu — " + trilhas[foco].book);
-  texto("p", "Uma jornada de 30 dias com exercícios de escrita e áudios de acompanhamento.");
-  const checkout = texto("a", "Ir para o checkout · R$ 88,00");
-  checkout.className = "checkout";
-  checkout.href = checkouts[trilhas[foco].id];
-  botao("Revisar a última resposta", () => {
-    passo = trilhas[foco].questions.length - 1;
+
+  texto("p", trilha.name + " · " + perfil.pattern).className = "quiz-status";
+  texto("h3", perfil.title);
+  texto("h4", "Uma crença para observar");
+  texto("blockquote", perfil.belief);
+  texto("h4", "Como esse padrão pode aparecer no dia a dia");
+  texto("p", perfil.reflection);
+  texto("h4", "O que trabalhar nos próximos 30 dias");
+  texto("p", perfil.practice);
+
+  const revisar = botao("Revisar a última resposta", () => {
+    passo = total - 1;
     pergunta();
   });
+  revisar.className = "quiz-back";
+
+  const painel = texto("section", "");
+  painel.className = "quiz-offer";
+  texto("p", "Seu próximo passo", painel).className = "quiz-status";
+  texto("h3", oferta.title, painel);
+  const capa = texto("img", "", painel);
+  capa.src = `./capas/${trilha.id}.webp`;
+  capa.alt = "";
+  capa.loading = "lazy";
+  texto("p", oferta.description, painel);
+  lista("O que você vai praticar", oferta.benefits, painel);
+  lista("O que você recebe", oferta.materials, painel);
+  texto("p", "R$ 88,00 em pagamento único", painel).className = "quiz-status";
+  const checkout = texto("a", oferta.cta, painel);
+  checkout.className = "checkout";
+  checkout.href = checkouts[trilha.id];
   botao("Escolher outro foco", () => {
     respostas = [];
     inicio();
   });
   cabecalho.focus();
+}
+
+function lista(titulo, itens, destino) {
+  texto("h4", titulo, destino);
+  const lista = texto("ul", "", destino);
+  itens.forEach(item => texto("li", item, lista));
 }
 
 inicio();
