@@ -54,7 +54,7 @@ function cadastro() {
 
 function historico() {
   painelQuiz.classList.add("quiz-intro");
-  const titulo = tela("Você já fez o Teste de Bloqueio Emocional Invisível antes?");
+  const titulo = tela("Você já fez o Teste de Bloqueio Emocional Invisível antes?", true);
   const escolhas = [
     botao("Sim", () => registrar(true)),
     botao("Não", () => registrar(false)),
@@ -112,9 +112,10 @@ function texto(tag, conteudo, destino = etapa) {
   return elemento;
 }
 
-function tela(titulo) {
+function tela(titulo, tituloPrincipal = false) {
+  painelQuiz.querySelector(":scope > h1").hidden = tituloPrincipal;
   etapa.replaceChildren();
-  const cabecalho = texto("h2", titulo);
+  const cabecalho = texto(tituloPrincipal ? "h1" : "h2", titulo);
   cabecalho.tabIndex = -1;
   return cabecalho;
 }
