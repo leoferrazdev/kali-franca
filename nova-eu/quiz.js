@@ -200,6 +200,11 @@ function resultado() {
 
   texto("p", trilha.name + " · " + perfil.pattern).className = "quiz-status";
   texto("h3", perfil.title);
+  const verOferta = botao("Ver valor e opção de compra", () => {
+    checkout.focus({ preventScroll: true });
+    valorEspecial.scrollIntoView({ block: "center" });
+  });
+  verOferta.className = "checkout checkout--inicio";
   texto("h4", "Uma crença para observar");
   texto("blockquote", perfil.belief);
   texto("h4", "Como esse padrão pode aparecer no dia a dia");
@@ -231,6 +236,9 @@ function resultado() {
   texto("p", "Os áudios são as ativações da sua Nova Eu e servem de âncora para a prática. No diário, a escrita guiada ajuda a fixar o que você pratica e a levar essa intenção para o dia a dia.", entregaveis);
   const materiais = texto("ul", "", entregaveis);
   [audioNovaEu, audioBastaPermitir, diario].forEach(item => texto("li", item, materiais));
+  const checkoutIntermediario = texto("a", "Quero meu Diário Nova Eu", painel);
+  checkoutIntermediario.className = "checkout checkout--meio";
+  checkoutIntermediario.href = checkouts[trilha.id];
   lista("O que você vai praticar", oferta.benefits, painel);
   const valorEspecial = texto("p", "", painel);
   texto("strong", "Valor Especial:", valorEspecial);
