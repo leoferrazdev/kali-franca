@@ -41,8 +41,8 @@ export default async function NovaEuLibrary() {
         <p className="eyebrow">Sua jornada de 30 dias</p>
         <h1>Diário Nova Eu</h1>
         {error && <p>Os materiais estão temporariamente indisponíveis.</p>}
-        {!error && tracks.length === 0 && <p>Quando o pagamento for aprovado, a trilha aparecerá aqui. Entre com o mesmo e-mail usado na compra.</p>}
-        {tracks.length > 0 && <p>Comece pela preparação. Depois, volte ao diário pela manhã e à noite e faça um balanço ao fim de cada semana.</p>}
+        {!error && slugs.length === 0 && <p>Quando o pagamento for aprovado, os materiais aparecerão aqui. Entre com o mesmo e-mail usado na compra.</p>}
+        {tracks.length > 0 && <p>Comece elevando suas emoções com a reprogramação “Nova Eu” pela manhã. Depois, volte à noite para a escrita de expansão no seu diário e ancore a sua Nova Eu.</p>}
       </div>
       {tracks.length > 1 && (
         <nav className="nova-eu-tracks" aria-label="Suas trilhas">
@@ -65,7 +65,7 @@ export default async function NovaEuLibrary() {
               </li>
               <li>
                 <details>
-                  <summary>Pratique pela manhã e à noite</summary>
+                  <summary>Prática da manhã e noite</summary>
                   <p><strong>De manhã</strong>, ouça o áudio Nova Eu e retome as afirmações do seu Mural.</p>
                   {morningAudio && (
                     <div className="nova-eu-audio">
@@ -74,7 +74,7 @@ export default async function NovaEuLibrary() {
                       <a href={morningAudio.url} target="_blank" rel="noreferrer">Abrir áudio em outra aba</a>
                     </div>
                   )}
-                  <p><strong>À noite</strong>, abra o dia correspondente, leia o decreto três vezes em voz alta e responda às perguntas de escrita.</p>
+                  <p><strong>À noite</strong>, abra o diário no dia correspondente, leia o decreto três vezes em voz alta e responda às perguntas para se ancorar na frequência da Nova Eu.</p>
                   {diary && <a className="nova-eu-action" href={diary.url} target="_blank" rel="noreferrer">{diary.label}</a>}
                 </details>
               </li>
@@ -93,8 +93,8 @@ export default async function NovaEuLibrary() {
             </ol>
             {(shortAudio || longAudio) && (
               <details className="nova-eu-extra">
-                <summary>Áudios de apoio · Basta Permitir</summary>
-                <p>Escolha a gravação que cabe no seu tempo. Você pode voltar a ela durante a jornada.</p>
+                <summary>Reprogramação “turbinada” · Basta Permitir</summary>
+                <p>Escolha a versão que cabe no seu tempo. Se quiser, ouça em volume baixo enquanto faz outras atividades.</p>
                 {[shortAudio, longAudio].map(asset => asset && (
                   <div key={asset.label} className="nova-eu-audio">
                     <span>{asset.label}</span>
