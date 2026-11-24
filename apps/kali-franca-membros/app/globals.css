@@ -2046,12 +2046,19 @@ button:disabled {
 .nova-eu-tracks a,
 .nova-eu-action {
   align-items: center;
-  border: 1px solid var(--members-border);
+  background: var(--kf-color-areia-nude-500);
+  border: 1px solid var(--kf-color-ouro-fosco-500);
   border-radius: 999px;
-  color: var(--members-accent);
+  color: var(--kf-color-vinho-profundo-500);
   display: inline-flex;
+  font-weight: 650;
   min-height: 44px;
   padding: .5rem 1rem;
+}
+
+.nova-eu-tracks a:hover,
+.nova-eu-action:hover {
+  background: var(--kf-color-alabastro-500);
 }
 
 .nova-eu-journey {
@@ -2080,9 +2087,10 @@ button:disabled {
 .nova-eu-steps li { counter-increment: nova-eu-step; }
 
 .nova-eu-journey details {
-  background: color-mix(in srgb, var(--kf-color-vinho-profundo-500) 42%, transparent);
-  border: 1px solid var(--members-border);
+  background: var(--kf-color-alabastro-500);
+  border: 1px solid var(--kf-color-ouro-fosco-500);
   border-radius: var(--members-radius-md);
+  color: var(--kf-color-vinho-profundo-500);
   padding: 0 clamp(.85rem, 3vw, 1.35rem);
 }
 
@@ -2096,7 +2104,7 @@ button:disabled {
 }
 
 .nova-eu-steps summary::before {
-  color: var(--members-accent);
+  color: var(--kf-color-ameixa-sagrada-500);
   content: counter(nova-eu-step, decimal-leading-zero) ' ';
   margin-inline-end: .5rem;
 }
@@ -2110,6 +2118,8 @@ button:disabled {
 
 .nova-eu-extra { margin-top: 1rem; }
 
+.nova-eu-journey details p { color: inherit; }
+
 .nova-eu-audio {
   display: grid;
   gap: .45rem;
@@ -2117,9 +2127,12 @@ button:disabled {
 }
 
 .nova-eu-audio audio { width: min(100%, 28rem); }
-.nova-eu-audio a { color: var(--members-accent); width: fit-content; }
+.nova-eu-audio a { color: var(--kf-color-ameixa-sagrada-500); width: fit-content; }
 .nova-eu-journey summary:focus-visible,
-.nova-eu-journey a:focus-visible,
+.nova-eu-journey a:focus-visible {
+  outline: 2px solid var(--kf-color-ameixa-sagrada-500);
+  outline-offset: 3px;
+}
 .nova-eu-tracks a:focus-visible {
   outline: 2px solid var(--members-accent);
   outline-offset: 3px;
