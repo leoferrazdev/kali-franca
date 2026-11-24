@@ -216,9 +216,9 @@ function resultado() {
   texto("p", "Seu próximo passo", painel).className = "quiz-status";
   texto("h3", oferta.title, painel);
   const capa = texto("img", "", painel);
-  capa.src = `./capas/${trilha.id}-audios.webp`;
+  capa.src = `./capas/resultado-${trilha.id}.webp`;
   capa.width = 1200;
-  capa.height = 400;
+  capa.height = 675;
   capa.alt = "";
   capa.loading = "lazy";
   texto("p", oferta.description, painel);
@@ -232,7 +232,10 @@ function resultado() {
   lista("O que você vai praticar", oferta.benefits, painel);
   const valorEspecial = texto("p", "", painel);
   texto("strong", "Valor Especial:", valorEspecial);
-  valorEspecial.append(" De R$197 por apenas R$ 88 (pagamento único, acesso imediato)");
+  valorEspecial.append(" De ");
+  texto("s", "R$197", valorEspecial).className = "quiz-preco-anterior";
+  valorEspecial.append(" por apenas ");
+  texto("strong", "R$ 88 (pagamento único, acesso imediato)", valorEspecial);
   const checkout = texto("a", oferta.cta, painel);
   checkout.className = "checkout";
   checkout.href = checkouts[trilha.id];

@@ -24,6 +24,7 @@ h4 + p { margin-top: 0; }
 .quiz-offer { margin: 1rem 0; padding: clamp(1rem, 4vw, 1.75rem); border: 1px solid #dbc1d0; border-radius: 1rem; background: #f6eef1; }
 .quiz-offer h3 { margin-top: .25rem; }
 .quiz-offer img { display: block; width: 100%; height: auto; border-radius: .65rem; }
+.quiz-preco-anterior { font-weight: 700; text-decoration: line-through 2px #c32738; }
 .quiz-offer ul { padding-inline-start: 1.25rem; }
 .quiz-offer li + li { margin-top: .55rem; }
 .quiz-deliverables { padding: 1rem; margin: 1rem 0; background: #fffaf8; border-inline-start: .25rem solid #74445d; border-radius: .65rem; }
