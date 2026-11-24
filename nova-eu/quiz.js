@@ -60,6 +60,8 @@ function historico() {
     botao("Não", () => registrar(false)),
     botao("Voltar aos meus dados", () => cadastro({ veioDaEtapaSeguinte: true })),
   ];
+  escolhas[0].className = "quiz-history-choice quiz-history-choice--yes";
+  escolhas[1].className = "quiz-history-choice quiz-history-choice--no";
   escolhas[2].className = "quiz-back";
   const status = texto("p", "");
   status.setAttribute("role", "status");
