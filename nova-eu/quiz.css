@@ -7,6 +7,24 @@ h1 { font-size: clamp(2rem, 7vw, 3.5rem); margin: .25em 0 .7em; }
 button { display: block; width: 100%; margin: .65rem 0; padding: .85rem 1rem; border: 1px solid #a77d92; border-radius: .65rem; background: white; color: inherit; text-align: left; font: inherit; cursor: pointer; }
 button:hover, button[aria-pressed="true"] { background: #f0dfe8; }
 button[aria-pressed="true"] { border-color: #74445d; box-shadow: inset .25rem 0 #74445d; font-weight: 600; }
+button[aria-pressed] {
+  transition: transform 160ms ease, filter 160ms ease, background-color 160ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  button[aria-pressed]:hover {
+    transform: translateY(-3px) scale(1.015);
+    filter: drop-shadow(0 6px 8px #38212d33);
+  }
+}
+button[aria-pressed]:active {
+  transform: translateY(-2px) scale(1.01);
+  filter: drop-shadow(0 4px 6px #38212d33);
+  background-color: #f0dfe8;
+}
+@media (prefers-reduced-motion: reduce) {
+  button[aria-pressed] { transition: none; }
+  button[aria-pressed]:is(:hover, :active) { transform: none; }
+}
 .quiz-back { width: fit-content; min-height: 44px; padding: .5rem .85rem; margin: 0 0 1rem; color: #68364f; font-weight: 600; }
 .quiz-back::before { content: "←" / ""; margin-inline-end: .5em; }
 .quiz-status { margin: 0 0 .35rem; color: #68364f; font-weight: 600; }
