@@ -230,7 +230,9 @@ function resultado() {
   const materiais = texto("ul", "", entregaveis);
   [audioNovaEu, audioBastaPermitir, diario].forEach(item => texto("li", item, materiais));
   lista("O que você vai praticar", oferta.benefits, painel);
-  texto("p", "R$ 88,00 em pagamento único", painel).className = "quiz-status";
+  const valorEspecial = texto("p", "", painel);
+  texto("strong", "Valor Especial:", valorEspecial);
+  valorEspecial.append(" De R$197 por apenas R$ 88 (pagamento único, acesso imediato)");
   const checkout = texto("a", oferta.cta, painel);
   checkout.className = "checkout";
   checkout.href = checkouts[trilha.id];
