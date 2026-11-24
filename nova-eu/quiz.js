@@ -1,5 +1,5 @@
-import { trilhas } from "./catalogo.js";
-import { resultados } from "./resultados.js";
+import { trilhas } from "./catalogo-v2.js";
+import { resultados } from "./resultados-v2.js";
 
 const checkouts = {
   abundancia: "https://pay.kiwify.com.br/Q9Q6VVG",
@@ -144,12 +144,12 @@ function progresso(cabecalho, rotulo, respondidas, total) {
 }
 
 function inicio() {
-  const cabecalho = tela("Qual área você quer cultivar nos próximos 30 dias?");
+  const cabecalho = tela("Se você pudesse destravar UMA área da sua vida nos próximos 30 dias com leveza, qual escolheria hoje?");
   const voltar = botao("Voltar", historico);
   voltar.className = "quiz-back";
   cabecalho.before(voltar);
-  texto("p", "Escolha um foco e responda a quatro perguntas sobre a sua rotina.");
-  trilhas.forEach((trilha, indice) => botao(trilha.name, () => {
+  progresso(cabecalho, "Pergunta 1 de 7", 0, 7);
+  trilhas.forEach((trilha, indice) => botao(`${trilha.name} — ${trilha.intro}`, () => {
     if (foco !== indice) respostas = [];
     foco = indice;
     passo = 0;
@@ -173,7 +173,7 @@ function pergunta() {
   });
   voltar.className = "quiz-back";
   cabecalho.before(voltar);
-  progresso(cabecalho, `${trilha.name} · Pergunta ${passo + 1} de ${total}`, passo, total);
+  progresso(cabecalho, `${trilha.name} · Pergunta ${passo + 2} de ${total + 1}`, passo + 1, total + 1);
   texto("p", "Selecione uma opção para avançar automaticamente.").className = "quiz-hint";
 
   atual.options.forEach((opcao, indice) => botao(opcao, () => {
@@ -194,7 +194,7 @@ function resultado() {
   const perfil = oferta.profiles[contagem.indexOf(Math.max(...contagem))];
   const cabecalho = tela("Seu diagnóstico Nova Eu");
   const total = trilha.questions.length;
-  progresso(cabecalho, `Quiz concluído · ${total} de ${total} perguntas`, total, total);
+  progresso(cabecalho, `Quiz concluído · ${total + 1} de ${total + 1} perguntas`, total + 1, total + 1);
 
   texto("p", trilha.name + " · " + perfil.pattern).className = "quiz-status";
   texto("h3", perfil.title);
