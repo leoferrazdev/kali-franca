@@ -22,6 +22,8 @@ export default async function NovaEuLibrary() {
   const supabase = await createSupabaseServerClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect('/login/');
+  const welcomeVideo = process.env.NOVA_EU_WELCOME_VIDEO_URL;
+  const welcomeAudio = process.env.NOVA_EU_WELCOME_AUDIO_URL;
 
   const { data, error } = await supabase.from('nova_eu_orders').select('product_slug');
   const slugs = [...new Set(data?.map(order => order.product_slug) ?? [])];
@@ -44,6 +46,17 @@ export default async function NovaEuLibrary() {
         {!error && slugs.length === 0 && <p>Quando o pagamento for aprovado, os materiais aparecerão aqui. Entre com o mesmo e-mail usado na compra.</p>}
         {tracks.length > 0 && <p>Comece elevando suas emoções com a reprogramação “Nova Eu” pela manhã. Depois, volte à noite para a escrita de expansão no seu diário e ancore a sua Nova Eu.</p>}
       </div>
+      <section className="nova-eu-welcome" aria-labelledby="nova-eu-welcome-title">
+        <h2 id="nova-eu-welcome-title">Comece aqui</h2>
+        <p>Boas-vindas da Kalì. Veja como usar os materiais e em que ordem seguir as práticas.</p>
+        {welcomeVideo ? (
+          <video controls preload="metadata" playsInline src={welcomeVideo} aria-label="Boas-vindas da Kalì" />
+        ) : welcomeAudio ? (
+          <audio controls preload="metadata" src={welcomeAudio} aria-label="Boas-vindas da Kalì" />
+        ) : (
+          <p className="nova-eu-welcome__pending">A mensagem de boas-vindas estará disponível aqui.</p>
+        )}
+      </section>
       {tracks.length > 1 && (
         <nav className="nova-eu-tracks" aria-label="Suas trilhas">
           {tracks.map(track => track && <a key={track.slug} href={`#nova-eu-${track.slug}`}>{track.title}</a>)}

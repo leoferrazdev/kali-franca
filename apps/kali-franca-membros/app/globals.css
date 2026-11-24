@@ -2036,6 +2036,27 @@ button:disabled {
 }
 
 /* Diário Nova Eu */
+.nova-eu-welcome {
+  max-width: 52rem;
+  margin-block: 1.5rem 2rem;
+  padding: clamp(1rem, 4vw, 2rem);
+  border: 1px solid var(--kf-color-ouro-fosco-500);
+  border-radius: var(--members-radius-md);
+  background: var(--kf-color-alabastro-500);
+  color: var(--kf-color-vinho-profundo-500);
+}
+
+.nova-eu-welcome h2 {
+  margin: 0;
+  font-family: var(--kf-font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.nova-eu-welcome p { margin: .5rem 0 0; }
+.nova-eu-welcome audio,
+.nova-eu-welcome video { display: block; width: 100%; margin-top: 1rem; }
+.nova-eu-welcome__pending { color: var(--kf-color-ameixa-sagrada-500); }
+
 .nova-eu-tracks {
   display: flex;
   flex-wrap: wrap;
