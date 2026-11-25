@@ -194,13 +194,13 @@ function resultado() {
   const trilha = trilhas[foco];
   const oferta = resultados[trilha.id];
   const perfil = oferta.profiles[contagem.indexOf(Math.max(...contagem))];
-  const cabecalho = tela("Seu diagnóstico Nova Eu");
+  const cabecalho = tela("Seu diagnóstico hoje");
   const total = trilha.questions.length;
   progresso(cabecalho, `Quiz concluído · ${total + 1} de ${total + 1} perguntas`, total + 1, total + 1);
 
   texto("p", trilha.name + " · " + perfil.pattern).className = "quiz-status";
   texto("h3", perfil.title);
-  const verOferta = botao("Ver valor e opção de compra", () => {
+  const verOferta = botao("O caminho para a NOVA EU realizada", () => {
     checkout.focus({ preventScroll: true });
     valorEspecial.scrollIntoView({ block: "center" });
   });
