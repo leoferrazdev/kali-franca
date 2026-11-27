@@ -199,17 +199,18 @@ function resultado() {
   progresso(cabecalho, `Quiz concluído · ${total + 1} de ${total + 1} perguntas`, total + 1, total + 1);
 
   texto("p", trilha.name + " · " + perfil.pattern).className = "quiz-status";
-  texto("h3", perfil.title);
+  texto("h3", "Seu Bloqueio Principal Hoje");
+  texto("p", perfil.title);
   const verOferta = botao("O caminho para a NOVA EU realizada", () => {
     checkout.focus({ preventScroll: true });
     valorEspecial.scrollIntoView({ block: "center" });
   });
   verOferta.className = "checkout checkout--inicio";
-  texto("h4", "Uma crença para observar");
-  texto("blockquote", perfil.belief);
-  texto("h4", "Como esse padrão pode aparecer no dia a dia");
+  texto("h4", "Crença Base Identificada");
+  texto("blockquote", `“${perfil.belief}”`);
+  texto("h4", "Como você se vê e age hoje");
   texto("p", perfil.reflection);
-  texto("h4", "O que trabalhar nos próximos 30 dias");
+  texto("h4", "Como o Diário Nova Eu transforma sua frequência");
   texto("p", perfil.practice);
 
   const revisar = botao("Revisar a última resposta", () => {
