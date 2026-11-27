@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 type MemberNavigationProps = {
   isAdministrator?: boolean;
-  activePath?: 'home' | 'eleva' | 'applications' | 'nova-eu';
+  activePath?: 'home' | 'eleva' | 'applications' | 'nova-eu' | 'quiz-cadastros';
 };
 
 export function MemberNavigation({ isAdministrator = false, activePath = 'home' }: MemberNavigationProps) {
@@ -22,6 +22,12 @@ export function MemberNavigation({ isAdministrator = false, activePath = 'home' 
           <span aria-hidden="true">✦</span>
           Diário Nova Eu
         </Link>
+        {isAdministrator ? (
+          <Link className={`member-navigation__link${activePath === 'quiz-cadastros' ? ' member-navigation__link--active' : ''}`} href="/membros/nova-eu/cadastros/" prefetch={false} aria-current={activePath === 'quiz-cadastros' ? 'page' : undefined}>
+            <span aria-hidden="true">◈</span>
+            Cadastros do quiz
+          </Link>
+        ) : null}
         {isAdministrator ? (
           <Link className={`member-navigation__link${activePath === 'applications' ? ' member-navigation__link--active' : ''}`} href="/membros/aplicacoes/mentoria-frequencia-da-abundancia" aria-current={activePath === 'applications' ? 'page' : undefined}>
             <span aria-hidden="true">◈</span>
