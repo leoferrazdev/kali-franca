@@ -198,20 +198,38 @@ function resultado() {
   const total = trilha.questions.length;
   progresso(cabecalho, `Quiz concluído · ${total + 1} de ${total + 1} perguntas`, total + 1, total + 1);
 
-  texto("p", trilha.name + " · " + perfil.pattern).className = "quiz-status";
-  texto("h3", "Seu Bloqueio Principal Hoje");
-  texto("p", perfil.title);
+  const resumo = texto("section", "");
+  resumo.className = "quiz-result-summary";
+  cabecalho.id = "quiz-result-title";
+  resumo.setAttribute("aria-labelledby", cabecalho.id);
+  resumo.append(cabecalho);
+  texto("p", trilha.name + " · " + perfil.pattern, resumo).className = "quiz-result-profile";
+
+  const bloqueio = texto("div", "", resumo);
+  bloqueio.className = "quiz-result-block";
+  texto("h3", "Seu Bloqueio Principal Hoje", bloqueio);
+  const [, nomeBloqueio, complemento] = perfil.title.match(/^([^()]+?) (\(.*\)\.)$/) ?? [];
+  texto("p", nomeBloqueio ?? perfil.title, bloqueio).className = "quiz-result-block-name";
+  if (complemento) texto("p", complemento, bloqueio);
+
   const verOferta = botao("O caminho para a NOVA EU realizada", () => {
     checkout.focus({ preventScroll: true });
     valorEspecial.scrollIntoView({ block: "center" });
   });
   verOferta.className = "checkout checkout--inicio";
-  texto("h4", "Crença Base Identificada");
-  texto("blockquote", `“${perfil.belief}”`);
-  texto("h4", "Como você se vê e age hoje");
-  texto("p", perfil.reflection);
-  texto("h4", "Como o Diário Nova Eu transforma sua frequência");
-  texto("p", perfil.practice);
+
+  const detalhes = texto("div", "");
+  detalhes.className = "quiz-result-details";
+  for (const [titulo, conteudo, tag] of [
+    ["Crença Base Identificada", `“${perfil.belief}”`, "blockquote"],
+    ["Como você se vê e age hoje", perfil.reflection, "p"],
+    ["Como o Diário Nova Eu transforma sua frequência", perfil.practice, "p"],
+  ]) {
+    const bloco = texto("section", "", detalhes);
+    bloco.className = "quiz-result-detail";
+    texto("h3", titulo, bloco);
+    texto(tag, conteudo, bloco);
+  }
 
   const revisar = botao("Revisar a última resposta", () => {
     passo = total - 1;
